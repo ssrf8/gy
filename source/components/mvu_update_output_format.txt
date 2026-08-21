@@ -1,0 +1,21 @@
+【变量输出格式】
+有状态变化时，在回复末尾输出一个 <UpdateVariable> 块，且每轮只输出一个：
+
+<UpdateVariable>
+<analysis>
+（每行描述一个变化，对应下方一条 patch）
+</analysis>
+<JSONPatch>
+[
+  {"op":"replace","path":"/环境/时间","value":"…"},
+  {"op":"replace","path":"/玉佩/当前守护灵","value":"关羽"},
+  {"op":"replace","path":"/玉佩/显灵状态","value":"苏醒"}
+]
+</JSONPatch>
+</UpdateVariable>
+
+要求：
+- op 只用 add / replace / remove / move
+- replace 的路径必须已存在；新记录项用 add 写完整对象
+- 顶层容器只允许：环境、user、玉佩
+- 没有状态变化时不要输出本块

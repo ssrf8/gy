@@ -1,0 +1,271 @@
+<!-- 开局页 · 中元特供·关公 v0.3
+  使用方式：整块复制进角色卡 first_mes（含样式与脚本）。
+  机制：两步选择 —— ①选守护灵（开对应世界书条目+关另一个）→ ②选开场白并切换。
+  开场白列表 = 角色卡「备选开场白」（alternate_greetings），点选后聊天首消息切换为该开场白（ST 原生 swipe 机制），玩家自由输入开始。
+  依赖：酒馆助手 ≥ v4.8（世界书 API，仅步骤①需要；缺省时步骤①降级为提示）。
+  命名约定：世界书守护灵条目名须包含「关羽」或「赵公明」。
+--><!--gg-opening-begin-->
+<div class="gg-opening" data-opening-protocol="1">
+  <header class="gg-head">
+    <h1>祖传玉佩</h1>
+    <p class="gg-sub">{{user}}，中元夜，玉佩在掌心发烫。两道虚影自玉中浮出。</p>
+  </header>
+
+  <!-- 步骤 1：选择守护灵 -->
+  <section class="gg-step" data-step="guardian" role="group" aria-labelledby="gg-h-guardian">
+    <h2 id="gg-h-guardian">选择你的守护灵</h2>
+    <div class="gg-cards">
+      <button type="button" class="gg-card" data-action="guardian" data-guardian="关羽">
+        <span class="gg-card-name">关羽</span>
+        <span class="gg-card-desc">丹凤眼，卧蚕眉，青龙偃月刀。武圣之威，斩邪护主。</span>
+      </button>
+      <button type="button" class="gg-card" data-action="guardian" data-guardian="赵公明">
+        <span class="gg-card-name">赵公明</span>
+        <span class="gg-card-desc">黑面浓须，执铁鞭，坐骑黑虎。正财之神，镇宅安民。</span>
+      </button>
+    </div>
+    <p class="gg-status" data-bind="status" aria-live="polite"></p>
+  </section>
+
+  <!-- 步骤 2：选择开场白（列表来自角色卡 alternate_greetings，点击即切换首消息） -->
+  <section class="gg-step" data-step="opening" hidden role="group" aria-labelledby="gg-h-opening">
+    <h2 id="gg-h-opening">选择你的开场</h2>
+    <div class="gg-cards" data-bind="openings"></div>
+    <p class="gg-empty" data-bind="openings-empty" hidden></p>
+    <div class="gg-actions">
+      <button type="button" class="gg-btn gg-btn-secondary" data-action="back">上一步</button>
+    </div>
+    <p class="gg-status" data-bind="status" aria-live="polite"></p>
+  </section>
+</div>
+
+<style>
+  .gg-opening{--gg-ink:#14100c;--gg-bg:#1e1711;--gg-card:#2a2016;--gg-border:#4a3521;--gg-gold:#c9a24b;--gg-red:#a03226;--gg-text:#e8dcc3;--gg-dim:#a99575;--gg-radius:10px;
+    box-sizing:border-box;margin:8px 0;padding:18px 16px;color:var(--gg-text);background:linear-gradient(160deg,var(--gg-bg),var(--gg-ink));border:1px solid var(--gg-border);border-radius:var(--gg-radius);font-size:15px;line-height:1.6}
+  .gg-opening *,.gg-opening *::before,.gg-opening *::after{box-sizing:border-box}
+  .gg-opening h1{font-size:20px;margin:0 0 2px;color:var(--gg-gold);letter-spacing:2px}
+  .gg-opening h2{font-size:16px;margin:0 0 10px;color:var(--gg-gold)}
+  .gg-sub{margin:0 0 12px;color:var(--gg-dim);font-size:13px}
+  .gg-opening .gg-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+  .gg-card{display:flex;flex-direction:column;gap:6px;min-height:88px;padding:12px;color:var(--gg-text);text-align:left;background:var(--gg-card);border:1px solid var(--gg-border);border-radius:var(--gg-radius);cursor:pointer;font:inherit;transition:border-color .15s ease,transform .15s ease}
+  .gg-card:hover,.gg-card:focus-visible{border-color:var(--gg-gold);transform:translateY(-1px);outline:none}
+  .gg-card:active{transform:translateY(0)}
+  .gg-card-name{font-size:17px;font-weight:700;color:var(--gg-gold)}
+  .gg-card-desc{font-size:12.5px;color:var(--gg-dim)}
+  .gg-status{min-height:18px;margin:10px 0 0;font-size:12.5px;color:var(--gg-dim)}
+  .gg-status[data-state="ok"]{color:#9ecb8a}
+  .gg-status[data-state="err"]{color:#e08a7a}
+  .gg-empty{margin:6px 0 0;font-size:12.5px;color:var(--gg-dim)}
+  .gg-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+  .gg-btn{min-height:44px;padding:10px 20px;border-radius:var(--gg-radius);border:1px solid var(--gg-border);cursor:pointer;font:inherit;font-size:15px}
+  .gg-btn-secondary{background:transparent;color:var(--gg-text)}
+  .gg-btn-secondary:hover,.gg-btn-secondary:focus-visible{border-color:var(--gg-gold);outline:none}
+  .gg-btn:disabled{opacity:.55;cursor:not-allowed}
+  @media (prefers-reduced-motion:reduce){.gg-card{transition:none}}
+</style>
+
+<script>
+(function () {
+  'use strict';
+
+  var BIND_KEY = '__ggOpeningBinder';
+
+  function getDoc() {
+    try { var r = document.querySelector('.gg-opening[data-opening-protocol="1"]'); if (r) return { doc: document, root: r }; } catch (_) {}
+    try {
+      var p = window.parent && window.parent.document;
+      var r2 = p && p.querySelector('.gg-opening[data-opening-protocol="1"]');
+      if (r2) return { doc: p, root: r2 };
+    } catch (_) {}
+    return null;
+  }
+
+  var host = getDoc();
+  if (!host) return;
+  var root = host.root;
+  var doc = host.doc;
+  if (root[BIND_KEY] && root[BIND_KEY].alive) return;
+
+  function getCtx() {
+    try { if (window.SillyTavern && window.SillyTavern.getContext) return window.SillyTavern.getContext(); } catch (_) {}
+    try {
+      var p = window.parent && window.parent.SillyTavern;
+      if (p && p.getContext) return p.getContext();
+    } catch (_) {}
+    return null;
+  }
+
+  var GUARDIANS = ['关羽', '赵公明'];
+  var state = { guardian: null };
+  var statusEls = root.querySelectorAll('[data-bind="status"]');
+  var steps = {
+    guardian: root.querySelector('[data-step="guardian"]'),
+    opening: root.querySelector('[data-step="opening"]')
+  };
+
+  function setStatus(text, kind) {
+    for (var i = 0; i < statusEls.length; i++) {
+      statusEls[i].textContent = text || '';
+      if (kind) statusEls[i].setAttribute('data-state', kind); else statusEls[i].removeAttribute('data-state');
+    }
+  }
+
+  function showStep(name) {
+    Object.keys(steps).forEach(function (k) {
+      var el = steps[k];
+      if (!el) return;
+      var active = k === name;
+      el.hidden = !active;
+      if (active) {
+        var heading = el.querySelector('h1, h2');
+        if (heading) { try { heading.focus({ preventScroll: false }); } catch (_) {} }
+      }
+    });
+  }
+
+  // ---- 世界书条目开关（步骤①）----
+  function findBookWithGuardianEntries() {
+    var books = [];
+    try {
+      if (typeof getCharWorldbookNames === 'function') {
+        var bind = getCharWorldbookNames('current');
+        if (bind && bind.primary) books.push(bind.primary);
+        if (bind && Array.isArray(bind.additional)) books = books.concat(bind.additional);
+      }
+    } catch (_) {}
+    if (!books.length) return Promise.resolve(null);
+    return books.reduce(function (chain, name) {
+      return chain.then(function (found) {
+        if (found) return found;
+        return getWorldbook(name).then(function (entries) {
+          var hit = entries.some(function (e) { return e.name && GUARDIANS.some(function (g) { return e.name.indexOf(g) !== -1; }); });
+          return hit ? name : null;
+        }).catch(function () { return null; });
+      });
+    }, Promise.resolve(null));
+  }
+
+  function setGuardianEntries(chosen) {
+    return findBookWithGuardianEntries().then(function (bookName) {
+      if (!bookName) throw new Error('未找到含守护灵条目的世界书（条目名须包含「关羽」或「赵公明」）');
+      var updater = function (entries) {
+        return entries.map(function (e) {
+          if (!e.name) return e;
+          var hit = GUARDIANS.filter(function (g) { return e.name.indexOf(g) !== -1; });
+          if (!hit.length) return e;
+          var copy = Object.assign({}, e);
+          copy.enabled = hit[0] === chosen;
+          return copy;
+        });
+      };
+      if (typeof updateWorldbookWith === 'function') {
+        return updateWorldbookWith(bookName, updater, { render: 'immediate' });
+      }
+      if (typeof getWorldbook === 'function' && typeof replaceWorldbook === 'function') {
+        return getWorldbook(bookName).then(function (cur) { return replaceWorldbook(bookName, updater(cur), { render: 'immediate' }); });
+      }
+      throw new Error('世界书 API 不可用（需要酒馆助手 v4.8+）');
+    });
+  }
+
+  // ---- 开场白列表（来自角色卡 alternate_greetings）----
+  function readOpenings() {
+    var ctx = getCtx();
+    if (!ctx || !ctx.characters || ctx.characterId === undefined) return null;
+    var ch = ctx.characters[ctx.characterId];
+    var list = ch && ch.data && Array.isArray(ch.data.alternate_greetings) ? ch.data.alternate_greetings : [];
+    return list.map(function (t) { return String(t || '').trim(); }).filter(Boolean);
+  }
+
+  function renderOpenings() {
+    var box = root.querySelector('[data-bind="openings"]');
+    var empty = root.querySelector('[data-bind="openings-empty"]');
+    if (!box || !empty) return;
+    box.textContent = '';
+    var list = readOpenings();
+    if (list === null) {
+      empty.textContent = '无法读取角色卡开场白（ST 上下文不可用）。';
+      empty.hidden = false;
+      return;
+    }
+    if (!list.length) {
+      empty.textContent = '角色卡暂无备选开场白：请在角色卡编辑器的「备选开场白」中填写。';
+      empty.hidden = false;
+      return;
+    }
+    empty.hidden = true;
+    list.forEach(function (text, i) {
+      var btn = doc.createElement('button');
+      btn.type = 'button';
+      btn.className = 'gg-card';
+      btn.setAttribute('data-action', 'opening');
+      btn.setAttribute('data-index', String(i));
+      var title = doc.createElement('span');
+      title.className = 'gg-card-name';
+      title.textContent = (text.split('\n')[0] || '开场白 ' + (i + 1)).slice(0, 24);
+      var desc = doc.createElement('span');
+      desc.className = 'gg-card-desc';
+      desc.textContent = text.slice(0, 40) + (text.length > 40 ? '…' : '');
+      btn.appendChild(title);
+      btn.appendChild(desc);
+      box.appendChild(btn);
+    });
+  }
+
+  // ---- 切换首消息到指定开场白（ST 原生 swipe 机制）----
+  // chat[0].swipes = [first_mes, ...alternate_greetings]，开场白 i 对应位置 i+1
+  function switchGreeting(index) {
+    return Promise.resolve().then(function () {
+      var ctx = getCtx();
+      if (!ctx || !ctx.chat || !ctx.chat.length) throw new Error('ST 聊天上下文不可用');
+      var first = ctx.chat[0];
+      if (!first || !Array.isArray(first.swipes)) throw new Error('首消息没有可切换的开场白');
+      var pos = index + 1;
+      if (pos >= first.swipes.length) throw new Error('开场白索引越界');
+      first.swipe_id = pos;
+      first.mes = first.swipes[pos];
+      var saving = ctx.saveChat ? ctx.saveChat() : Promise.resolve();
+      return saving.then(function () {
+        if (ctx.reloadCurrentChat) ctx.reloadCurrentChat();
+      });
+    });
+  }
+
+  root.addEventListener('click', function (ev) {
+    var btn = ev.target && ev.target.closest ? ev.target.closest('[data-action]') : null;
+    if (!btn) return;
+    var action = btn.getAttribute('data-action');
+    if (action === 'guardian') {
+      var g = btn.getAttribute('data-guardian');
+      btn.disabled = true;
+      setStatus('正在开启【' + g + '】的条目…');
+      setGuardianEntries(g).then(function () {
+        state.guardian = g;
+        setStatus('已开启【' + g + '】，已关闭另一条。', 'ok');
+        btn.disabled = false;
+        showStep('opening');
+      }).catch(function (err) {
+        setStatus(err && err.message ? err.message : '世界书开关失败，请检查酒馆助手是否安装。', 'err');
+        btn.disabled = false;
+      });
+    } else if (action === 'opening') {
+      var idx = Number(btn.getAttribute('data-index'));
+      setStatus('正在切换开场白…');
+      switchGreeting(idx).then(function () {
+        setStatus('已切换到所选开场白。', 'ok');
+      }).catch(function (err) {
+        setStatus('切换失败：' + (err && err.message ? err.message : err), 'err');
+      });
+    } else if (action === 'back') {
+      showStep('guardian');
+    }
+  });
+
+  renderOpenings();
+  showStep('guardian');
+  root[BIND_KEY] = { alive: true };
+})();
+</script>
+<!--gg-opening-end-->
+
+中元节夜，{{user}}手中的祖传玉佩忽然发烫，两道虚影浮出——丹凤眼长髯者按刀而立，黑面执鞭者拱手而笑。玉佩在等{{user}}选一位守护灵。四家香火，都认这块玉。

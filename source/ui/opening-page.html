@@ -1,0 +1,760 @@
+<!--gg-opening-begin-->
+```html
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  /* 主题：透明玻璃 UI · 白色高透（纯样式，结构/逻辑不变） */
+  .gg-opening{
+    --gg-radius:16px;
+    position:relative;overflow:hidden;
+    box-sizing:border-box;margin:10px 0;padding:34px 28px;
+    color:#e8ecf8;
+    background:
+      linear-gradient(115deg,transparent 32%,rgba(150,170,255,.07) 45%,rgba(190,150,255,.06) 52%,transparent 66%),
+      radial-gradient(90px 90px at 18% 22%,rgba(160,120,220,.14),transparent 70%),
+      radial-gradient(70px 70px at 62% 12%,rgba(150,110,220,.12),transparent 70%),
+      radial-gradient(100px 100px at 42% 55%,rgba(170,130,230,.10),transparent 70%),
+      radial-gradient(80px 80px at 78% 42%,rgba(140,100,210,.12),transparent 70%),
+      radial-gradient(60px 60px at 30% 78%,rgba(160,120,220,.10),transparent 70%),
+      radial-gradient(90px 90px at 68% 82%,rgba(150,110,220,.12),transparent 70%),
+      radial-gradient(120% 90% at 20% -10%,rgba(90,110,200,.22),transparent 55%),
+      radial-gradient(120% 100% at 85% 110%,rgba(120,80,190,.16),transparent 60%),
+      radial-gradient(80% 60% at 75% 30%,rgba(200,120,220,.10),transparent 60%),
+      linear-gradient(160deg,rgba(20,30,60,.82),rgba(8,12,26,.94));
+    border:1px solid rgba(150,170,230,.30);
+    border-top-color:rgba(190,205,245,.45);
+    border-radius:var(--gg-radius);
+    box-shadow:
+      0 0 0 1px rgba(160,180,240,.10),
+      inset 0 1px 0 rgba(200,215,250,.18),
+      inset 0 0 40px rgba(0,0,0,.35),
+      0 0 34px rgba(110,130,220,.22),
+      0 24px 50px rgba(0,0,0,.5);
+    -webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px);
+    font-size:15px;line-height:1.75;
+  }
+  .gg-opening *,.gg-opening *::before,.gg-opening *::after{box-sizing:border-box}
+  /* 雨层：铺满玻璃片，不挡点击；内容（header/section/图位）抬到雨层上方 */
+  .gg-rain{position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
+  .gg-opening>header,.gg-opening>section,.gg-opening>.gg-figure{position:relative;z-index:1}
+  /* 星云光晕：靛蓝辉光缓慢浮动（z-index:-1 不遮内容） */
+  .gg-opening::before{
+    content:"";position:absolute;z-index:-1;border-radius:50%;pointer-events:none;filter:blur(60px);
+    width:280px;height:280px;top:-120px;right:-80px;background:rgba(120,140,230,.28);
+    animation:ggDrift 12s ease-in-out infinite alternate;
+  }
+  @keyframes ggDrift{from{transform:translate(0,0) scale(1)}to{transform:translate(-24px,18px) scale(1.12)}}
+  /* 星点：box-shadow 点阵 + 呼吸闪烁 */
+  .gg-opening::after{
+    content:"";position:absolute;z-index:0;top:0;left:0;width:2px;height:2px;border-radius:50%;pointer-events:none;
+    box-shadow:
+      40px 60px 0 0 rgba(255,255,255,.9),
+      120px 30px 0 0 rgba(255,255,255,.55),
+      200px 80px 0 0 rgba(190,205,255,.8),
+      280px 20px 0 0 rgba(255,255,255,.5),
+      60px 140px 0 0 rgba(210,220,255,.7),
+      160px 110px 0 0 rgba(255,255,255,.9),
+      240px 160px 0 0 rgba(180,200,255,.6),
+      320px 120px 0 0 rgba(255,255,255,.7),
+      30px 220px 0 0 rgba(255,255,255,.5),
+      110px 200px 0 0 rgba(200,215,255,.8),
+      190px 250px 0 0 rgba(255,255,255,.6),
+      290px 210px 0 0 rgba(230,235,255,.8),
+      360px 260px 0 0 rgba(255,255,255,.5),
+      80px 320px 0 0 rgba(255,255,255,.7),
+      150px 360px 0 0 rgba(190,210,255,.6),
+      260px 330px 0 0 rgba(255,255,255,.8),
+      340px 380px 0 0 rgba(255,255,255,.5),
+      50px 430px 0 0 rgba(215,225,255,.7),
+      130px 470px 0 0 rgba(255,255,255,.6),
+      220px 420px 0 0 rgba(200,215,255,.8),
+      310px 460px 0 0 rgba(255,255,255,.7),
+      380px 500px 0 0 rgba(255,255,255,.5),
+      90px 540px 0 0 rgba(230,240,255,.6),
+      180px 580px 0 0 rgba(255,255,255,.7),
+      280px 560px 0 0 rgba(200,215,255,.6),
+      360px 620px 0 0 rgba(255,255,255,.5);
+    animation:ggTwinkle 4.5s ease-in-out infinite;
+  }
+  @keyframes ggTwinkle{0%,100%{opacity:.30}50%{opacity:.95}}
+  /* 星层二/三：中层星 + 大星（带光晕），闪烁周期错相 */
+  .gg-stars{position:absolute;inset:0;z-index:0;pointer-events:none}
+  .gg-stars::before{
+    content:"";position:absolute;top:0;left:0;width:2px;height:2px;border-radius:50%;
+    box-shadow:
+      55px 45px 0 0 rgba(255,255,255,.75),
+      135px 95px 0 0 rgba(215,225,255,.6),
+      215px 55px 0 0 rgba(255,255,255,.7),
+      300px 130px 0 0 rgba(200,215,255,.55),
+      355px 70px 0 0 rgba(255,255,255,.65),
+      85px 175px 0 0 rgba(255,255,255,.6),
+      175px 210px 0 0 rgba(230,235,255,.7),
+      255px 185px 0 0 rgba(255,255,255,.55),
+      330px 240px 0 0 rgba(210,220,255,.65),
+      45px 290px 0 0 rgba(255,255,255,.6),
+      125px 330px 0 0 rgba(255,255,255,.7),
+      205px 285px 0 0 rgba(225,232,255,.55),
+      285px 350px 0 0 rgba(255,255,255,.65),
+      350px 310px 0 0 rgba(215,225,255,.6),
+      70px 395px 0 0 rgba(255,255,255,.7),
+      150px 430px 0 0 rgba(200,215,255,.55),
+      235px 400px 0 0 rgba(255,255,255,.65),
+      310px 455px 0 0 rgba(230,235,255,.6),
+      95px 505px 0 0 rgba(255,255,255,.7),
+      200px 530px 0 0 rgba(215,225,255,.6);
+    animation:ggTwinkle2 6s ease-in-out infinite;
+  }
+  .gg-stars::after{
+    content:"";position:absolute;top:0;left:0;width:3px;height:3px;border-radius:50%;
+    filter:drop-shadow(0 0 6px rgba(200,215,255,.85));
+    box-shadow:
+      95px 130px 0 0 rgba(255,255,255,.9),
+      265px 90px 0 0 rgba(220,230,255,.8),
+      355px 210px 0 0 rgba(255,255,255,.85),
+      60px 355px 0 0 rgba(230,235,255,.8),
+      215px 310px 0 0 rgba(255,255,255,.9),
+      315px 420px 0 0 rgba(220,230,255,.8),
+      145px 500px 0 0 rgba(255,255,255,.85),
+      260px 560px 0 0 rgba(230,235,255,.8);
+    animation:ggTwinkle3 8s ease-in-out infinite;
+  }
+  @keyframes ggTwinkle2{0%,100%{opacity:.25}50%{opacity:.85}}
+  @keyframes ggTwinkle3{0%,100%{opacity:.4}50%{opacity:1}}
+  /* 流星层：canvas 绘制（尾迹沿运动反方向渐变，跟随轨迹） */
+  .gg-meteors{position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
+  /* 标题：星辉流光（白→淡蓝→淡紫）+ 星辉横线 */
+  .gg-opening h1{
+    font-size:30px;margin:0 0 10px;letter-spacing:5px;line-height:1.25;
+    background:linear-gradient(100deg,#ffffff,#c3ccf5 40%,#e8d9ff 65%,#ffffff 85%);
+    background-size:230% 100%;
+    -webkit-background-clip:text;background-clip:text;
+    -webkit-text-fill-color:transparent;color:transparent;
+    animation:ggShimmer 6s linear infinite;
+    filter:drop-shadow(0 0 12px rgba(170,190,255,.45));
+  }
+  .gg-opening h1::after{
+    content:"";display:block;height:1px;margin-top:12px;
+    background:linear-gradient(90deg,transparent,rgba(180,200,255,.6),transparent);
+  }
+  @keyframes ggShimmer{from{background-position:0% 0}to{background-position:230% 0}}
+  .gg-opening h2{font-size:18px;margin:0 0 14px;color:#c3ccf5;letter-spacing:2px;text-shadow:0 0 12px rgba(170,190,255,.30)}
+  /* h2 下星辉小线：脉动 */
+  .gg-opening h2::after{content:"";display:block;width:44px;height:2px;margin-top:6px;border-radius:1px;background:linear-gradient(90deg,transparent,#c3ccf5,transparent);animation:ggLinePulse 2.4s ease-in-out infinite}
+  @keyframes ggLinePulse{0%,100%{opacity:.35}50%{opacity:1}}
+  .gg-sub{margin:0 0 20px;color:#93a0c4;font-size:14px}
+  /* 中部图位：星云留白感 */
+  .gg-figure{
+    margin:0 0 22px;min-height:250px;display:flex;align-items:center;justify-content:center;
+    border:1px dashed rgba(170,190,240,.35);border-radius:14px;
+    background:radial-gradient(ellipse at center,rgba(120,140,230,.12),transparent 70%);
+  }
+  .gg-figure-placeholder{color:#7d8ab0;font-size:13px;letter-spacing:3px}
+  .gg-figure img{display:block;max-width:100%;max-height:340px;border-radius:14px;box-shadow:0 12px 32px rgba(0,0,0,.5),0 0 40px rgba(120,140,230,.30)}
+  .gg-opening .gg-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px}
+  /* 守护灵卡片：深空玻璃片 + 随机极光光点（canvas） */
+  .gg-card{
+    position:relative;overflow:hidden;
+    display:flex;flex-direction:column;gap:8px;min-height:132px;padding:16px;
+    color:#e8ecf8;text-align:left;font:inherit;
+    background:
+      radial-gradient(90px 90px at 30% 20%,rgba(160,180,240,.16),transparent 70%),
+      radial-gradient(120% 100% at 50% 0%,rgba(160,180,240,.10),transparent 60%),
+      linear-gradient(160deg,rgba(30,40,75,.55),rgba(15,20,45,.65));
+    background-size:110% 110%;
+    border:1px solid rgba(150,170,230,.28);
+    border-top-color:rgba(190,205,245,.40);
+    border-radius:14px;
+    box-shadow:inset 0 1px 0 rgba(200,215,250,.15),inset 0 0 18px rgba(0,0,0,.3),0 8px 18px rgba(0,0,0,.35);
+    cursor:pointer;
+    transition:border-color .2s ease,transform .2s ease,box-shadow .2s ease;
+    animation:ggCardBreath 3.2s ease-in-out infinite;
+  }
+  /* 常态：微呼吸辉光（非 hover 也有存在感） */
+  @keyframes ggCardBreath{
+    0%,100%{box-shadow:inset 0 1px 0 rgba(200,215,250,.15),inset 0 0 18px rgba(0,0,0,.30),0 8px 18px rgba(0,0,0,.35)}
+    50%{box-shadow:inset 0 1px 0 rgba(200,215,250,.20),inset 0 0 18px rgba(0,0,0,.26),0 8px 22px rgba(150,180,255,.16)}
+  }
+  /* 随机极光光点层：canvas 绘制（真随机漂移，无中心无周期） */
+  .gg-aurora{position:absolute;inset:0;width:100%;height:100%;z-index:2;pointer-events:none;mix-blend-mode:screen}
+  .gg-card:hover,.gg-card:focus-visible{
+    border-color:rgba(180,200,255,.60);transform:translateY(-3px);
+    animation:ggCardHover 1.2s ease-in-out infinite,ggCardFlow 6s ease-in-out infinite;
+    outline:none;
+  }
+  /* hover：呼吸加速变亮（蓝紫光晕） + 背景光斑缓缓流转 */
+  @keyframes ggCardHover{
+    0%,100%{box-shadow:inset 0 1px 0 rgba(200,215,250,.22),0 0 20px rgba(150,180,255,.28)}
+    50%{box-shadow:inset 0 1px 0 rgba(200,215,250,.30),0 0 34px rgba(150,180,255,.48)}
+  }
+  @keyframes ggCardFlow{0%,100%{background-position:0% 0%}50%{background-position:100% 100%}}
+  .gg-card:active{transform:translateY(0) scale(.98)}
+  /* 极光带：多色光带不规律飘动（背景位移+透明度+位移三变量不同步；常态慢飘，hover 加速增强） */
+  .gg-card::after{
+    content:"";position:absolute;inset:-20%;z-index:2;pointer-events:none;
+    background:
+      linear-gradient(105deg,transparent 25%,rgba(80,255,195,.28) 40%,rgba(140,180,255,.20) 50%,rgba(190,130,255,.16) 58%,rgba(255,150,200,.12) 65%,transparent 78%);
+    background-size:220% 100%;
+    filter:blur(10px);
+    mix-blend-mode:screen;
+    opacity:.35;
+    animation:ggAuroraSlow 8s ease-in-out infinite;
+  }
+  .gg-card:hover::after,.gg-card:focus-visible::after{opacity:.95;animation:ggAuroraFast 4s ease-in-out infinite}
+  @keyframes ggAuroraSlow{
+    0%,100%{background-position:0% 0%;opacity:.25;transform:translateX(-6%)}
+    30%{background-position:55% 0%;opacity:.45;transform:translateX(4%)}
+    55%{background-position:100% 0%;opacity:.30;transform:translateX(0)}
+    80%{background-position:45% 0%;opacity:.50;transform:translateX(-3%)}
+  }
+  @keyframes ggAuroraFast{
+    0%{background-position:0% 0%;opacity:.50}
+    25%{background-position:70% 0%;opacity:.95}
+    45%{background-position:110% 0%;opacity:.60}
+    65%{background-position:50% 0%;opacity:1}
+    100%{background-position:130% 0%;opacity:.55}
+  }
+  .gg-card-name{
+    font-size:21px;font-weight:700;letter-spacing:2px;
+    background:linear-gradient(100deg,#ffffff,#c3ccf5);
+    -webkit-background-clip:text;background-clip:text;
+    -webkit-text-fill-color:transparent;color:transparent;
+    transition:filter .3s ease;
+  }
+  /* 名字符纹：关羽青✦ / 赵公明金❖，缓慢旋转 */
+  .gg-card-name::before{
+    content:"✦";display:inline-block;margin-right:7px;font-size:15px;
+    color:#8ef2cd;-webkit-text-fill-color:currentColor;
+    filter:drop-shadow(0 0 6px rgba(142,242,205,.8));
+    animation:ggSpin 6s linear infinite;
+  }
+  .gg-card[data-guardian="赵公明"] .gg-card-name::before{
+    content:"❖";color:#ffcd6e;-webkit-text-fill-color:currentColor;
+    filter:drop-shadow(0 0 6px rgba(255,205,110,.8));
+  }
+  @keyframes ggSpin{to{transform:rotate(360deg)}}
+  .gg-card:hover .gg-card-name{filter:drop-shadow(0 0 9px rgba(210,225,255,.85))}
+  .gg-card-desc{font-size:13.5px;color:#a3aecb}
+  .gg-status{min-height:20px;margin:14px 0 0;font-size:13px;color:#7d8ab0}
+  .gg-status[data-state="ok"]{color:#9fd8c0}
+  .gg-status[data-state="err"]{color:#e0a0a0}
+  .gg-empty{margin:8px 0 0;font-size:13px;color:#7d8ab0}
+  .gg-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}
+  .gg-btn{
+    min-height:48px;padding:12px 24px;border-radius:14px;
+    border:1px solid rgba(150,170,230,.30);cursor:pointer;font:inherit;font-size:16px;letter-spacing:1px;
+    background:linear-gradient(160deg,rgba(40,55,100,.5),rgba(20,28,60,.6));
+    color:#e8ecf8;
+    transition:border-color .2s ease,background .2s ease,box-shadow .2s ease;
+  }
+  .gg-btn-secondary:hover,.gg-btn-secondary:focus-visible{
+    border-color:rgba(180,200,255,.55);background:rgba(70,90,150,.35);
+    box-shadow:0 0 16px rgba(150,180,255,.18);outline:none;
+  }
+  .gg-btn:disabled{opacity:.55;cursor:not-allowed}
+  @media (prefers-reduced-motion:reduce){
+    .gg-opening::before,.gg-opening::after,.gg-opening h1,.gg-card::after,
+    .gg-stars::before,.gg-stars::after,.gg-card,
+    .gg-card-name::before,.gg-opening h2::after{animation:none;transition:none}
+    .gg-meteors,.gg-aurora{display:none}
+  }
+</style>
+</head>
+<body>
+<div class="gg-opening" data-opening-protocol="1">
+  <canvas class="gg-rain" aria-hidden="true"></canvas>
+  <i class="gg-stars" aria-hidden="true"></i>
+  <canvas class="gg-meteors" aria-hidden="true"></canvas>
+  <canvas class="gg-aurora" aria-hidden="true"></canvas>
+
+  <header class="gg-head">
+    <h1>祖传玉佩</h1>
+    <p class="gg-sub">{{user}}，中元夜，玉佩在掌心发烫。两道虚影自玉中浮出。</p>
+  </header>
+
+  <!-- 中部图位：放玉佩 / 守护灵立绘。img 直接替换占位块即可（占位块仅预览用，最终版需移除） -->
+  <div class="gg-figure">
+    <div class="gg-figure-placeholder">（此处放图 · 玉佩 / 守护灵立绘）</div>
+  </div>
+
+  <!-- 步骤 1：选择守护灵 -->
+  <section class="gg-step" data-step="guardian" role="group" aria-labelledby="gg-h-guardian">
+    <h2 id="gg-h-guardian">选择你的守护灵</h2>
+    <div class="gg-cards">
+      <button type="button" class="gg-card" data-action="guardian" data-guardian="关羽">
+        <span class="gg-card-name">关羽</span>
+        <span class="gg-card-desc">丹凤眼，卧蚕眉，青龙偃月刀。武圣之威，斩邪护主。</span>
+      </button>
+      <button type="button" class="gg-card" data-action="guardian" data-guardian="赵公明">
+        <span class="gg-card-name">赵公明</span>
+        <span class="gg-card-desc">黑面浓须，执铁鞭，坐骑黑虎。正财之神，镇宅安民。</span>
+      </button>
+    </div>
+    <p class="gg-status" data-bind="status" aria-live="polite"></p>
+  </section>
+
+  <!-- 步骤 2：选择开场白（列表来自角色卡 alternate_greetings，点击即切换首消息） -->
+  <section class="gg-step" data-step="opening" hidden role="group" aria-labelledby="gg-h-opening">
+    <h2 id="gg-h-opening">选择你的开场</h2>
+    <div class="gg-cards" data-bind="openings"></div>
+    <p class="gg-empty" data-bind="openings-empty" hidden></p>
+    <div class="gg-actions">
+      <button type="button" class="gg-btn gg-btn-secondary" data-action="back">上一步</button>
+    </div>
+    <p class="gg-status" data-bind="status" aria-live="polite"></p>
+  </section>
+</div>
+
+<script>
+(function () {
+  'use strict';
+
+  // 本脚本由酒馆助手渲染器注入 TH-message iframe 中执行：
+  // predefine.js 已注入 window.SillyTavern（getContext shim）、window.TavernHelper，
+  // 以及 updateWorldbookWith / getWorldbook / replaceWorldbook / getCharWorldbookNames 等全局函数。
+  // 同时保留 window.parent 双文档降级，兼容非 iframe 直插环境。
+
+  var BIND_KEY = '__ggOpeningBinder';
+
+  function getDoc() {
+    try { var r = document.querySelector('.gg-opening[data-opening-protocol="1"]'); if (r) return { doc: document, root: r }; } catch (_) {}
+    try {
+      var p = window.parent && window.parent.document;
+      var r2 = p && p.querySelector('.gg-opening[data-opening-protocol="1"]');
+      if (r2) return { doc: p, root: r2 };
+    } catch (_) {}
+    return null;
+  }
+
+  var host = getDoc();
+  if (!host) return;
+  var root = host.root;
+  var doc = host.doc;
+  if (root[BIND_KEY] && root[BIND_KEY].alive) return;
+
+  function getCtx() {
+    try { if (window.SillyTavern && window.SillyTavern.getContext) return window.SillyTavern.getContext(); } catch (_) {}
+    try {
+      var p = window.parent && window.parent.SillyTavern;
+      if (p && p.getContext) return p.getContext();
+    } catch (_) {}
+    return null;
+  }
+
+  var GUARDIANS = ['关羽', '赵公明'];
+  var state = { guardian: null };
+  var statusEls = root.querySelectorAll('[data-bind="status"]');
+  var steps = {
+    guardian: root.querySelector('[data-step="guardian"]'),
+    opening: root.querySelector('[data-step="opening"]')
+  };
+
+  function setStatus(text, kind) {
+    for (var i = 0; i < statusEls.length; i++) {
+      statusEls[i].textContent = text || '';
+      if (kind) statusEls[i].setAttribute('data-state', kind); else statusEls[i].removeAttribute('data-state');
+    }
+  }
+
+  function showStep(name) {
+    Object.keys(steps).forEach(function (k) {
+      var el = steps[k];
+      if (!el) return;
+      var active = k === name;
+      el.hidden = !active;
+      if (active) {
+        var heading = el.querySelector('h1, h2');
+        if (heading) { try { heading.focus({ preventScroll: false }); } catch (_) {} }
+      }
+    });
+  }
+
+  // ---- 世界书条目开关（步骤①）----
+  // 注：TH 的 updateWorldbookWith 视角里 entry.name 映射自 ST 条目的 comment（JS-Slash-Runner worldbook.ts），
+  //     因此同时匹配 name 与 comment，双保险。
+  function entryHitText(e) {
+    return [e && e.name, e && e.comment].filter(Boolean).join(' ');
+  }
+
+  function findBookWithGuardianEntries() {
+    var books = [];
+    try {
+      if (typeof getCharWorldbookNames === 'function') {
+        var bind = getCharWorldbookNames('current');
+        if (bind && bind.primary) books.push(bind.primary);
+        if (bind && Array.isArray(bind.additional)) books = books.concat(bind.additional);
+      }
+    } catch (_) {}
+    if (!books.length) return Promise.resolve(null);
+    return books.reduce(function (chain, name) {
+      return chain.then(function (found) {
+        if (found) return found;
+        return getWorldbook(name).then(function (entries) {
+          var hit = entries.some(function (e) { return GUARDIANS.some(function (g) { return entryHitText(e).indexOf(g) !== -1; }); });
+          return hit ? name : null;
+        }).catch(function () { return null; });
+      });
+    }, Promise.resolve(null));
+  }
+
+  function setGuardianEntries(chosen) {
+    return findBookWithGuardianEntries().then(function (bookName) {
+      if (!bookName) throw new Error('未找到含守护灵条目的世界书（条目标题须包含「关羽」或「赵公明」）');
+      var updater = function (entries) {
+        return entries.map(function (e) {
+          var hit = GUARDIANS.filter(function (g) { return entryHitText(e).indexOf(g) !== -1; });
+          if (!hit.length) return e;
+          var copy = Object.assign({}, e);
+          copy.enabled = hit[0] === chosen;
+          return copy;
+        });
+      };
+      if (typeof updateWorldbookWith === 'function') {
+        return updateWorldbookWith(bookName, updater, { render: 'immediate' });
+      }
+      if (typeof getWorldbook === 'function' && typeof replaceWorldbook === 'function') {
+        return getWorldbook(bookName).then(function (cur) { return replaceWorldbook(bookName, updater(cur), { render: 'immediate' }); });
+      }
+      throw new Error('世界书 API 不可用（需要酒馆助手 v4.8+）');
+    });
+  }
+
+  // ---- 开场白列表（来自角色卡 alternate_greetings）----
+  function readOpenings() {
+    var ctx = getCtx();
+    if (!ctx || !ctx.characters || ctx.characterId === undefined) return null;
+    var ch = ctx.characters[ctx.characterId];
+    var list = ch && ch.data && Array.isArray(ch.data.alternate_greetings) ? ch.data.alternate_greetings : [];
+    return list.map(function (t) { return String(t || '').trim(); }).filter(Boolean);
+  }
+
+  function renderOpenings() {
+    var box = root.querySelector('[data-bind="openings"]');
+    var empty = root.querySelector('[data-bind="openings-empty"]');
+    if (!box || !empty) return;
+    box.textContent = '';
+    var list = readOpenings();
+    if (list === null) {
+      empty.textContent = '无法读取角色卡开场白（ST 上下文不可用）。';
+      empty.hidden = false;
+      return;
+    }
+    if (!list.length) {
+      empty.textContent = '角色卡暂无备选开场白：请在角色卡编辑器的「备选开场白」中填写。';
+      empty.hidden = false;
+      return;
+    }
+    empty.hidden = true;
+    list.forEach(function (text, i) {
+      var btn = doc.createElement('button');
+      btn.type = 'button';
+      btn.className = 'gg-card';
+      btn.setAttribute('data-action', 'opening');
+      btn.setAttribute('data-index', String(i));
+      var title = doc.createElement('span');
+      title.className = 'gg-card-name';
+      title.textContent = (text.split('\n')[0] || '开场白 ' + (i + 1)).slice(0, 24);
+      var desc = doc.createElement('span');
+      desc.className = 'gg-card-desc';
+      desc.textContent = text.slice(0, 40) + (text.length > 40 ? '…' : '');
+      btn.appendChild(title);
+      btn.appendChild(desc);
+      box.appendChild(btn);
+    });
+  }
+
+  // ---- 切换首消息到指定开场白（ST 原生 swipe 机制）----
+  // chat[0].swipes = [first_mes, ...alternate_greetings]，开场白 i 对应位置 i+1
+  function switchGreeting(index) {
+    return Promise.resolve().then(function () {
+      var ctx = getCtx();
+      if (!ctx || !ctx.chat || !ctx.chat.length) throw new Error('ST 聊天上下文不可用');
+      var first = ctx.chat[0];
+      if (!first || !Array.isArray(first.swipes)) throw new Error('首消息没有可切换的开场白');
+      var pos = index + 1;
+      if (pos >= first.swipes.length) throw new Error('开场白索引越界');
+      first.swipe_id = pos;
+      first.mes = first.swipes[pos];
+      var saving = ctx.saveChat ? ctx.saveChat() : Promise.resolve();
+      return saving.then(function () {
+        if (ctx.reloadCurrentChat) ctx.reloadCurrentChat();
+      });
+    });
+  }
+
+  root.addEventListener('click', function (ev) {
+    var btn = ev.target && ev.target.closest ? ev.target.closest('[data-action]') : null;
+    if (!btn) return;
+    var action = btn.getAttribute('data-action');
+    if (action === 'guardian') {
+      var g = btn.getAttribute('data-guardian');
+      btn.disabled = true;
+      setStatus('正在开启【' + g + '】的条目…');
+      setGuardianEntries(g).then(function () {
+        state.guardian = g;
+        setStatus('已开启【' + g + '】，已关闭另一条。', 'ok');
+        btn.disabled = false;
+        showStep('opening');
+      }).catch(function (err) {
+        setStatus(err && err.message ? err.message : '世界书开关失败，请检查酒馆助手是否安装。', 'err');
+        btn.disabled = false;
+      });
+    } else if (action === 'opening') {
+      var idx = Number(btn.getAttribute('data-index'));
+      setStatus('正在切换开场白…');
+      switchGreeting(idx).then(function () {
+        setStatus('已切换到所选开场白。', 'ok');
+      }).catch(function (err) {
+        setStatus('切换失败：' + (err && err.message ? err.message : err), 'err');
+      });
+    } else if (action === 'back') {
+      showStep('guardian');
+    }
+  });
+
+  renderOpenings();
+  showStep('guardian');
+  root[BIND_KEY] = { alive: true };
+})();
+</script>
+<script>
+// 下雨特效：独立模块，不依赖上方脚本的任何状态，仅做视觉渲染。
+// 防重复绑定（window.__ggRainInit）；prefers-reduced-motion 时只画一帧静态雨。
+(function () {
+  'use strict';
+  if (window.__ggRainInit) return;
+  window.__ggRainInit = true;
+
+  var root = document.querySelector('.gg-opening[data-opening-protocol="1"]');
+  if (!root) return;
+  var cv = root.querySelector('.gg-rain');
+  if (!cv) return;
+  var ctx = cv.getContext('2d');
+
+  var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var W = 0, H = 0, drops = [], raf = null;
+
+  function resize() {
+    W = cv.width = root.clientWidth;
+    H = cv.height = root.clientHeight;
+  }
+
+  function newDrop() {
+    return {
+      x: Math.random() * W,
+      y: Math.random() * H * 2 - H,
+      len: 14 + Math.random() * 16,
+      speed: 7 + Math.random() * 7,
+      alpha: 0.12 + Math.random() * 0.26
+    };
+  }
+
+  function frame() {
+    ctx.clearRect(0, 0, W, H);
+    ctx.strokeStyle = '#b8c4e8';
+    ctx.lineWidth = 1.2;
+    ctx.beginPath();
+    for (var i = 0; i < drops.length; i++) {
+      var d = drops[i];
+      d.y += d.speed;
+      if (d.y > H + d.len) { drops[i] = newDrop(); continue; }
+      ctx.globalAlpha = d.alpha;
+      ctx.moveTo(d.x, d.y);
+      ctx.lineTo(d.x, d.y - d.len);
+    }
+    ctx.stroke();
+    ctx.globalAlpha = 1;
+    raf = requestAnimationFrame(frame);
+  }
+
+  resize();
+  var count = Math.min(120, Math.max(50, Math.floor(W / 6)));
+  drops = [];
+  for (var k = 0; k < count; k++) drops.push(newDrop());
+  if (reduced) {
+    frame(); // 只画一帧，随后取消循环
+    cancelAnimationFrame(raf);
+    raf = null;
+  } else {
+    raf = requestAnimationFrame(frame);
+  }
+
+  // 尺寸自适应：优先 ResizeObserver（预览宽度切换/ST 消息宽度变化都走它），回退 window resize
+  if (window.ResizeObserver) {
+    var ro = new ResizeObserver(function () { resize(); });
+    ro.observe(root);
+  } else {
+    window.addEventListener('resize', resize);
+  }
+})();
+</script>
+<script>
+// 流星特效：独立模块。尾迹 = 从星核沿运动反方向渐变的线（严格跟随轨迹，非固定朝向）。
+// 防重复绑定（window.__ggMeteorsInit）；prefers-reduced-motion 时不启动（canvas 由 CSS 隐藏）。
+(function () {
+  'use strict';
+  if (window.__ggMeteorsInit) return;
+  window.__ggMeteorsInit = true;
+
+  var root = document.querySelector('.gg-opening[data-opening-protocol="1"]');
+  if (!root) return;
+  var cv = root.querySelector('.gg-meteors');
+  if (!cv) return;
+  var ctx = cv.getContext('2d');
+  var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  var W = 0, H = 0, raf = null, meteors = [];
+  var SPEED = 9;
+  var ANGLE = Math.PI * 0.18;       // 向右下约 32° 斜掠
+  var DIR_X = Math.cos(ANGLE), DIR_Y = Math.sin(ANGLE);
+
+  function resize() {
+    W = cv.width = root.clientWidth;
+    H = cv.height = root.clientHeight;
+  }
+
+  function spawn(i) {
+    // 三条流星从不同起点进入（横向错开），时间自然错开
+    return {
+      x: -80 - i * W * 0.30,
+      y: -40 - i * H * 0.10,
+      len: 60 + Math.random() * 40,
+      alpha: 0.5 + Math.random() * 0.4
+    };
+  }
+
+  function frame() {
+    ctx.clearRect(0, 0, W, H);
+    ctx.lineCap = 'round';
+    for (var i = 0; i < meteors.length; i++) {
+      var m = meteors[i];
+      m.x += DIR_X * SPEED;
+      m.y += DIR_Y * SPEED;
+      if (m.x > W + m.len || m.y > H + m.len) { meteors[i] = spawn(i); continue; }
+      // 拖尾：尾部在星核的运动反方向（= 它刚才经过的位置），渐变到星核
+      var tx = m.x - DIR_X * m.len;
+      var ty = m.y - DIR_Y * m.len;
+      var grad = ctx.createLinearGradient(tx, ty, m.x, m.y);
+      grad.addColorStop(0, 'rgba(210,225,255,0)');
+      grad.addColorStop(0.85, 'rgba(210,225,255,' + (0.55 * m.alpha).toFixed(2) + ')');
+      grad.addColorStop(1, 'rgba(255,255,255,.95)');
+      ctx.strokeStyle = grad;
+      ctx.lineWidth = 1.6;
+      ctx.beginPath();
+      ctx.moveTo(tx, ty);
+      ctx.lineTo(m.x, m.y);
+      ctx.stroke();
+      // 星核光晕
+      ctx.fillStyle = 'rgba(255,255,255,.9)';
+      ctx.beginPath();
+      ctx.arc(m.x, m.y, 1.6, 0, Math.PI * 2);
+      ctx.fill();
+    }
+    raf = requestAnimationFrame(frame);
+  }
+
+  resize();
+  meteors = [spawn(0), spawn(1), spawn(2)];
+  if (!reduced) raf = requestAnimationFrame(frame);
+
+  if (window.ResizeObserver) {
+    var ro = new ResizeObserver(function () { resize(); });
+    ro.observe(root);
+  } else {
+    window.addEventListener('resize', resize);
+  }
+})();
+</script>
+<script>
+// 随机极光光点：真随机——光团随机游走 + 正弦扰动 + 明暗呼吸，无中心、无周期。
+// 守护灵卡片 hover 时变多变亮；防重复绑定；reduced-motion 时不启动（canvas 由 CSS 隐藏）。
+(function () {
+  'use strict';
+  if (window.__ggAuroraInit) return;
+  window.__ggAuroraInit = true;
+
+  var root = document.querySelector('.gg-opening[data-opening-protocol="1"]');
+  if (!root) return;
+  var cv = root.querySelector('.gg-aurora');
+  if (!cv) return;
+  var ctx = cv.getContext('2d');
+  var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  var W = 0, H = 0, raf = null, dots = [], hovered = false;
+  var COLORS = [[80, 255, 195], [140, 180, 255], [190, 130, 255], [255, 150, 200], [120, 200, 255]];
+
+  function resize() {
+    W = cv.width = root.clientWidth;
+    H = cv.height = root.clientHeight;
+  }
+
+  function newDot(intense) {
+    return {
+      x: Math.random() * W,
+      y: Math.random() * H,
+      vx: (Math.random() - 0.5) * 0.5,
+      vy: (Math.random() - 0.5) * 0.5,
+      r: 8 + Math.random() * 22,
+      c: COLORS[(Math.random() * COLORS.length) | 0],
+      a: intense ? 0.25 + Math.random() * 0.40 : 0.08 + Math.random() * 0.18,
+      phase: Math.random() * Math.PI * 2,
+      sway: 0.2 + Math.random() * 0.5
+    };
+  }
+
+  function rebuild(intense) {
+    var n = intense ? 14 : 6;
+    dots = [];
+    for (var i = 0; i < n; i++) dots.push(newDot(intense));
+  }
+
+  function frame(t) {
+    ctx.clearRect(0, 0, W, H);
+    for (var i = 0; i < dots.length; i++) {
+      var d = dots[i];
+      // 随机游走（速度随机扰动 + 阻尼）
+      d.vx += (Math.random() - 0.5) * 0.12;
+      d.vy += (Math.random() - 0.5) * 0.12;
+      d.vx *= 0.98; d.vy *= 0.98;
+      d.x += d.vx + Math.sin(t * 0.001 * d.sway + d.phase) * 0.3;
+      d.y += d.vy + Math.cos(t * 0.0008 * d.sway + d.phase) * 0.3;
+      // 环绕出界（从对侧回来）
+      if (d.x < -d.r) d.x = W + d.r; else if (d.x > W + d.r) d.x = -d.r;
+      if (d.y < -d.r) d.y = H + d.r; else if (d.y > H + d.r) d.y = -d.r;
+      // 明暗呼吸（相位各不同）
+      var a = d.a * (0.7 + 0.3 * Math.sin(t * 0.0012 + d.phase * 3));
+      var g = ctx.createRadialGradient(d.x, d.y, 0, d.x, d.y, d.r);
+      g.addColorStop(0, 'rgba(' + d.c[0] + ',' + d.c[1] + ',' + d.c[2] + ',' + a.toFixed(3) + ')');
+      g.addColorStop(1, 'rgba(' + d.c[0] + ',' + d.c[1] + ',' + d.c[2] + ',0)');
+      ctx.fillStyle = g;
+      ctx.beginPath();
+      ctx.arc(d.x, d.y, d.r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+    raf = requestAnimationFrame(frame);
+  }
+
+  resize();
+  rebuild(false);
+  // hover 增强：守护灵卡片悬停时光点变多变亮
+  var cards = root.querySelectorAll('.gg-card');
+  for (var i = 0; i < cards.length; i++) {
+    cards[i].addEventListener('mouseenter', function () { hovered = true; rebuild(true); });
+    cards[i].addEventListener('mouseleave', function () { hovered = false; rebuild(false); });
+  }
+  if (!reduced) raf = requestAnimationFrame(frame);
+
+  if (window.ResizeObserver) {
+    var ro = new ResizeObserver(function () { resize(); });
+    ro.observe(root);
+  } else {
+    window.addEventListener('resize', resize);
+  }
+})();
+</script>
+</body>
+</html>
+```
+<!--gg-opening-end-->
