@@ -88,7 +88,7 @@ var __pvBooks = {
 };
 var __pvGreetings = [
   '预览开场白·壹（占位）：中元夜，玉佩在掌心发烫。',
-  '预览开场白·贰（占位）：四家香火，都认这块玉。'
+  '预览开场白·贰（占位）：人间香火，都认这块玉。'
 ];
 function __pvLog(msg) { window.__ggPreviewLog.push(msg); }
 window.getCharWorldbookNames = function () { return { primary: '预览世界书', additional: [] }; };

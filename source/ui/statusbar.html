@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+html,body{margin:0;padding:0;background:transparent}
+#ggbar{--paper:rgba(18,14,20,.94);--gold:#d9a441;--red:#c0453a;--text:#e8e2d5;--dim:#9a8f7c;--line:rgba(217,164,65,.28);
+  font-family:'Microsoft YaHei','PingFang SC',system-ui,sans-serif;color:var(--text);
+  max-width:420px;margin:6px auto;padding:10px 12px 8px;border:1px solid var(--line);border-radius:10px;
+  background:var(--paper);line-height:1.5;font-size:13px;box-sizing:border-box}
+#ggbar .h{display:flex;align-items:center;gap:8px;border-bottom:1px solid var(--line);padding-bottom:6px;margin-bottom:8px}
+#ggbar .badge{color:var(--gold);font-weight:700;letter-spacing:2px;border:1px solid var(--line);border-radius:6px;padding:1px 8px;font-size:12px;white-space:nowrap}
+#ggbar .env{color:var(--dim);font-size:12px;flex:1;text-align:right;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+#ggbar .me{color:var(--text);font-size:12px;margin:0 0 8px}
+#ggbar .sec{color:var(--gold);font-size:12px;letter-spacing:3px;margin:2px 0 6px}
+#ggbar .c{border:1px solid var(--line);border-radius:8px;padding:6px 9px;margin-bottom:6px;background:rgba(255,255,255,.02)}
+#ggbar .cn{color:var(--text);font-weight:700}
+#ggbar .cs{color:var(--dim);margin-left:8px}
+#ggbar .line{margin-top:3px;font-size:12px}
+#ggbar .hv{color:var(--red);opacity:.9}
+#ggbar .bd{color:var(--dim)}
+#ggbar .off{color:var(--dim);font-size:12px;text-align:center;padding:2px 0 0}
+#ggbar .empty{color:var(--dim);text-align:center;padding:8px 0}
+</style>
+</head>
+<body>
+<div id="ggbar" data-gg-statusbar="1"><div class="empty">状态同步中…</div></div>
+<script>
+(function () {
+  var waited = 0, RETRY = 10, STEP = 300;
+
+  function esc(s) {
+    return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+  }
+
+  function stat() {
+    try {
+      if (window.Mvu && typeof Mvu.getMvuData === 'function') {
+        var d = Mvu.getMvuData({ type: 'message', message_id: 'latest' });
+        if (d && d.stat_data) return d.stat_data;
+      }
+    } catch (e) {}
+    try {
+      if (typeof getVariables === 'function') {
+        var v = getVariables({ type: 'message', message_id: 'latest' });
+        if (v && v.stat_data) return v.stat_data;
+      }
+    } catch (e) {}
+    return null;
+  }
+
+  function render(s) {
+    var root = document.getElementById('ggbar');
+    if (!s) { root.innerHTML = '<div class="empty">（状态待同步）</div>'; return; }
+    var yb = s['玉佩'] || {}, env = s['环境'] || {}, me = s['user'] || {}, cast = s['角色'] || {};
+    var spirit = yb['当前守护灵'] || '未选';
+    var envLine = [env['日期'], env['时间'], env['地点']].filter(Boolean).join(' · ');
+    var html = '<div class="h"><span class="badge">' + esc(spirit) + '</span>' +
+      (envLine ? '<span class="env">' + esc(envLine) + '</span>' : '') + '</div>';
+    if (me['状态']) html += '<div class="me">' + esc(me['状态']) + '</div>';
+
+    var on = [], off = [];
+    for (var k in cast) {
+      var c = cast[k] || {};
+      (c['在场'] === true ? on : off).push({ c: c, k: k });
+    }
+    if (on.length) {
+      html += '<div class="sec">在场</div>';
+      for (var i = 0; i < on.length; i++) {
+        var e = on[i];
+        html += '<div class="c"><div><span class="cn">' + esc(e.c['名字'] || e.k) + '</span>' +
+          (e.c['状态'] ? '<span class="cs">' + esc(e.c['状态']) + '</span>' : '') + '</div>';
+        if (e.c['心声']) html += '<div class="line hv">心声：' + esc(e.c['心声']) + '</div>';
+        if (e.c['身体情况']) html += '<div class="line bd">身体：' + esc(e.c['身体情况']) + '</div>';
+        html += '</div>';
+      }
+    } else {
+      html += '<div class="empty">（场上无人）</div>';
+    }
+    if (off.length) {
+      var names = [];
+      for (var j = 0; j < off.length; j++) names.push(off[j].c['名字'] || off[j].k);
+      html += '<div class="off">场外：' + esc(names.join('、')) + '</div>';
+    }
+    root.innerHTML = html;
+  }
+
+  function tick() {
+    var s = stat();
+    if (s) { render(s); return; }
+    if (++waited < RETRY) { setTimeout(tick, STEP); return; }
+    render(null);
+  }
+  tick();
+})();
+</script>
+</body>
+</html>
