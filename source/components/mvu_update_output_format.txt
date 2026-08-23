@@ -8,16 +8,16 @@
 <JSONPatch>
 [
   {"op":"replace","path":"/环境/时间","value":"…"},
-  {"op":"replace","path":"/玉佩/当前守护灵","value":"关羽"},
   {"op":"replace","path":"/角色/慧慧/在场","value":true},
   {"op":"replace","path":"/角色/慧慧/心声","value":"…"},
-  {"op":"add","path":"/角色/新角色","value":{"名字":"…","在场":true,"状态":"…","心声":"…","身体情况":"…"}}
+  {"op":"add","path":"/角色/新角色","value":{"名字":"…","在场":true,"状态":"…","心声":"…"}}
 ]
 </JSONPatch>
 </UpdateVariable>
 
 要求：
 - op 只用 add / replace / remove / move
-- replace 的路径必须已存在；角色池新角色用 add 写完整五字段对象
-- 顶层容器只允许：环境、user、玉佩、角色
+- replace 的路径必须已存在；角色池新角色用 add 写完整四字段对象
+- 动态角色键使用稳定标准名；别名复用已有记录；离场只把在场 replace 为 false
+- 顶层容器只允许：环境、角色
 - 没有状态变化时不要输出本块

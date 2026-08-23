@@ -37,8 +37,9 @@ const entryContent = new Map(entryFiles.map((f) => [f.replace(/\.md$/, ''), S(pa
 //       因此条目名写入 comment；[initvar] 标记也必须在 comment 中（MVU bundle.js 匹配 comment）。
 const order = ['[mvu_update] 变量更新规则', '[mvu_update] 变量输出格式', '[mvu_update] 初始变量',
   '[mvu_plot][mvu_update] 当前变量投影',
+  '[mvu_plot] 状态栏输出',
   '[mvu_plot] 守护灵·关羽', '[mvu_plot] 守护灵·赵公明',
-  '[mvu_plot] 角色·山田凉', '[mvu_plot] 角色·慧慧', '[mvu_plot] 角色·达克妮丝', '[mvu_plot] 角色·阿库娅', '[mvu_plot] 角色·委托人',
+  '[mvu_plot] 角色·山田凉', '[mvu_plot] 角色·慧慧', '[mvu_plot] 角色·达克妮丝', '[mvu_plot] 角色·阿库娅', '[mvu_plot] 角色·委托人', '[mvu_plot] 角色·藤原千花',
   '[mvu_plot] 四宫家·辉夜',
   '[mvu_plot] 四宫家·雁庵', '[mvu_plot] 四宫家·名夜竹', '[mvu_plot] 四宫家·黄光', '[mvu_plot] 四宫家·青龙', '[mvu_plot] 四宫家·云鹰', '[mvu_plot] 四宫家·早坂爱'];
 const defs = {
@@ -46,16 +47,18 @@ const defs = {
   '[mvu_update] 变量输出格式': { constant: true, enabled: true, keys: [], comment: '[mvu_update] 变量输出格式' },
   '[mvu_update] 初始变量': { constant: false, enabled: false, keys: [], comment: '[mvu_update] 初始变量 [initvar]' },
   '[mvu_plot][mvu_update] 当前变量投影': { constant: true, enabled: true, keys: [], comment: '[mvu_plot][mvu_update] 当前变量投影' },
+  '[mvu_plot] 状态栏输出': { constant: true, enabled: true, keys: [], comment: '[mvu_plot] 状态栏输出' },
   // 守护灵条目：常驻蓝灯（constant: true）——无论玩家聊天中是否提到关键词，启用的一条始终注入上下文；
   // 开局页按钮只翻转 enabled（启用一条、关闭另一条），constant 不变。
   '[mvu_plot] 守护灵·关羽': { constant: true, enabled: true, selective: false, keys: [], comment: '[mvu_plot] 守护灵·关羽' },
   '[mvu_plot] 守护灵·赵公明': { constant: true, enabled: false, selective: false, keys: [], comment: '[mvu_plot] 守护灵·赵公明' },
   // 角色条目：绿灯（selective + keys，关键词命中当前消息才注入）——财神线角色名只在本线叙述中出现，跨线零噪音
-  '[mvu_plot] 角色·山田凉': { constant: false, enabled: true, selective: true, keys: ['山田凉', '山田'], comment: '[mvu_plot] 角色·山田凉' },
-  '[mvu_plot] 角色·慧慧': { constant: false, enabled: true, selective: true, keys: ['慧慧'], comment: '[mvu_plot] 角色·慧慧' },
-  '[mvu_plot] 角色·达克妮丝': { constant: false, enabled: true, selective: true, keys: ['达克妮丝', '女骑士'], comment: '[mvu_plot] 角色·达克妮丝' },
-  '[mvu_plot] 角色·阿库娅': { constant: false, enabled: true, selective: true, keys: ['阿库娅'], comment: '[mvu_plot] 角色·阿库娅' },
+  '[mvu_plot] 角色·山田凉': { constant: false, enabled: true, selective: true, keys: ['山田凉', '山田', '凉前辈', '山田リョウ'], comment: '[mvu_plot] 角色·山田凉' },
+  '[mvu_plot] 角色·慧慧': { constant: false, enabled: true, selective: true, keys: ['慧慧', '惠惠'], comment: '[mvu_plot] 角色·慧慧' },
+  '[mvu_plot] 角色·达克妮丝': { constant: false, enabled: true, selective: true, keys: ['达克妮丝', '达克妮斯', '女骑士', '拉拉蒂娜', '达斯提尼斯'], comment: '[mvu_plot] 角色·达克妮丝' },
+  '[mvu_plot] 角色·阿库娅': { constant: false, enabled: true, selective: true, keys: ['阿库娅', '阿克娅'], comment: '[mvu_plot] 角色·阿库娅' },
   '[mvu_plot] 角色·委托人': { constant: false, enabled: true, selective: true, keys: ['四宫', '商人', '哭诉'], comment: '[mvu_plot] 角色·委托人' },
+  '[mvu_plot] 角色·藤原千花': { constant: false, enabled: true, selective: true, keys: ['藤原千花', '千花', '藤原'], comment: '[mvu_plot] 角色·藤原千花' },
   // 四宫家系列（仇敌阵营）：正文占位待补；绿灯=人名
   '[mvu_plot] 四宫家·辉夜': { constant: false, enabled: true, selective: true, keys: ['辉夜'], comment: '[mvu_plot] 四宫家·辉夜' },
   '[mvu_plot] 四宫家·雁庵': { constant: false, enabled: true, selective: true, keys: ['雁庵'], comment: '[mvu_plot] 四宫家·雁庵' },
@@ -203,11 +206,15 @@ const card = {
   },
 };
 
-const out = path.join(root, 'artifacts/中元特供·关公.json');
+const outFlag = process.argv.indexOf('--out');
+const out = outFlag >= 0
+  ? path.resolve(root, process.argv[outFlag + 1] || '')
+  : path.join(root, 'artifacts/中元特供·关公.json');
+if (outFlag >= 0 && !process.argv[outFlag + 1]) throw new Error('--out 需要输出路径');
 fs.writeFileSync(out, JSON.stringify(card, null, 2) + '\n', 'utf8');
 
 // ---- 摘要 ----
-console.log('输出: artifacts/中元特供·关公.json');
+console.log('输出: ' + path.relative(root, out));
 console.log('first_mes: ' + card.data.first_mes.length + ' 字符 / ' + Buffer.byteLength(card.data.first_mes, 'utf8') + ' bytes');
 console.log('备选开场白: ' + openings.length + ' 条');
 console.log('世界书条目: ' + entries.length + ' 条（' + entries.filter((e) => e.enabled).length + ' 启用）');
