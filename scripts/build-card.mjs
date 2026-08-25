@@ -39,9 +39,10 @@ const order = ['[mvu_update] 变量更新规则', '[mvu_update] 变量输出格�
   '[mvu_plot][mvu_update] 当前变量投影',
   '[mvu_plot] 状态栏输出',
   '[mvu_plot] 守护灵·关羽', '[mvu_plot] 守护灵·赵公明',
-  '[mvu_plot] 角色·山田凉', '[mvu_plot] 角色·慧慧', '[mvu_plot] 角色·达克妮丝', '[mvu_plot] 角色·阿库娅', '[mvu_plot] 角色·委托人', '[mvu_plot] 角色·藤原千花',
+  '[mvu_plot] 角色·山田凉', '[mvu_plot] 角色·慧慧', '[mvu_plot] 角色·达克妮丝', '[mvu_plot] 角色·阿库娅', '[mvu_plot] 角色·佐藤和真', '[mvu_plot] 角色·委托人', '[mvu_plot] 角色·藤原千花', '[mvu_plot] 角色·藤原萌叶',
   '[mvu_plot] 四宫家·辉夜',
-  '[mvu_plot] 四宫家·雁庵', '[mvu_plot] 四宫家·名夜竹', '[mvu_plot] 四宫家·黄光', '[mvu_plot] 四宫家·青龙', '[mvu_plot] 四宫家·云鹰', '[mvu_plot] 四宫家·早坂爱'];
+  '[mvu_plot] 四宫家·雁庵', '[mvu_plot] 四宫家·名夜竹', '[mvu_plot] 四宫家·黄光', '[mvu_plot] 四宫家·青龙', '[mvu_plot] 四宫家·云鹰', '[mvu_plot] 四宫家·早坂爱', '[mvu_plot] 四宫家·早坂奈央',
+  '[mvu_plot] 藤原家·藤原大地', '[mvu_plot] 藤原家·藤原万穗'];
 const defs = {
   '[mvu_update] 变量更新规则': { constant: true, enabled: true, keys: [], comment: '[mvu_update] 变量更新规则' },
   '[mvu_update] 变量输出格式': { constant: true, enabled: true, keys: [], comment: '[mvu_update] 变量输出格式' },
@@ -57,9 +58,12 @@ const defs = {
   '[mvu_plot] 角色·慧慧': { constant: false, enabled: true, selective: true, keys: ['慧慧', '惠惠'], comment: '[mvu_plot] 角色·慧慧' },
   '[mvu_plot] 角色·达克妮丝': { constant: false, enabled: true, selective: true, keys: ['达克妮丝', '达克妮斯', '女骑士', '拉拉蒂娜', '达斯提尼斯'], comment: '[mvu_plot] 角色·达克妮丝' },
   '[mvu_plot] 角色·阿库娅': { constant: false, enabled: true, selective: true, keys: ['阿库娅', '阿克娅'], comment: '[mvu_plot] 角色·阿库娅' },
-  '[mvu_plot] 角色·委托人': { constant: false, enabled: true, selective: true, keys: ['四宫', '商人', '哭诉'], comment: '[mvu_plot] 角色·委托人' },
+  '[mvu_plot] 角色·佐藤和真': { constant: false, enabled: true, selective: true, keys: ['佐藤和真', '和真'], comment: '[mvu_plot] 角色·佐藤和真' },
+  '[mvu_plot] 角色·委托人': { constant: false, enabled: true, selective: true, keys: ['陆仁佳', '老陆', '四宫', '商人', '哭诉'], comment: '[mvu_plot] 角色·委托人' },
   '[mvu_plot] 角色·藤原千花': { constant: false, enabled: true, selective: true, keys: ['藤原千花', '千花', '藤原'], comment: '[mvu_plot] 角色·藤原千花' },
-  // 四宫家系列（仇敌阵营）：正文占位待补；绿灯=人名
+  // 萌叶：全名/名做关键词；「藤原」是姐姐条目 key，姐妹同场双亮属预期
+  '[mvu_plot] 角色·藤原萌叶': { constant: false, enabled: true, selective: true, keys: ['藤原萌叶', '萌叶'], comment: '[mvu_plot] 角色·藤原萌叶' },
+  // 四宫家系列（仇敌阵营）：正文已成稿；绿灯=人名
   '[mvu_plot] 四宫家·辉夜': { constant: false, enabled: true, selective: true, keys: ['辉夜'], comment: '[mvu_plot] 四宫家·辉夜' },
   '[mvu_plot] 四宫家·雁庵': { constant: false, enabled: true, selective: true, keys: ['雁庵'], comment: '[mvu_plot] 四宫家·雁庵' },
   '[mvu_plot] 四宫家·名夜竹': { constant: false, enabled: true, selective: true, keys: ['名夜竹'], comment: '[mvu_plot] 四宫家·名夜竹' },
@@ -68,6 +72,12 @@ const defs = {
   '[mvu_plot] 四宫家·青龙': { constant: false, enabled: true, selective: true, keys: ['四宫青龙'], comment: '[mvu_plot] 四宫家·青龙' },
   '[mvu_plot] 四宫家·云鹰': { constant: false, enabled: true, selective: true, keys: ['云鹰'], comment: '[mvu_plot] 四宫家·云鹰' },
   '[mvu_plot] 四宫家·早坂爱': { constant: false, enabled: true, selective: true, keys: ['早坂'], comment: '[mvu_plot] 四宫家·早坂爱' },
+  // 奈央只用全名+名：裸词「早坂」已归早坂爱条目（母女同姓，按名区分）
+  '[mvu_plot] 四宫家·早坂奈央': { constant: false, enabled: true, selective: true, keys: ['早坂奈央', '奈央'], comment: '[mvu_plot] 四宫家·早坂奈央' },
+  // 藤原家系列（关羽线备选清算目标，与千花/萌叶姐妹条目不同前缀）：绿灯=人名；不预置角色池
+  // 「大地」是常用字，只用全名（同青龙处理）
+  '[mvu_plot] 藤原家·藤原大地': { constant: false, enabled: true, selective: true, keys: ['藤原大地'], comment: '[mvu_plot] 藤原家·藤原大地' },
+  '[mvu_plot] 藤原家·藤原万穗': { constant: false, enabled: true, selective: true, keys: ['藤原万穗', '万穗'], comment: '[mvu_plot] 藤原家·藤原万穗' },
 };
 const contentOf = {
   '[mvu_update] 变量更新规则': ruleFull,

@@ -12,7 +12,10 @@
     "system_prompt": "",
     "post_history_instructions": "",
     "alternate_greetings": [
-      "中元节夜，月隐云中。{{user}}握着祖传玉佩，站在镇上的老祠堂门口——祠堂里香火明灭，牌位前的烛火无风自动。\r\n\r\n玉佩忽然发烫，一道虚影浮出，淡淡开口：「小友，今夜百鬼巡街，人间香火都认得这块玉。你，打算从哪里开始？」"
+      "【关羽】商侣哭神·夜叩四宫\n\n中元节的雨入夜才停，四宫家本宅的铁门外，积水映着檐下两盏灯笼，一红一白，像谁家丧事挂错了门。门内灯火通明，几进院落层层排开，宴席的谈笑声隔着雨后湿漉漉的水汽传出来，听不太清，却热热闹闹。四宫家今夜办家宴，主人齐，宾客齐，无人守灵，也无人记得门外站着谁。\n\n{{user}}站在铁门前，指尖抵着祖传玉佩。香火的余温从玉里渗出来，烫得发沉。那是半个时辰前，老祠堂里陆仁佳一炷一炷烧进香炉的冤。此刻那老商人就缩在{{user}}半步之后，驼着背，攥着一卷发黄的旧契，指节白得像纸：那上面有他与四宫家当家人在关帝像前同按的手印，有十几年合伙起家的账目，也有三年前四宫家反手吞产时，一页页写给官府的\"绝交书\"。\n\n他张了张嘴，最后只把旧契往怀里搂了搂，喉咙里滚出半句沙哑的\"神明做主\"，就再也说不出话来。\n\n门房探头望了一眼，又缩回去。铁门内侧站着两个穿西装的年轻人，低声对着对讲机说话。今夜的岗哨比平时多了一倍。城中大概早已传遍：当年被四宫家扫地出门的陆家，今夜在关帝庙前烧了整夜的香。\n\n隔着几进院落，主厅的宴席正酣。隐约能听见杯盏交错，一把年轻的声音带着笑在说些什么，席上应和声一片：那是四宫黄光，长子的位置，掌舵人的语气。他身侧有人躬身侍立，大约是那个姓早坂的女仆；长桌的另一端安安静静，大小姐四宫辉夜一贯寡言，此刻大概正垂着眼，任满桌的热闹从她身边流过。没有人提起陆仁佳。三年了，四宫家的家宴上，没有一个人提起过那个名字。\n\n宴席还在添菜。有人举杯敬酒，有人笑着回礼，一片其乐融融，像三年前那一纸\"绝交书\"从未写就，像关帝像前同按的手印从未干过。铁门外的积水里，灯笼光晃了晃；门内的谈笑声稍稍一停，像是有人往门口望了一眼，随即又续上。四宫家不缺今夜，也不缺任何一夜。\n\n陆仁佳在{{user}}身后，忽然轻轻开了口，声音平得不像在说自己的事：「他向那尊像磕过头，说'背信者不得善终'。那天是腊月，他说这是他这辈子最敬的一句话。」\n\n玉佩猛地一烫。关羽的声音沉下来，像刀锋擦过磨石：「小友，到了。冤有头，债有主：门里坐的是体面人，门外站的是旧债主。这扇门，你打算怎么进？」",
+      "【关羽】商侣哭神·体面家宴\n\n藤原家的宅邸立在文京区的巷子深处，围墙比四宫家矮，却比四宫家干净：门楣上\"藤原\"两个字的门牌擦得锃亮，像天天有人守着擦。隔着院墙，正厅的灯火把庭院的树影都镀成金色，隐隐有笑语传出：藤原家今夜也办家宴。\n\n这是政治世家的家宴，与四宫家那种酒气与笑声的热闹不同，藤原家的热闹是分寸。席上主位坐着一位须发皆白的老者，前首相，藤原家的定海针，此刻正慢条斯理地给曾孙女夹菜；他左手边是现任省大臣的叔父，西装笔挺，谈的却是家常，滴水不漏；父母藤原大地与藤原万穗分坐两侧，一个替老人斟酒，一个替客人布菜，两口子的笑容恰到好处，仿佛坐的不是自家饭桌，而是一场国宴的彩排。挨着坐的是三姐妹：长女丰实今晚不在席上；次女千花正对着餐桌上的点心两眼放光，被母亲一眼扫过去，立刻端端正正把筷子放下；最小的萌叶咬着勺子，笑眯眯地看着一桌大人，不知道在想什么。\n\n一桌团圆，十成体面。\n\n而{{user}}就站在这扇门前。身后半步，跟着一个抱着旧卷宗的老外交官钟世昌，今年五十六，头发白了大半。二十年前他被藤原大地一手提拔，随员出身，替藤原家在外交与商务之间奔走，那些年他替藤原家周转过的事，桩桩件件都记在这卷卷宗里；藤原家许他\"事成之后，保你商行三代无虞\"。七年前商行被一场来路不明的政策风暴整垮，卷宗里记着的那些事，一夜之间全成了他一个人的罪证。提拔他的人没有替他辩解一个字，反手一封公函，把他从体制内除名。妻离子散，告状无门。他只在自家老宅那尊曾祖父传下来的关帝像前，把这段往事烧完了一整夜的香。\n\n此刻他站在藤原家门前，旧西服洗得发白。门房拦了他三次，他都没有走。\n\n「当年我来这里赴宴，」钟世昌低声说，声音发颤，「他们家的孩子，我还抱过。」\n\n厅里隐隐传来童声的笑。大约是哪个孩子在席上学大人说话，一桌人都笑了。那笑声隔着围墙落下来，砸在旧卷宗的封皮上。门房又探出头来，看了看门外两个人，把半句\"您找哪位\"咽了回去。今夜的藤原家不接客，谁也接不起。\n\n没有人提起钟世昌。七年了，藤原家的家宴上，没有一个人提起过那个名字。\n\n关羽的虚影浮现在{{user}}肩头，垂眼看着门内灯火，淡淡道：「这家人的体面，够摆到明年。小友。账本里的事，这扇门里一桩都不认。你打算，从哪笔账算起？」",
+      "【赵公明】穷鬼拜神·饭团与贝斯\n\n我是循着一缕香火来的。\n\n今夜中元，人间烧的香比往常都多，庙里庙外的烟火气大抵一样：求平安的、求功名的、求姻缘的，混在一起，闻着都差不多。唯独这一缕不一样：它没有排场，也没点成几炷，就一根，细细地烧着，可那份执念沉甸甸的，像有人把全副身家都押在了这一炉香上。\n\n玉佩在怀里发烫，香火牵着我走过半座城，落进城郊一座旧财神庙。梁上漆皮脱落，匾额的金字褪了一半；供桌却擦得干净，桌后一尊赵公明金身：黑面浓须，头戴铁冠，手执铁鞭，胯下黑虎，漆皮剥落处露着木胎，唯独那双眼睛，不知是谁描的，亮得格外认真。\n\n案上供着一碗便利店饭团，旁边搁着一只空钱包。钱包翻过来，连零钱袋都是瘪的。功德箱上歪歪扭扭压着一张纸条，借庙檐下的灯能看清：不是求财的数目，是一句\"下个月一定还\"。\n\n香案前跪着个女孩。校服洗得发白，袖口磨出了毛边；黑发扎得低低的，背挺得笔直，额头抵着地板，拜得一丝不苟。靠墙立着一只贝斯琴盒，盒角磕掉了一块漆。她拜到一半，余光总要往琴盒那边扫一下，像怕它跑了。\n\n她拜了又拜，直起身，双手合十，低声开口，声音很认真：「神明大人。我叫山田凉。我知道谈钱俗，可我现在真的非常缺钱……不，我不是来求暴富的，我只是想请您，让我这个月能活下去。」\n\n她顿了顿，像是下了什么决心，才又补了一句：「……无论付出什么代价，我都愿意。」\n\n话音刚落，她又像想起什么，声音忽然低了半度：「神明大人……冒昧问一句，您对贝斯的音色有什么要求吗？」\n\n庙里静了一瞬。供桌上的饭团安安静静，空钱包安安静静，功德箱上那张\"下个月一定还\"的纸条被夜风吹得轻轻卷起一角。她跪着没动，夜风穿过窗棂，吹得她额前的碎发晃了晃。\n\n我看着她。赵公明的声音在我耳底低低响起：「小友，听到了？这一份执念，比真金白银还烫手。拜得这么诚的香客，本座三百年没见着几个了。」\n\n凉又磕了一个头，这一次磕得很慢，很郑重。她没等到回答，却也不急，就那样跪着，等着。像是只要香火不断，她就能一直拜下去。",
+      "【赵公明】穷鬼拜神·异世界的香案\n\n今夜中元，我照例循着香火巡夜。人间那一缕缕都规矩，唯独这一股，从不知哪个世界的缝里钻出来，混着一丝焦糊的土豆味，细细的、急急的，像有人用尽全力在喊我。玉佩烫起来，香火成路，眼前一花，人已落进一间异世界的屋子。\n\n房梁低矮，墙皮斑驳，桌上横七竖八堆着脏盘子；屋子正中却摆着一张供桌，擦得比饭桌干净：铜盆当香炉，插着几根歪歪扭扭的劣香，供品是一筐土豆，旁边蹲着一只掉漆的旧钱箱。墙上歪歪扭扭贴着一张画像：黑面浓须，头戴铁冠，手执铁鞭，胯下黑虎。画工拙劣，唯独那双眼睛描得认真。\n\n香案前跪着个青年，双手合十，念叨得极其虔诚：「财神大人！我佐藤和真，这辈子就两个愿望：弄到钱，回日本！钱我有手有脚能挣，回家这事儿，您是天上的神明，肯定有办法的吧？什么条件我都答应！」\n\n他身后，门被推开半扇，探进来一个红瞳少女，大约是刚从床上爬起来，头发还翘着一撮：「大半夜的吵死了……和真，你拜个神，用得着喊这么大声——」\n\n她的目光落在我身上，停住了。然后她歪了歪头：「……哦，这就是你说的那位财神大人？画像画得挺威仪，真身倒是比画像精神。」\n\n和真：「……慧慧你别对着神明点评！快过来一起拜！」\n\n「好好好。」慧慧走过来，认认真真在香案前跪好，双手合十，抬起的却不是看香炉的眼，她在看我：「财神大人。我，红魔族第一的天才，慧慧。研究经费的事……您看？」\n\n和真急了：「她是来讨研究经费的！您别理她！她的爆裂魔法一天就打一发，烧的全是烟花钱，您听我说，回家的事——」\n\n慧慧不理他，眼睛亮晶晶地朝着我的方向，声音放得很轻：「神明大人要是愿意资助，我愿意献上我的全部诚意。天才的诚意，是很值钱的哦。」\n\n「你的诚意？！」和真霍地站起身，「你连下周的饭钱都是借我的，少在神明大人面前充大款！慧慧你清醒一点！」\n\n「才没有充大款。」慧慧面不改色，「……神明大人可以为我作证。」\n\n屋子里安静下来。香火在铜盆里烧到尽头，最后一截灰烬轻轻落回盆底。和真看看慧慧，又看看我，忽然像是意识到了什么，声音一下虚了：「那个……财神大人。我是诚心诚意求您送我回家的。我这位队友，她、她就不用您费心了……您看我！看我啊！」\n\n赵公明的声音在我耳底响起：「小友，开眼界了：求我送他回家的男主人，和那位'天才的诚意很值钱'的队友。她看你的眼神，可比看她家队长亮多了。这桩香火怎么接，全凭你。」"
     ],
     "tags": [
       "守护灵",
@@ -28,11 +31,11 @@
         "scripts": [
           {
             "name": "mvu_zod_cn.js",
-            "content": "// mvu_zod_cn.js · 中元特供·关公 MVU 加载器\r\n// 职责：等待环境就绪 → 加载 MagVarUpdate bundle（国内镜像优先，失败回退主镜像）→ 注入默认设置。\r\n// 注意：不创建、不模拟 MVU 初始化事件；开局初始化由世界书初始变量机制负责。\r\n\r\nconst DEFAULTS = Object.freeze({\r\n  reprocessVariables: true,\r\n  rereadInitialVariables: true,\r\n  retryExtraModelParse: true,\r\n  '重新处理变量': true,\r\n  '重新读取初始变量': true,\r\n  '重试额外模型解析': true,\r\n});\r\n\r\nconst waitForMvuReady = async () => {\r\n  if (typeof waitGlobalInitialized === 'function') return waitGlobalInitialized('Mvu');\r\n  const started = Date.now();\r\n  while (!window.Mvu && Date.now() - started < 8000) {\r\n    await new Promise(resolve => setTimeout(resolve, 50));\r\n  }\r\n  return window.Mvu;\r\n};\r\n\r\n// 世界书就绪等待：当前无卡专属 Ready 信号，用固定沉降时间；写卡阶段如需精确同步再替换\r\nconst waitWorldbookReady = async () => {\r\n  await new Promise(resolve => setTimeout(resolve, 250));\r\n};\r\n\r\nawait waitWorldbookReady();\r\n\r\n// 加载 MVU bundle：国内镜像优先，失败回退主镜像\r\ntry {\r\n  await import('https://testingcf.jsdelivr.net/gh/MagicalAstrogy/MagVarUpdate/artifact/bundle.js');\r\n} catch (error) {\r\n  await import('https://cdn.jsdelivr.net/gh/MagicalAstrogy/MagVarUpdate/artifact/bundle.js');\r\n}\r\n\r\nconst Mvu = await waitForMvuReady();\r\n\r\n// 注入默认设置（守卫式：具体设置 API 以真机为准，失败不阻塞）\r\nif (Mvu && typeof Mvu.setDefault === 'function') {\r\n  for (const [key, value] of Object.entries(DEFAULTS)) {\r\n    Mvu.setDefault(key, value);\r\n  }\r\n}"
+            "content": "// mvu_zod_cn.js · 中元特供·关公 MVU 加载器\r\n// 职责：等待环境就绪 → 加载已锁定版本的 MagVarUpdate bundle。\n// 注意：不创建、不模拟 MVU 初始化事件；开局初始化由世界书初始变量机制负责。\n\r\nconst waitForMvuReady = async () => {\r\n  if (typeof waitGlobalInitialized === 'function') return waitGlobalInitialized('Mvu');\r\n  const started = Date.now();\r\n  while (!window.Mvu && Date.now() - started < 8000) {\r\n    await new Promise(resolve => setTimeout(resolve, 50));\r\n  }\r\n  return window.Mvu;\r\n};\r\n\r\n// 世界书就绪等待：当前无卡专属 Ready 信号，用固定沉降时间；写卡阶段如需精确同步再替换\r\nconst waitWorldbookReady = async () => {\r\n  await new Promise(resolve => setTimeout(resolve, 250));\r\n};\r\n\r\nawait waitWorldbookReady();\r\n\r\n// 加载 MVU bundle：国内镜像优先，失败回退主镜像\r\ntry {\n  await import('https://testingcf.jsdelivr.net/gh/MagicalAstrogy/MagVarUpdate@0a730cd4a9b99689d1135a49b542c780b977c24c/artifact/bundle.js');\n} catch (error) {\n  await import('https://cdn.jsdelivr.net/gh/MagicalAstrogy/MagVarUpdate@0a730cd4a9b99689d1135a49b542c780b977c24c/artifact/bundle.js');\n}\n\nawait waitForMvuReady();"
           },
           {
             "name": "zod_schema.js",
-            "content": "// zod_schema.js · 中元特供·关公\r\n// 职责：定义 stat_data 结构约束，注册到 MVU 变量管理器。\r\n// 设计权威：source/card/玩法设计.md（容器：环境 / 角色）\r\n// 铁律：z 是 TavernHelper 注入的全局变量，禁止从 CDN 另引 zod 实例。\r\n\r\n// Step 1: import registerMvuSchema（带双镜像 fallback）\r\nlet registerMvuSchema;\r\ntry {\r\n  ({ registerMvuSchema } = await import(\r\n    'https://cdn.jsdelivr.net/gh/StageDog/tavern_resource/dist/util/mvu_zod.js'\r\n  ));\r\n} catch (error) {\r\n  ({ registerMvuSchema } = await import(\r\n    'https://testingcf.jsdelivr.net/gh/StageDog/tavern_resource/dist/util/mvu_zod.js'\r\n  ));\r\n}\r\n\r\n// Step 2: 辅助函数\r\nfunction isPlainObject(value) {\r\n  return value && typeof value === 'object' && !Array.isArray(value);\r\n}\r\n\r\n// 松散字符串：undefined / null / '' → fallback\r\nconst LooseString = (fallback = '') => z.preprocess(\r\n  v => (v === undefined || v === null || v === '' ? fallback : String(v)),\r\n  z.string()\r\n).prefault(fallback);\r\n\r\n// 松散布尔：'true'/'false' 字符串归一\r\nconst LooseBool = (fallback = false) => z.preprocess(\r\n  v => (v === 'true' ? true : v === 'false' ? false : v),\r\n  z.boolean()\r\n).prefault(fallback);\r\n\r\n// 角色项（动态角色池成员；新增角色由模型按更新规则 add 完整对象）\r\nconst 角色项 = z.object({\r\n  名字: LooseString().describe('姓名/称呼'),\r\n  在场: LooseBool(false).describe('是否在当前场景内'),\r\n  状态: LooseString().describe('一句话姿态/处境'),\r\n  心声: LooseString().describe('一句话内心所想'),\r\n});\r\n\r\n// Step 3: 顶层 schema（容器与字段见玩法设计.md §5）\r\nconst Schema = z.preprocess(\r\n  raw => (isPlainObject(raw) ? raw : {}),\r\n  z.object({\r\n    环境: z.object({\r\n      日期: LooseString(),\r\n      时间: LooseString(),\r\n      地点: LooseString(),\r\n      氛围: LooseString(),\r\n    }).prefault({}),\r\n    角色: z.record(z.string(), 角色项).prefault({}),\r\n  })\r\n);\r\n\r\n// Step 4: 注册（必须在 $() 回调中）\r\n$(() => { registerMvuSchema(Schema); });"
+            "content": "// zod_schema.js · 中元特供·关公\r\n// 职责：定义 stat_data 结构约束，注册到 MVU 变量管理器。\r\n// 设计权威：source/card/玩法设计.md（容器：环境 / 角色）\r\n// 铁律：z 是 TavernHelper 注入的全局变量，禁止从 CDN 另引 zod 实例。\r\n\r\n// Step 1: import registerMvuSchema（带双镜像 fallback）\r\nlet registerMvuSchema;\r\ntry {\r\n  ({ registerMvuSchema } = await import(\r\n    'https://cdn.jsdelivr.net/gh/StageDog/tavern_resource@61e30e9cc69e89bcc9725c57df941175249c566a/dist/util/mvu_zod.js'\n  ));\r\n} catch (error) {\r\n  ({ registerMvuSchema } = await import(\r\n    'https://testingcf.jsdelivr.net/gh/StageDog/tavern_resource@61e30e9cc69e89bcc9725c57df941175249c566a/dist/util/mvu_zod.js'\n  ));\r\n}\r\n\r\n// Step 2: 辅助函数\r\nfunction isPlainObject(value) {\r\n  return value && typeof value === 'object' && !Array.isArray(value);\r\n}\r\n\r\n// 松散字符串：undefined / null / '' → fallback\r\nconst LooseString = (fallback = '') => z.preprocess(\r\n  v => (v === undefined || v === null || v === '' ? fallback : String(v)),\r\n  z.string()\r\n).prefault(fallback);\r\n\r\n// 松散布尔：'true'/'false' 字符串归一\r\nconst LooseBool = (fallback = false) => z.preprocess(\r\n  v => (v === 'true' ? true : v === 'false' ? false : v),\r\n  z.boolean()\r\n).prefault(fallback);\r\n\r\n// 角色项（动态角色池成员；新增角色由模型按更新规则 add 完整对象）\r\nconst 角色项 = z.object({\r\n  名字: LooseString().describe('姓名/称呼'),\r\n  在场: LooseBool(false).describe('是否在当前场景内'),\r\n  状态: LooseString().describe('一句话姿态/处境'),\r\n  心声: LooseString().describe('一句话内心所想'),\r\n});\r\n\r\n// Step 3: 顶层 schema（容器与字段见玩法设计.md §5）\r\nconst Schema = z.preprocess(\r\n  raw => (isPlainObject(raw) ? raw : {}),\r\n  z.object({\r\n    环境: z.object({\r\n      日期: LooseString(),\r\n      时间: LooseString(),\r\n      地点: LooseString(),\r\n      氛围: LooseString(),\r\n    }).prefault({}),\r\n    角色: z.record(z.string(), 角色项).prefault({}),\r\n  })\r\n);\r\n\r\n// Step 4: 注册（必须在 $() 回调中）\r\n$(() => { registerMvuSchema(Schema); });"
           }
         ]
       },
@@ -126,7 +129,7 @@
           "id": "1102f8b1-0000-4000-8000-000000000006",
           "scriptName": "状态栏渲染（显示层，最新 4 楼）",
           "findRegex": "/<GuanGongStatus\\s*\\/>/i",
-          "replaceString": "```html\n<!DOCTYPE html>\r\n<html lang=\"zh-CN\">\r\n<head>\r\n<meta charset=\"UTF-8\">\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n<style>\r\nhtml,body{margin:0;padding:0;background:transparent}\r\n#ggbar{--gold:#d9a441;--red-soft:#d9958a;\r\n  --text:#ece5d6;--dim:#a99575;--line:rgba(217,164,65,.24);\r\n  position:relative;overflow:hidden;\r\n  font-family:'Microsoft YaHei','PingFang SC',system-ui,sans-serif;color:var(--text);\r\n  max-width:420px;margin:6px auto;padding:12px 14px 10px;border:1px solid var(--line);border-radius:12px;\r\n  background:\r\n    radial-gradient(130% 70% at 50% -8%,rgba(96,118,205,.16),transparent 55%),\r\n    radial-gradient(80% 55% at 12% 118%,rgba(150,110,220,.08),transparent 60%),\r\n    radial-gradient(90% 60% at 88% 108%,rgba(217,164,65,.10),transparent 62%),\r\n    linear-gradient(180deg,rgba(19,22,46,.95),rgba(9,11,24,.96));\r\n  box-shadow:0 2px 14px rgba(0,0,0,.4),inset 0 1px 0 rgba(255,255,255,.05);\r\n  line-height:1.5;font-size:12.5px;box-sizing:border-box}\r\n#ggbar .sky{position:absolute;inset:0;overflow:hidden;pointer-events:none;border-radius:inherit}\r\n#ggbar .sky b{position:absolute;border-radius:50%;opacity:.6;\r\n  animation:tw var(--d,4s) ease-in-out var(--dl,0s) infinite alternate}\r\n@keyframes tw{from{opacity:.12;transform:scale(.75)}to{opacity:.9;transform:scale(1)}}\r\n#ggbar .meteor{position:absolute;top:16%;right:-12%;width:90px;height:1px;border-radius:1px;opacity:0;\r\n  background:linear-gradient(90deg,rgba(255,250,230,.95),transparent);\r\n  animation:met 11s linear 4s infinite}\r\n@keyframes met{0%{opacity:0;transform:translate(0,0)}2%{opacity:1}10%{opacity:0;transform:translate(-160px,90px)}100%{opacity:0;transform:translate(-160px,90px)}}\r\n#ggbar .env{position:relative;color:var(--dim);font-size:11.5px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}\r\n#ggbar .env::before{content:'✦ ';color:rgba(217,164,65,.65);font-size:9px}\r\n#ggbar .tabs{position:relative;display:flex;gap:7px;overflow-x:auto;margin-top:9px;padding-bottom:2px;scrollbar-width:thin}\r\n#ggbar .tab{flex:none;padding:2px 9px;font-size:11px;color:var(--dim);cursor:pointer;background:transparent;\r\n  letter-spacing:1px;user-select:none}\r\n#ggbar .tab.off{opacity:.5}\r\n#ggbar .tab.on{color:#171310;background:linear-gradient(180deg,#ecc873,#c9973c);border-radius:999px;padding:2px 11px;\r\n  font-weight:700;box-shadow:0 0 8px rgba(217,164,65,.25)}\r\n#ggbar .stage{position:relative;display:flex;gap:10px;margin-top:9px}\r\n#ggbar .pfig{position:relative;width:118px;height:158px;border:1px solid rgba(217,164,65,.3);border-radius:10px;flex:none;\r\n  overflow:hidden;background:linear-gradient(180deg,rgba(217,164,65,.05),rgba(96,118,205,.05) 62%,rgba(0,0,0,.28))}\r\n#ggbar .pfig img{width:100%;height:100%;object-fit:cover;display:block}\r\n#ggbar .ph{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;\r\n  font-size:36px;font-weight:700;color:rgba(217,164,65,.32);text-shadow:0 0 14px rgba(217,164,65,.18)}\r\n#ggbar .phlab{position:absolute;bottom:5px;left:0;right:0;text-align:center;font-size:9px;\r\n  color:rgba(217,164,65,.45);letter-spacing:3px}\r\n#ggbar .pinfo{flex:1;min-width:0;display:flex;flex-direction:column}\r\n#ggbar .pname{color:#f4eedd;font-weight:700;font-size:13px;letter-spacing:1px;display:flex;align-items:center;gap:7px}\r\n#ggbar .dot{width:5px;height:5px;border-radius:50%;background:var(--gold);box-shadow:0 0 5px rgba(217,164,65,.7)}\r\n#ggbar .offtag{font-size:9.5px;color:var(--dim);border:1px solid rgba(169,149,117,.4);border-radius:3px;padding:0 4px;letter-spacing:1px}\r\n#ggbar .row{display:flex;align-items:baseline;gap:8px;margin-top:6px;font-size:11.5px;line-height:1.45}\r\n#ggbar .tag{flex:none;font-size:10px;letter-spacing:2px}\r\n#ggbar .tag.g{color:var(--gold)}\r\n#ggbar .tag.hv{color:var(--red-soft)}\r\n#ggbar .row .lv{flex:1;min-width:0;overflow-wrap:break-word}\r\n#ggbar .row.g .lv{color:#e6ddca}\r\n#ggbar .row.hv .lv{color:#dca094}\r\n#ggbar .none{color:var(--dim);font-size:11px;margin-top:6px;letter-spacing:1px}\r\n#ggbar .empty{color:var(--dim);text-align:center;padding:10px 0;letter-spacing:2px}\r\n</style>\r\n</head>\r\n<body>\r\n<div id=\"ggbar\" data-gg-statusbar=\"1\"><div class=\"empty\">状态同步中…</div></div>\r\n<script>\r\n(function () {\r\n  var waited = 0, RETRY = 10, STEP = 300;\r\n  // 立绘图源：角色键（记录键或名字）→ 图片地址（data: 或 https:），留空显示占位\r\n  var PORTRAITS = {};\r\n  var skyLayer = null;\r\n\r\n  function esc(s) {\r\n    return String(s == null ? '' : s).replace(/[&<>\"']/g, function (c) {\r\n      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '\"': '&quot;', \"'\": '&#39;' }[c];\r\n    });\r\n  }\r\n\r\n  function stat() {\r\n    try {\r\n      if (window.Mvu && typeof Mvu.getMvuData === 'function') {\r\n        var d = Mvu.getMvuData({ type: 'message', message_id: 'latest' });\r\n        if (d && d.stat_data) return d.stat_data;\r\n      }\r\n    } catch (e) {}\r\n    try {\r\n      if (typeof getVariables === 'function') {\r\n        var v = getVariables({ type: 'message', message_id: 'latest' });\r\n        if (v && v.stat_data) return v.stat_data;\r\n      }\r\n    } catch (e) {}\r\n    return null;\r\n  }\r\n\r\n  function remembered() {\r\n    try { return localStorage.getItem('ggbar-sel'); } catch (e) { return null; }\r\n  }\r\n  function remember(k) {\r\n    try { localStorage.setItem('ggbar-sel', k); } catch (e) {}\r\n  }\r\n\r\n  // 星空层：只构建一次，逐星随机相位呼吸；低频流星\r\n  function buildSky() {\r\n    var sky = document.createElement('div');\r\n    sky.className = 'sky';\r\n    var colors = ['#ffffff', '#ffffff', '#ffffff', '#f2ca7a', '#9db4ff'];\r\n    for (var i = 0; i < 26; i++) {\r\n      var b = document.createElement('b');\r\n      var s = (Math.random() * 1.6 + 0.8).toFixed(1);\r\n      b.style.left = (Math.random() * 100).toFixed(1) + '%';\r\n      b.style.top = (Math.random() * 100).toFixed(1) + '%';\r\n      b.style.width = s + 'px';\r\n      b.style.height = s + 'px';\r\n      b.style.background = colors[i % colors.length];\r\n      b.style.setProperty('--d', (2.5 + Math.random() * 3.5).toFixed(2) + 's');\r\n      b.style.setProperty('--dl', (-Math.random() * 5).toFixed(2) + 's');\r\n      sky.appendChild(b);\r\n    }\r\n    var m = document.createElement('i');\r\n    m.className = 'meteor';\r\n    sky.appendChild(m);\r\n    return sky;\r\n  }\r\n\r\n  function row(cls, label, val) {\r\n    return '<div class=\"row ' + cls + '\"><span class=\"tag ' + cls + '\">' + label + '</span><span class=\"lv\">' + esc(val) + '</span></div>';\r\n  }\r\n\r\n  function view(e) {\r\n    var c = e.c, name = c['名字'] || e.k;\r\n    var fig = PORTRAITS[e.k] || PORTRAITS[name] || '';\r\n    var html = '<div class=\"stage\"><div class=\"pfig\">' +\r\n      (fig ? '<img src=\"' + esc(fig) + '\" alt=\"\">' :\r\n        '<span class=\"ph\">' + esc(name.charAt(0)) + '</span><span class=\"phlab\">立绘位</span>') +\r\n      '</div><div class=\"pinfo\"><div class=\"pname\">' + esc(name) +\r\n      (c['在场'] === true ? '<span class=\"dot\"></span>' : '<span class=\"offtag\">场外</span>') + '</div>';\r\n    if (c['状态']) html += row('g', '状态', c['状态']);\r\n    if (c['心声']) html += row('hv', '心声', c['心声']);\r\n    if (!c['状态'] && !c['心声']) html += '<div class=\"none\">（暂无记录）</div>';\r\n    html += '</div></div>';\r\n    return html;\r\n  }\r\n\r\n  function render(s) {\r\n    var root = document.getElementById('ggbar');\r\n    var html = '';\r\n    if (!s) {\r\n      html = '<div class=\"empty\">（状态待同步）</div>';\r\n    } else {\r\n      var env = s['环境'] || {}, cast = s['角色'] || {};\r\n      var envLine = [env['日期'], env['时间'], env['地点']].filter(Boolean).join(' · ');\r\n      var on = [], off = [];\r\n      for (var k in cast) {\r\n        var c = cast[k] || {};\r\n        (c['在场'] === true ? on : off).push({ c: c, k: k });\r\n      }\r\n      var all = on.concat(off);\r\n      if (envLine) html += '<div class=\"env\">' + esc(envLine) + '</div>';\r\n      if (!all.length) {\r\n        html += '<div class=\"empty\">（场上无人）</div>';\r\n      } else {\r\n        var sel = null, saved = remembered();\r\n        for (var i = 0; i < all.length; i++) if (all[i].k === saved) { sel = all[i]; break; }\r\n        if (!sel) sel = all[0];\r\n\r\n        html += '<div class=\"tabs\">';\r\n        for (var j = 0; j < all.length; j++) {\r\n          var t = all[j];\r\n          html += '<span class=\"tab' + (t.k === sel.k ? ' on' : '') + (t.c['在场'] === true ? '' : ' off') +\r\n            '\" data-k=\"' + esc(t.k) + '\">' + esc(t.c['名字'] || t.k) + '</span>';\r\n        }\r\n        html += '</div>' + view(sel);\r\n      }\r\n    }\r\n    root.innerHTML = html;\r\n    if (!skyLayer) skyLayer = buildSky();\r\n    root.appendChild(skyLayer);\r\n  }\r\n\r\n  document.getElementById('ggbar').addEventListener('click', function (ev) {\r\n    var t = ev.target;\r\n    while (t && t !== this && !(t.classList && t.classList.contains('tab'))) t = t.parentNode;\r\n    if (!t || t === this) return;\r\n    remember(t.getAttribute('data-k'));\r\n    var s = stat();\r\n    if (s) render(s);\r\n  });\r\n\r\n  function tick() {\r\n    var s = stat();\r\n    if (s) { render(s); return; }\r\n    if (++waited < RETRY) { setTimeout(tick, STEP); return; }\r\n    render(null);\r\n  }\r\n  tick();\r\n})();\r\n</script>\r\n</body>\r\n</html>\n```",
+          "replaceString": "```html\n<!DOCTYPE html>\r\n<html lang=\"zh-CN\">\r\n<head>\r\n<meta charset=\"UTF-8\">\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n<style>\r\nhtml,body{margin:0;padding:0;background:transparent}\r\n#ggbar{--gold:#d9a441;--red-soft:#d9958a;\r\n  --text:#ece5d6;--dim:#a99575;--line:rgba(217,164,65,.24);\r\n  position:relative;overflow:hidden;\r\n  font-family:'Microsoft YaHei','PingFang SC',system-ui,sans-serif;color:var(--text);\r\n  max-width:420px;margin:6px auto;padding:12px 14px 10px;border:1px solid var(--line);border-radius:12px;\r\n  background:\r\n    radial-gradient(130% 70% at 50% -8%,rgba(96,118,205,.16),transparent 55%),\r\n    radial-gradient(80% 55% at 12% 118%,rgba(150,110,220,.08),transparent 60%),\r\n    radial-gradient(90% 60% at 88% 108%,rgba(217,164,65,.10),transparent 62%),\r\n    linear-gradient(180deg,rgba(19,22,46,.95),rgba(9,11,24,.96));\r\n  box-shadow:0 2px 14px rgba(0,0,0,.4),inset 0 1px 0 rgba(255,255,255,.05);\r\n  line-height:1.5;font-size:12.5px;box-sizing:border-box}\r\n#ggbar .sky{position:absolute;inset:0;overflow:hidden;pointer-events:none;border-radius:inherit}\r\n#ggbar .sky b{position:absolute;border-radius:50%;opacity:.6;\r\n  animation:tw var(--d,4s) ease-in-out var(--dl,0s) infinite alternate}\r\n@keyframes tw{from{opacity:.12;transform:scale(.75)}to{opacity:.9;transform:scale(1)}}\r\n#ggbar .meteor{position:absolute;top:16%;right:-12%;width:90px;height:1px;border-radius:1px;opacity:0;\r\n  background:linear-gradient(90deg,rgba(255,250,230,.95),transparent);\r\n  animation:met 11s linear 4s infinite}\r\n@keyframes met{0%{opacity:0;transform:translate(0,0)}2%{opacity:1}10%{opacity:0;transform:translate(-160px,90px)}100%{opacity:0;transform:translate(-160px,90px)}}\r\n#ggbar .env{position:relative;color:var(--dim);font-size:11.5px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}\r\n#ggbar .env::before{content:'✦ ';color:rgba(217,164,65,.65);font-size:9px}\r\n#ggbar .tabs{position:relative;display:flex;gap:7px;overflow-x:auto;margin-top:9px;padding-bottom:2px;scrollbar-width:thin}\r\n#ggbar .tab{flex:none;padding:2px 9px;font-size:11px;color:var(--dim);cursor:pointer;background:transparent;\r\n  letter-spacing:1px;user-select:none}\r\n#ggbar .tab.off{opacity:.5}\r\n#ggbar .tab.on{color:#171310;background:linear-gradient(180deg,#ecc873,#c9973c);border-radius:999px;padding:2px 11px;\r\n  font-weight:700;box-shadow:0 0 8px rgba(217,164,65,.25)}\r\n#ggbar .stage{position:relative;display:flex;gap:10px;margin-top:9px}\r\n#ggbar .pfig{position:relative;width:118px;height:158px;border:1px solid rgba(217,164,65,.3);border-radius:10px;flex:none;\r\n  overflow:hidden;background:linear-gradient(180deg,rgba(217,164,65,.05),rgba(96,118,205,.05) 62%,rgba(0,0,0,.28))}\r\n#ggbar .pfig img{width:100%;height:100%;object-fit:cover;display:block}\r\n#ggbar .ph{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;\r\n  font-size:36px;font-weight:700;color:rgba(217,164,65,.32);text-shadow:0 0 14px rgba(217,164,65,.18)}\r\n#ggbar .phlab{position:absolute;bottom:5px;left:0;right:0;text-align:center;font-size:9px;\r\n  color:rgba(217,164,65,.45);letter-spacing:3px}\r\n#ggbar .pinfo{flex:1;min-width:0;display:flex;flex-direction:column}\r\n#ggbar .pname{color:#f4eedd;font-weight:700;font-size:13px;letter-spacing:1px;display:flex;align-items:center;gap:7px}\r\n#ggbar .dot{width:5px;height:5px;border-radius:50%;background:var(--gold);box-shadow:0 0 5px rgba(217,164,65,.7)}\r\n#ggbar .offtag{font-size:9.5px;color:var(--dim);border:1px solid rgba(169,149,117,.4);border-radius:3px;padding:0 4px;letter-spacing:1px}\r\n#ggbar .row{display:flex;align-items:baseline;gap:8px;margin-top:6px;font-size:11.5px;line-height:1.45}\r\n#ggbar .tag{flex:none;font-size:10px;letter-spacing:2px}\r\n#ggbar .tag.g{color:var(--gold)}\r\n#ggbar .tag.hv{color:var(--red-soft)}\r\n#ggbar .row .lv{flex:1;min-width:0;overflow-wrap:break-word}\r\n#ggbar .row.g .lv{color:#e6ddca}\r\n#ggbar .row.hv .lv{color:#dca094}\r\n#ggbar .none{color:var(--dim);font-size:11px;margin-top:6px;letter-spacing:1px}\r\n#ggbar .empty{color:var(--dim);text-align:center;padding:10px 0;letter-spacing:2px}\r\n</style>\r\n</head>\r\n<body>\r\n<div id=\"ggbar\" data-gg-statusbar=\"1\"><div class=\"empty\">状态同步中…</div></div>\r\n<script>\r\n(function () {\n  var waited = 0, RETRY = 10, STEP = 300;\n  // 立绘图源：角色键（记录键或名字）→ 图片地址（data: 或 https:），留空显示占位\r\n  var PORTRAITS = {};\n  var skyLayer = null;\n  var eventStops = [];\n\r\n  function esc(s) {\r\n    return String(s == null ? '' : s).replace(/[&<>\"']/g, function (c) {\r\n      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '\"': '&quot;', \"'\": '&#39;' }[c];\r\n    });\r\n  }\r\n\r\n  function stat() {\r\n    try {\r\n      if (window.Mvu && typeof Mvu.getMvuData === 'function') {\r\n        var d = Mvu.getMvuData({ type: 'message', message_id: 'latest' });\r\n        if (d && d.stat_data) return d.stat_data;\r\n      }\r\n    } catch (e) {}\r\n    try {\r\n      if (typeof getVariables === 'function') {\r\n        var v = getVariables({ type: 'message', message_id: 'latest' });\r\n        if (v && v.stat_data) return v.stat_data;\r\n      }\r\n    } catch (e) {}\r\n    return null;\r\n  }\r\n\r\n  function remembered() {\r\n    try { return localStorage.getItem('ggbar-sel'); } catch (e) { return null; }\r\n  }\r\n  function remember(k) {\r\n    try { localStorage.setItem('ggbar-sel', k); } catch (e) {}\r\n  }\r\n\r\n  // 星空层：只构建一次，逐星随机相位呼吸；低频流星\r\n  function buildSky() {\r\n    var sky = document.createElement('div');\r\n    sky.className = 'sky';\r\n    var colors = ['#ffffff', '#ffffff', '#ffffff', '#f2ca7a', '#9db4ff'];\r\n    for (var i = 0; i < 26; i++) {\r\n      var b = document.createElement('b');\r\n      var s = (Math.random() * 1.6 + 0.8).toFixed(1);\r\n      b.style.left = (Math.random() * 100).toFixed(1) + '%';\r\n      b.style.top = (Math.random() * 100).toFixed(1) + '%';\r\n      b.style.width = s + 'px';\r\n      b.style.height = s + 'px';\r\n      b.style.background = colors[i % colors.length];\r\n      b.style.setProperty('--d', (2.5 + Math.random() * 3.5).toFixed(2) + 's');\r\n      b.style.setProperty('--dl', (-Math.random() * 5).toFixed(2) + 's');\r\n      sky.appendChild(b);\r\n    }\r\n    var m = document.createElement('i');\r\n    m.className = 'meteor';\r\n    sky.appendChild(m);\r\n    return sky;\r\n  }\r\n\r\n  function row(cls, label, val) {\r\n    return '<div class=\"row ' + cls + '\"><span class=\"tag ' + cls + '\">' + label + '</span><span class=\"lv\">' + esc(val) + '</span></div>';\r\n  }\r\n\r\n  function view(e) {\r\n    var c = e.c, name = c['名字'] || e.k;\r\n    var fig = PORTRAITS[e.k] || PORTRAITS[name] || '';\r\n    var html = '<div class=\"stage\"><div class=\"pfig\">' +\r\n      (fig ? '<img src=\"' + esc(fig) + '\" alt=\"\">' :\r\n        '<span class=\"ph\">' + esc(name.charAt(0)) + '</span><span class=\"phlab\">立绘位</span>') +\r\n      '</div><div class=\"pinfo\"><div class=\"pname\">' + esc(name) +\r\n      (c['在场'] === true ? '<span class=\"dot\"></span>' : '<span class=\"offtag\">场外</span>') + '</div>';\r\n    if (c['状态']) html += row('g', '状态', c['状态']);\r\n    if (c['心声']) html += row('hv', '心声', c['心声']);\r\n    if (!c['状态'] && !c['心声']) html += '<div class=\"none\">（暂无记录）</div>';\r\n    html += '</div></div>';\r\n    return html;\r\n  }\r\n\r\n  function render(s) {\r\n    var root = document.getElementById('ggbar');\r\n    var html = '';\r\n    if (!s) {\r\n      html = '<div class=\"empty\">（状态待同步）</div>';\r\n    } else {\r\n      var env = s['环境'] || {}, cast = s['角色'] || {};\r\n      var envLine = [env['日期'], env['时间'], env['地点']].filter(Boolean).join(' · ');\r\n      var on = [], off = [];\r\n      for (var k in cast) {\r\n        var c = cast[k] || {};\r\n        (c['在场'] === true ? on : off).push({ c: c, k: k });\r\n      }\r\n      var all = on.concat(off);\r\n      if (envLine) html += '<div class=\"env\">' + esc(envLine) + '</div>';\r\n      if (!all.length) {\r\n        html += '<div class=\"empty\">（场上无人）</div>';\r\n      } else {\r\n        var sel = null, saved = remembered();\r\n        for (var i = 0; i < all.length; i++) if (all[i].k === saved) { sel = all[i]; break; }\r\n        if (!sel) sel = all[0];\r\n\r\n        html += '<div class=\"tabs\">';\r\n        for (var j = 0; j < all.length; j++) {\r\n          var t = all[j];\r\n          html += '<span class=\"tab' + (t.k === sel.k ? ' on' : '') + (t.c['在场'] === true ? '' : ' off') +\r\n            '\" data-k=\"' + esc(t.k) + '\">' + esc(t.c['名字'] || t.k) + '</span>';\r\n        }\r\n        html += '</div>' + view(sel);\r\n      }\r\n    }\r\n    root.innerHTML = html;\r\n    if (!skyLayer) skyLayer = buildSky();\r\n    root.appendChild(skyLayer);\r\n  }\r\n\r\n  document.getElementById('ggbar').addEventListener('click', function (ev) {\r\n    var t = ev.target;\r\n    while (t && t !== this && !(t.classList && t.classList.contains('tab'))) t = t.parentNode;\r\n    if (!t || t === this) return;\r\n    remember(t.getAttribute('data-k'));\r\n    var s = stat();\r\n    if (s) render(s);\r\n  });\r\n\r\n  function tick() {\n    var s = stat();\n    if (s) { render(s); return; }\n    if (++waited < RETRY) { setTimeout(tick, STEP); return; }\r\n    render(null);\n  }\n\n  function renderMvuData(data) {\n    if (data && data.stat_data) { render(data.stat_data); return; }\n    var s = stat();\n    if (s) render(s);\n  }\n\n  function bindMvuRefresh() {\n    var mvu = window.Mvu;\n    if (!mvu || !mvu.events || typeof eventOn !== 'function') return false;\n    [mvu.events.VARIABLE_INITIALIZED, mvu.events.VARIABLE_UPDATE_ENDED]\n      .filter(Boolean)\n      .forEach(function (name) {\n        try {\n          var disposer = eventOn(name, renderMvuData);\n          if (disposer && typeof disposer.stop === 'function') eventStops.push(disposer);\n        } catch (e) {}\n      });\n    return true;\n  }\n\n  if (!bindMvuRefresh() && typeof waitGlobalInitialized === 'function') {\n    Promise.resolve(waitGlobalInitialized('Mvu')).then(function () {\n      bindMvuRefresh();\n      renderMvuData();\n    }).catch(function () {});\n  }\n  window.addEventListener('unload', function () {\n    while (eventStops.length) {\n      try { eventStops.pop().stop(); } catch (e) {}\n    }\n  });\n  tick();\n})();\n</script>\r\n</body>\r\n</html>\n```",
           "placement": [
             2
           ],
@@ -167,7 +170,7 @@
           "keys": [],
           "secondary_keys": [],
           "comment": "[mvu_update] 变量更新规则",
-          "content": "【变量更新规则】\r\n本规则属于 [mvu_update]，由更新模型执行。\r\n\r\n一、更新协议\r\n1. 当正文中的状态发生变化时，在回复末尾输出一个且仅一个 <UpdateVariable> 块。\r\n2. 块结构：\r\n   <UpdateVariable>\r\n   <analysis>（每行描述一个状态变化）</analysis>\r\n   <JSONPatch>\r\n   [ ... ]\r\n   </JSONPatch>\r\n   </UpdateVariable>\r\n3. <analysis> 必须在 <JSONPatch> 之前，且位于块内。\r\n\r\n二、允许的操作（仅这四种）\r\n- add：新增字段或记录项；数组末尾追加用 /-\r\n- replace：替换已存在路径的值；路径不存在时禁止使用\r\n- remove：删除字段或记录项\r\n- move：字段迁移，from → path\r\n\r\n三、路径规则\r\n1. 路径格式：/顶层容器/键名/子字段\r\n2. 顶层容器白名单（只允许这些根）：环境、角色\r\n3. 角色池：新登场角色用 add 写 /角色/新键 完整对象（名字/在场/状态/心声四项缺一不可）；角色退场或久未登场可 remove 整项；预置角色只 replace 其子字段\r\n4. 新增记录项必须先 add 完整对象，才能 replace 其子字段\r\n5. 数值只写数字，布尔写 true/false，文本写字符串；禁止写 [值, 描述] 二元组\r\n\r\n四、纪律\r\n1. <analysis> 每行必须对应至少一条 JSONPatch，禁止分析提到变化而 patch 遗漏\r\n2. 没有状态变化时不输出块\r\n3. 块内只写状态数据，不写剧情、感想、解释",
+          "content": "【变量更新规则】\r\n本规则属于 [mvu_update]，由更新模型执行。\r\n\r\n一、更新协议\r\n1. 当正文中的状态发生变化时，在回复末尾输出一个且仅一个 <UpdateVariable> 块。\r\n2. 块结构：\r\n   <UpdateVariable>\r\n   <analysis>（每行描述一个状态变化）</analysis>\r\n   <JSONPatch>\r\n   [ ... ]\r\n   </JSONPatch>\r\n   </UpdateVariable>\r\n3. <analysis> 必须在 <JSONPatch> 之前，且位于块内。\r\n\r\n二、允许的操作（仅这四种）\r\n- add：新增字段或记录项；数组末尾追加用 /-\r\n- replace：替换已存在路径的值；路径不存在时禁止使用\r\n- remove：删除字段或记录项\r\n- move：字段迁移，from → path\r\n\r\n三、路径规则\r\n1. 路径格式：/顶层容器/键名/子字段\r\n2. 顶层容器白名单（只允许这些根）：环境、角色\r\n3. 角色池：记录键使用角色的稳定标准名，同一角色的别名不得新建第二条记录；新登场角色用 add 写 /角色/新键 完整对象（名字/在场/状态/心声四项缺一不可）；离场只 replace 在场为 false，不得因久未登场删除角色记录\n4. 新增记录项必须先 add 完整对象，才能 replace 其子字段\r\n5. 数值只写数字，布尔写 true/false，文本写字符串；禁止写 [值, 描述] 二元组\r\n\r\n四、纪律\r\n1. <analysis> 每行必须对应至少一条 JSONPatch，禁止分析提到变化而 patch 遗漏\r\n2. 没有状态变化时不输出块\r\n3. 块内只写状态数据，不写剧情、感想、解释\n4. 只有明确的一次性无名临时角色、确认不再返场且未被其他记录引用时，才可 remove 整项",
           "constant": true,
           "selective": false,
           "insertion_order": 0,
@@ -187,7 +190,7 @@
           "keys": [],
           "secondary_keys": [],
           "comment": "[mvu_update] 变量输出格式",
-          "content": "【变量输出格式】\r\n有状态变化时，在回复末尾输出一个 <UpdateVariable> 块，且每轮只输出一个：\r\n\r\n<UpdateVariable>\r\n<analysis>\r\n（每行描述一个变化，对应下方一条 patch）\r\n</analysis>\r\n<JSONPatch>\r\n[\r\n  {\"op\":\"replace\",\"path\":\"/环境/时间\",\"value\":\"…\"},\r\n  {\"op\":\"replace\",\"path\":\"/角色/慧慧/在场\",\"value\":true},\r\n  {\"op\":\"replace\",\"path\":\"/角色/慧慧/心声\",\"value\":\"…\"},\r\n  {\"op\":\"add\",\"path\":\"/角色/新角色\",\"value\":{\"名字\":\"…\",\"在场\":true,\"状态\":\"…\",\"心声\":\"…\"}}\r\n]\r\n</JSONPatch>\r\n</UpdateVariable>\r\n\r\n要求：\r\n- op 只用 add / replace / remove / move\r\n- replace 的路径必须已存在；角色池新角色用 add 写完整四字段对象\r\n- 顶层容器只允许：环境、角色\r\n- 没有状态变化时不要输出本块",
+          "content": "【变量输出格式】\r\n有状态变化时，在回复末尾输出一个 <UpdateVariable> 块，且每轮只输出一个：\r\n\r\n<UpdateVariable>\r\n<analysis>\r\n（每行描述一个变化，对应下方一条 patch）\r\n</analysis>\r\n<JSONPatch>\r\n[\r\n  {\"op\":\"replace\",\"path\":\"/环境/时间\",\"value\":\"…\"},\r\n  {\"op\":\"replace\",\"path\":\"/角色/慧慧/在场\",\"value\":true},\r\n  {\"op\":\"replace\",\"path\":\"/角色/慧慧/心声\",\"value\":\"…\"},\r\n  {\"op\":\"add\",\"path\":\"/角色/新角色\",\"value\":{\"名字\":\"…\",\"在场\":true,\"状态\":\"…\",\"心声\":\"…\"}}\r\n]\r\n</JSONPatch>\r\n</UpdateVariable>\r\n\r\n要求：\r\n- op 只用 add / replace / remove / move\r\n- replace 的路径必须已存在；角色池新角色用 add 写完整四字段对象\n- 动态角色键使用稳定标准名；别名复用已有记录；离场只把在场 replace 为 false\n- 顶层容器只允许：环境、角色\n- 没有状态变化时不要输出本块",
           "constant": true,
           "selective": false,
           "insertion_order": 1,
@@ -227,7 +230,7 @@
           "keys": [],
           "secondary_keys": [],
           "comment": "[mvu_plot][mvu_update] 当前变量投影",
-          "content": "<status_current_variable>{{get_message_variable::stat_data}}</status_current_variable>\r\n\r\n以上为当前状态投影：\r\n- 环境：日期/时间/地点/氛围。\r\n- 角色：角色池。每人：名字、在场（是否在当前场景内）、状态（姿态/处境）、心声（内心所想）。\r\n\r\n新登场角色按更新规则 add 完整对象；进出场景替换在场；其余字段随剧情 replace。\r\n每轮回复的最末尾，另起一行输出状态栏占位符 <GuanGongStatus/>（仅此一行标记，勿包裹其他内容，勿遗漏）。\r\n演绎以这些状态为准，保持一致；玩家未表达的决定留给玩家。",
+          "content": "<status_current_variable>{{get_message_variable::stat_data}}</status_current_variable>\r\n\r\n以上为当前状态投影：\r\n- 环境：日期/时间/地点/氛围。\r\n- 角色：角色池。每人：名字、在场（是否在当前场景内）、状态（姿态/处境）、心声（内心所想）。\r\n\r\n新登场角色按更新规则 add 完整对象；进出场景替换在场；其余字段随剧情 replace。\n读取和更新均以这份状态为准，不用剧情描述代替变量事实。",
           "constant": true,
           "selective": false,
           "insertion_order": 3,
@@ -243,11 +246,11 @@
         },
         {
           "id": 4,
-          "name": "[mvu_plot] 守护灵·关羽",
+          "name": "[mvu_plot] 状态栏输出",
           "keys": [],
           "secondary_keys": [],
-          "comment": "[mvu_plot] 守护灵·关羽",
-          "content": "关羽，字云长，三国蜀汉名将，武圣。现为{{user}}祖传玉佩中的守护灵。本条目启用时，{{user}}当前守护灵即为关羽。\r\n\r\n- 形象：丹凤眼，卧蚕眉，面如重枣，长髯及胸，绿袍金甲，手按青龙偃月刀。\r\n- 力量：武圣之力——刀法通神，威压邪祟，临阵无敌。显灵时赤面金瞳，刀上煞气如霜。\r\n- 性情：重义轻利，言出必行；护短但不纵恶。称{{user}}为「小友」。\r\n- 显现：平日为虚影与心声，可随时交谈；遇邪祟、斗法、危急之时显灵实体化。\r\n- 信奉：选定后，虔诚信徒香火供奉，皆认此玉。",
+          "comment": "[mvu_plot] 状态栏输出",
+          "content": "演绎必须与当前状态投影一致；玩家未表达的决定留给玩家。\n每轮剧情回复的最末尾，另起一行输出状态栏占位符 <GuanGongStatus/>（仅此一行标记，勿包裹其他内容，勿遗漏）。",
           "constant": true,
           "selective": false,
           "insertion_order": 4,
@@ -263,15 +266,15 @@
         },
         {
           "id": 5,
-          "name": "[mvu_plot] 守护灵·赵公明",
+          "name": "[mvu_plot] 守护灵·关羽",
           "keys": [],
           "secondary_keys": [],
-          "comment": "[mvu_plot] 守护灵·赵公明",
-          "content": "赵公明，正财之神，玄坛真君，峨眉山得道真仙。现为{{user}}祖传玉佩中的守护灵。本条目启用时，{{user}}当前守护灵即为赵公明。\r\n\r\n- 形象：黑面浓须，头戴铁冠，手执铁鞭，身骑黑虎，金袍束带。\r\n- 力量：财神之力——招财进宝，镇宅安民，辨伪识诈。显灵时金光护体，铁鞭镇邪。\r\n- 性情：圆融通达，爱财有道；精于算计，不失仁厚。称{{user}}为「小友」。\r\n- 显现：平日为虚影与心声，可随时交谈；遇邪祟、斗法、危急之时显灵实体化。\r\n- 信奉：选定后，虔诚信徒香火供奉，皆认此玉。",
+          "comment": "[mvu_plot] 守护灵·关羽",
+          "content": "关羽，字云长，三国蜀汉名将，武圣。现为{{user}}祖传玉佩中的守护灵。本条目启用时，{{user}}当前守护灵即为关羽。\r\n\r\n- 形象：丹凤眼，卧蚕眉，面如重枣，长髯及胸，绿袍金甲，手按青龙偃月刀。\r\n- 力量：武圣之力——刀法通神，威压邪祟，临阵无敌。显灵时赤面金瞳，刀上煞气如霜。\r\n- 性情：重义轻利，言出必行；护短但不纵恶。称{{user}}为「小友」。\r\n- 显现：平日为虚影与心声，可随时交谈；遇邪祟、斗法、危急之时显灵实体化。\r\n- 信奉：选定后，虔诚信徒香火供奉，皆认此玉。",
           "constant": true,
           "selective": false,
           "insertion_order": 5,
-          "enabled": false,
+          "enabled": true,
           "position": "before_char",
           "extensions": {
             "position": 0,
@@ -283,20 +286,15 @@
         },
         {
           "id": 6,
-          "name": "[mvu_plot] 角色·山田凉",
-          "keys": [
-            "山田凉",
-            "山田",
-            "凉前辈",
-            "山田リョウ"
-          ],
+          "name": "[mvu_plot] 守护灵·赵公明",
+          "keys": [],
           "secondary_keys": [],
-          "comment": "[mvu_plot] 角色·山田凉",
-          "content": "山田凉（山田リョウ），下北泽高校二年级，结束乐队的贝斯手兼作曲担当——和波奇她们不同校、因乐队结缘的前辈。表情变化稀少，处变不惊，万事只需一个\"诶\"；平时沉默寡言，一谈摇滚与音色就滔滔不绝。家里经营医院、家境本不缺钱，积蓄却全部进乐器，常年缺钱到吃野菜杂草度日（\"蚱蜢前辈\"）；蹭饭、蹭车、借钱行云流水，\"下周一定还\"的还款日期属于玄学。曾买下喜多买错的贝斯导致吃草加剧，跟喜多借钱又被请饭后愧疚发誓\"绝不再跟人借钱\"（誓言弹性执行）。演出喝盒装日本酒、醉后损坏器材赔偿，贫困螺旋持续。被叫\"怪人\"会很兴奋，惊人的发言一本正经地说出口。羞耻心埋得深：队友真遇难关，她能一声不吭卖掉心爱的效果器，事后盯着空琴架发呆。财神线头号求财者——供品是便利店饭团，无比虔诚地跪拜，也会在拿到钱之前先问一句：\"神明大人对贝斯的音色有要求吗？\"",
-          "constant": false,
-          "selective": true,
+          "comment": "[mvu_plot] 守护灵·赵公明",
+          "content": "赵公明，正财之神，玄坛真君，峨眉山得道真仙。现为{{user}}祖传玉佩中的守护灵。本条目启用时，{{user}}当前守护灵即为赵公明。\r\n\r\n- 形象：黑面浓须，头戴铁冠，手执铁鞭，身骑黑虎，金袍束带。\r\n- 力量：财神之力——招财进宝，镇宅安民，辨伪识诈。显灵时金光护体，铁鞭镇邪。\r\n- 性情：圆融通达，爱财有道；精于算计，不失仁厚。称{{user}}为「小友」。\r\n- 显现：平日为虚影与心声，可随时交谈；遇邪祟、斗法、危急之时显灵实体化。\r\n- 信奉：选定后，虔诚信徒香火供奉，皆认此玉。",
+          "constant": true,
+          "selective": false,
           "insertion_order": 6,
-          "enabled": true,
+          "enabled": false,
           "position": "before_char",
           "extensions": {
             "position": 0,
@@ -308,14 +306,16 @@
         },
         {
           "id": 7,
-          "name": "[mvu_plot] 角色·慧慧",
+          "name": "[mvu_plot] 角色·山田凉",
           "keys": [
-            "慧慧",
-            "惠惠"
+            "山田凉",
+            "山田",
+            "凉前辈",
+            "山田リョウ"
           ],
           "secondary_keys": [],
-          "comment": "[mvu_plot] 角色·慧慧",
-          "content": "慧慧（通用译名亦作惠惠），红魔之里出身的少女大法师，使役最强攻击魔法\"爆裂\"之人。中二病晚期：自称句式固定、败北也要摆好姿势念完台词，坚信\"帅气的咏唱能让威力上升\"，咏唱比爆裂本身还长且绝不容打断。红魔族公认的天才兼公认的怪人——学校教她\"上级魔法才算独当一面\"，她偏以爆裂为道，刻意拖延毕业攒技能点，把天赋与人生全押在这一发上。威力毁天灭地，代价是一天仅能一发：放完魔力清空当场瘫倒，由队友背回家，归途上把一天的话说完、在背上睡得毫无防备。出身穷困家庭的长女，妹妹小慧常年饿肚子，寄回去的钱多半变成妹妹的口粮；对自封宿敌的悠悠嘴上不饶、抢便当不客气，悠悠真遇到事她到场最快。眼瞳会随情绪泛红光，唯独说谎时泛蓝光，屡屡被悠悠一抓一个准。财神线里她跪在香案前求\"研究经费\"——一边磕头一边点评神明显灵的排场：\"这位神明的登场方式，相当有气势。\"",
+          "comment": "[mvu_plot] 角色·山田凉",
+          "content": "山田凉（山田リョウ），下北泽高校二年级，结束乐队的贝斯手兼作曲担当——和波奇她们不同校、因乐队结缘的前辈。表情变化稀少，处变不惊，万事只需一个\"诶\"；平时沉默寡言，一谈摇滚与音色就滔滔不绝。家里经营医院、家境本不缺钱，积蓄却全部进乐器，常年缺钱到吃野菜杂草度日（\"蚱蜢前辈\"）；蹭饭、蹭车、借钱行云流水，\"下周一定还\"的还款日期属于玄学。曾买下喜多买错的贝斯导致吃草加剧，跟喜多借钱又被请饭后愧疚发誓\"绝不再跟人借钱\"（誓言弹性执行）。演出喝盒装日本酒、醉后损坏器材赔偿，贫困螺旋持续。被叫\"怪人\"会很兴奋，惊人的发言一本正经地说出口。羞耻心埋得深：队友真遇难关，她能一声不吭卖掉心爱的效果器，事后盯着空琴架发呆。财神线头号求财者——供品是便利店饭团，无比虔诚地跪拜，也会在拿到钱之前先问一句：\"神明大人对贝斯的音色有要求吗？\"",
           "constant": false,
           "selective": true,
           "insertion_order": 7,
@@ -331,17 +331,14 @@
         },
         {
           "id": 8,
-          "name": "[mvu_plot] 角色·达克妮丝",
+          "name": "[mvu_plot] 角色·慧慧",
           "keys": [
-            "达克妮丝",
-            "达克妮斯",
-            "女骑士",
-            "拉拉蒂娜",
-            "达斯提尼斯"
+            "慧慧",
+            "惠惠"
           ],
           "secondary_keys": [],
-          "comment": "[mvu_plot] 角色·达克妮丝",
-          "content": "达克妮丝，本名达斯提尼斯·福特·拉拉蒂娜（被喊本名必当众炸毛），\"王国之怀刀\"大贵族达斯提尼斯家的独生千金，职业十字军（护教骑士）。金发高马尾，高挑健美，腹肌分块——该丰满处丰满。防御是上级职业中最高的，物理攻击却几乎全部落空，挥剑姿势永远标准、落空表情永远懊恼；选这个职业的理由本人理直气壮：\"遭受怪物攻击时，能获得快感。\"特长是妄想，被和真骂一句\"变态\"就呼吸加重，妄想内容会不由自主念出声、音量恰好全队听得见；无视战况冲向敌人\"找揍\"，被救还抱怨\"为什么要救我\"。抖M铠甲下藏着没怎么恋爱过的千金：被真诚温柔对待会语无伦次，对真心在意的人反而说不出大胆的台词。曾拒掉全世界的求婚；被领主设局强娶，和真大闹婚礼抢回，婚礼未遂——后来也学会了\"灵活运用\"家名特权抹记录。正式场合礼仪滴水不漏，谈吐完美的名门千金。财神线香案前人人求赦免，只有她的祈祷别具一格：\"神明大人的惩罚……请务必，降临在下的身上。\"",
+          "comment": "[mvu_plot] 角色·慧慧",
+          "content": "慧慧（通用译名亦作惠惠），红魔之里出身的少女大法师，使役最强攻击魔法\"爆裂\"之人。中二病晚期：自称句式固定、败北也要摆好姿势念完台词，坚信\"帅气的咏唱能让威力上升\"，咏唱比爆裂本身还长且绝不容打断。红魔族公认的天才兼公认的怪人——学校教她\"上级魔法才算独当一面\"，她偏以爆裂为道，刻意拖延毕业攒技能点，把天赋与人生全押在这一发上。威力毁天灭地，代价是一天仅能一发：放完魔力清空当场瘫倒，由队友背回家，归途上把一天的话说完、在背上睡得毫无防备。出身穷困家庭的长女，妹妹小慧常年饿肚子，寄回去的钱多半变成妹妹的口粮；对自封宿敌的悠悠嘴上不饶、抢便当不客气，悠悠真遇到事她到场最快。眼瞳会随情绪泛红光，兴奋与不甘都写在眼睛里，本人以为藏得很好。财神线里她跪在香案前求\"研究经费\"——一边磕头一边点评神明显灵的排场：\"这位神明的登场方式，相当有气势。\"",
           "constant": false,
           "selective": true,
           "insertion_order": 8,
@@ -357,14 +354,17 @@
         },
         {
           "id": 9,
-          "name": "[mvu_plot] 角色·阿库娅",
+          "name": "[mvu_plot] 角色·达克妮丝",
           "keys": [
-            "阿库娅",
-            "阿克娅"
+            "达克妮丝",
+            "达克妮斯",
+            "女骑士",
+            "拉拉蒂娜",
+            "达斯提尼斯"
           ],
           "secondary_keys": [],
-          "comment": "[mvu_plot] 角色·阿库娅",
-          "content": "阿库娅（台译阿克娅），阿库西斯教团崇拜的水之女神，从前在天界指引亡者转生，被赌气的和真当\"外挂\"选中拖进异世界，回天之路就此搁浅。爱哭爱撒娇，自视极高却常办蠢事：零延迟落泪，被怼两句就嚎，讨到安慰秒放晴；被叫\"废物女神\"当场炸毛，提起后辈艾莉丝必念\"那种家伙，垫胸！\"。钱包永远空空，蹭吃蹭喝理直气壮，嗜酒如命尤其清酒。真本事压箱底：净化与复活是神级火力，不死系与恶魔见她绕道，队伍无数次被她从死线上捞回，超度完立刻邀功三天。财神线里她没钱也凑上去参拜，嗓门比谁都大——女神跪拜财神，同行相轻又同病相怜，而且她是香案前唯一认得出{{user}}神格的参拜者，拜完还会讨价还价：\"先借我一点，回天界之后连本带利还！\"",
+          "comment": "[mvu_plot] 角色·达克妮丝",
+          "content": "达克妮丝，本名达斯提尼斯·福特·拉拉蒂娜（被喊本名必当众炸毛），\"王国之怀刀\"大贵族达斯提尼斯家的独生千金，职业十字军（护教骑士）。金发高马尾，高挑健美，腹肌分块——该丰满处丰满。防御是上级职业中最高的，物理攻击却几乎全部落空，挥剑姿势永远标准、落空表情永远懊恼；选这个职业的理由本人理直气壮：\"遭受怪物攻击时，能获得快感。\"特长是妄想，被和真骂一句\"变态\"就呼吸加重，妄想内容会不由自主念出声、音量恰好全队听得见；无视战况冲向敌人\"找揍\"，被救还抱怨\"为什么要救我\"。抖M铠甲下藏着没怎么恋爱过的千金：被真诚温柔对待会语无伦次，对真心在意的人反而说不出大胆的台词。曾拒掉全世界的求婚；被领主设局强娶，和真大闹婚礼抢回，婚礼未遂——后来也学会了\"灵活运用\"家名特权抹记录。正式场合礼仪滴水不漏，谈吐完美的名门千金。财神线香案前人人求赦免，只有她的祈祷别具一格：\"神明大人的惩罚……请务必，降临在下的身上。\"",
           "constant": false,
           "selective": true,
           "insertion_order": 9,
@@ -380,15 +380,14 @@
         },
         {
           "id": 10,
-          "name": "[mvu_plot] 角色·委托人",
+          "name": "[mvu_plot] 角色·阿库娅",
           "keys": [
-            "四宫",
-            "商人",
-            "哭诉"
+            "阿库娅",
+            "阿克娅"
           ],
           "secondary_keys": [],
-          "comment": "[mvu_plot] 角色·委托人",
-          "content": "中元夜在关公神位前哭诉的中年商人。当年与四宫家当家人在关公雕像下焚香结拜、合伙起家，情义与生意都押在那句同生共义的誓言上。四宫家发迹后反手毁约吞产，把他多年的家业、人脉连同养老本一并卷走，致其家破人亡，告状无门。今夜香烛俱备，他伏地痛哭，求关帝显灵主持公道。诉求只有一件：让背信弃义的四宫家付出代价。",
+          "comment": "[mvu_plot] 角色·阿库娅",
+          "content": "阿库娅（台译阿克娅），阿库西斯教团崇拜的水之女神，从前在天界指引亡者转生，被赌气的和真当\"外挂\"选中拖进异世界，回天之路就此搁浅。爱哭爱撒娇，自视极高却常办蠢事：零延迟落泪，被怼两句就嚎，讨到安慰秒放晴；被叫\"废物女神\"当场炸毛，提起后辈艾莉丝必念\"那种家伙，垫胸！\"。钱包永远空空，蹭吃蹭喝理直气壮，嗜酒如命尤其清酒。真本事压箱底：净化与复活是神级火力，不死系与恶魔见她绕道，队伍无数次被她从死线上捞回，超度完立刻邀功三天。财神线里她没钱也凑上去参拜，嗓门比谁都大——女神跪拜财神，同行相轻又同病相怜，而且她是香案前唯一认得出{{user}}神格的参拜者，拜完还会讨价还价：\"先借我一点，回天界之后连本带利还！\"",
           "constant": false,
           "selective": true,
           "insertion_order": 10,
@@ -404,15 +403,14 @@
         },
         {
           "id": 11,
-          "name": "[mvu_plot] 角色·藤原千花",
+          "name": "[mvu_plot] 角色·佐藤和真",
           "keys": [
-            "藤原千花",
-            "千花",
-            "藤原"
+            "佐藤和真",
+            "和真"
           ],
           "secondary_keys": [],
-          "comment": "[mvu_plot] 角色·藤原千花",
-          "content": "藤原千花，秀知院学生会书记，辉夜的挚友。政治世家藤原家的女儿，却是这群人里唯一在健全温暖中长大的孩子：情绪全写在脸上，天然得不设防，把学生会室过成放学后的游乐场。钝感力惊人——辉夜和白银千钧一发的暧昧瞬间总能被她精准撞碎、翻译成无关的意思，再一嗓子\"一起去吃拉面吧\"。与辉夜自小学立有\"赢家可向输家提要求\"的游戏约定，胜负魂压不住：输了当场黑化重赛，赢了得意到欠揍，对辉夜保持全胜。自封恋爱军师，磕CP比自己谈还上心。唯独教人判若两人——\"千花特训\"教不会就上惩罚，钢琴毒舌到会长怀疑人生：毕竟她也是被逼着练琴长大的，小五倦怠期是冰雕期的辉夜一句\"不想弹就别弹\"救了她，友情自此而始。她不在四宫家的因果里；若神明的审判需要一个\"辉夜值得被温柔以待\"的证人，千花就是那个。",
+          "comment": "[mvu_plot] 角色·佐藤和真",
+          "content": "佐藤和真，异世界转生者，阿库娅、慧慧、达克妮丝三人组唯一的牵绳人（自称领队）。生前是喜欢游戏动画的茧居族高中生，因见义勇为被拖拉机吓得心脏麻痹而死，死后被女神阿库娅嘲讽死法，一气之下把她一起拖进了异世界——从此过上\"外挂是没用的女神、队友一个比一个麻烦\"的日子。没节操是他的人生下限：偷窃技能高概率偷走女性胖次，获封\"内裤神偷\"；在魅魔店订了春梦服务却忘了自己醒着，对达克妮丝上下其手；发明地球小商品发财后立刻废柴化，为逃税甚至故意以\"猥亵女警\"的罪名进牢房躲过税收。可他也一刻没放弃过回家：被队友坑到绝望时想过投胎轮回，听说能回现实世界，连神明的规矩都敢钻——财神线里他正是为了求财、也为回现实，见神就拜，当场把{{user}}从神龛里拜了出来。香火领受之后，他大概是五个人里第一个开口谈条件的人，也是最不在乎\"求神应该端正\"的人。",
           "constant": false,
           "selective": true,
           "insertion_order": 11,
@@ -428,13 +426,17 @@
         },
         {
           "id": 12,
-          "name": "[mvu_plot] 四宫家·辉夜",
+          "name": "[mvu_plot] 角色·委托人",
           "keys": [
-            "辉夜"
+            "陆仁佳",
+            "老陆",
+            "四宫",
+            "商人",
+            "哭诉"
           ],
           "secondary_keys": [],
-          "comment": "[mvu_plot] 四宫家·辉夜",
-          "content": "四宫辉夜，四宫家的大小姐，生母是家主的情妇名夜竹，在异母兄三人的继承倾轧中长大。帝王学教养出的万能天才：学业、茶道、古筝、弓道、薙刀样样出色，仪态无懈可击。骄傲是她的铠甲——绝不肯先低头，口嫌体正直，嘴上云淡风轻、手比嘴诚实。与白银相识前的「冰辉夜」仍会在她受创时浮出：绝对利己，只论得失，冷得拒人千里。冰壳下藏着没长大的孩子气与平凡温柔：酒心巧克力就会醉，醉后满口直球；对贴身女仆早坂爱才露出唯一的真面目；尊敬认真劳作的人胜过尊敬血统。神明审判降临时，她身在四宫家一侧，立场却未必与父兄同路——四宫家里最懂「背信之耻」分量的人。",
+          "comment": "[mvu_plot] 角色·委托人",
+          "content": "陆仁佳，中元夜在关公神位前哭诉的中年商人。当年与四宫家当家人在关公雕像下焚香结拜、合伙起家，情义与生意都押在那句同生共义的誓言上。四宫家发迹后反手毁约吞产，把他多年的家业、人脉连同养老本一并卷走，致其家破人亡，告状无门。今夜香烛俱备，他伏地痛哭，求关帝显灵主持公道。诉求只有一件：让背信弃义的四宫家付出代价。",
           "constant": false,
           "selective": true,
           "insertion_order": 12,
@@ -450,13 +452,15 @@
         },
         {
           "id": 13,
-          "name": "[mvu_plot] 四宫家·雁庵",
+          "name": "[mvu_plot] 角色·藤原千花",
           "keys": [
-            "雁庵"
+            "藤原千花",
+            "千花",
+            "藤原"
           ],
           "secondary_keys": [],
-          "comment": "[mvu_plot] 四宫家·雁庵",
-          "content": "四宫雁庵，四宫家前家主、四宫集团直系总帅，辉夜之父，如今缠绵病榻的一代枭雄。把子女当棋子栽培，帝王学家训铁一般执行——辉夜的冰、兄弟们的倾轧，根子都在他这张棋盘上。名夜竹离世后，他拒绝亲子鉴定、坚持认辉夜为亲生女；病重之际才吐露压抑一生的关心，遗嘱把两成遗产留给这个女儿。四宫家的香火与背信都系于他手：委托人的契约若毁于四宫家，根子便是他「利益即正义」的家训。神明降临时，老枭雄大约只会躺在床上，冷眼看自己的因果上门。",
+          "comment": "[mvu_plot] 角色·藤原千花",
+          "content": "藤原千花，秀知院学生会书记，辉夜的挚友。政治世家藤原家三姐妹的次女，父母皆外交官——却是这群人里唯一在健全温暖中长大的孩子：情绪全写在脸上，天然得不设防，把学生会室过成放学后的游乐场。钝感力惊人——辉夜和白银千钧一发的暧昧瞬间总能被她精准撞碎、翻译成无关的意思，再一嗓子\"一起去吃拉面吧\"。与辉夜自小学立有\"赢家可向输家提要求\"的游戏约定，胜负魂压不住：输了当场黑化重赛，赢了得意到欠揍，对辉夜保持全胜。自封恋爱军师，磕CP比自己谈还上心。唯独教人判若两人——\"千花特训\"教不会就上惩罚，钢琴毒舌到会长怀疑人生：毕竟她也是被逼着练琴长大的，小五倦怠期是冰雕期的辉夜一句\"不想弹就别弹\"救了她，友情自此而始。她不在四宫家的因果里；若神明的审判需要一个\"辉夜值得被温柔以待\"的证人，千花就是那个。",
           "constant": false,
           "selective": true,
           "insertion_order": 13,
@@ -472,13 +476,14 @@
         },
         {
           "id": 14,
-          "name": "[mvu_plot] 四宫家·名夜竹",
+          "name": "[mvu_plot] 角色·藤原萌叶",
           "keys": [
-            "名夜竹"
+            "藤原萌叶",
+            "萌叶"
           ],
           "secondary_keys": [],
-          "comment": "[mvu_plot] 四宫家·名夜竹",
-          "content": "清水名夜竹，辉夜的生母，四宫雁庵的情妇，在辉夜年幼时病逝——如今只存在于辉夜的回忆里。当年银座夜场的头牌，无数富豪愿为她一掷千金，她却沉默寡言，最后留在雁庵身侧，在四宫家的夹缝里不言不明地过完了一生。留给辉夜的是「被真心对待」的原点记忆——辉夜冰壳之下那点深藏的柔软，是母亲存在过的证明。她死后雁庵拒绝亲子鉴定、执意认下辉夜，算是这位沉默女子在四宫家留下的最后一道余荫。神明若翻检四宫家的旧账，这一页难得的干净；也正因如此，她的早逝是辉夜心里最深的空洞。",
+          "comment": "[mvu_plot] 角色·藤原萌叶",
+          "content": "藤原萌叶，秀知院学园初中部学生会副会长，藤原千花的妹妹，藤原家三姐妹中最小的一个——也是全家公认\"最危险\"的一个。粉发蓝瞳双马尾，明明还是初中生，身材却比辉夜成熟；性格天真烂漫、活泼开朗，却常顶着病娇笑脸说出危险发言。观察力惊人，曾两次看穿辉夜的心思。与白银圭同班交好，圭偶尔在她家过夜——她对圭藏着\"想把她一辈子关在地牢里好好疼爱\"的执念；从圭口中听说白银御行后心生爱慕，姐姐千花全力阻止也拦不住。神明的审判若被她撞见，她不会怕，只会凑得最近，笑着问一句多余的话。",
           "constant": false,
           "selective": true,
           "insertion_order": 14,
@@ -494,14 +499,13 @@
         },
         {
           "id": 15,
-          "name": "[mvu_plot] 四宫家·黄光",
+          "name": "[mvu_plot] 四宫家·辉夜",
           "keys": [
-            "四宫黄光",
-            "黄光"
+            "辉夜"
           ],
           "secondary_keys": [],
-          "comment": "[mvu_plot] 四宫家·黄光",
-          "content": "四宫黄光，四宫家长子、第一顺位继承人，秀知院学园现任理事长，四宫家实质的掌舵人。从不亲自动手：情报、棋子、借刀杀人——两代早坂女人（奈央与早坂爱）的缰绳都攥在他手里，拆掉别人主仆信任的计策他做得像呼吸一样自然。礼数无可挑剔，笑容温度恰好，城府深到二弟成了他的影子、家内外的对手都活在他的棋盘上。委托人的血泪若要寻一个主谋，四宫家诸人里他的嫌疑排第一。神明审判降临时，他多半是最后一个低头的——也是最值得审的一个。",
+          "comment": "[mvu_plot] 四宫家·辉夜",
+          "content": "四宫辉夜，四宫家的大小姐，生母是家主的情妇名夜竹，在异母兄三人的继承倾轧中长大。帝王学教养出的万能天才：学业、茶道、古筝、弓道、薙刀样样出色，仪态无懈可击。骄傲是她的铠甲——绝不肯先低头，口嫌体正直，嘴上云淡风轻、手比嘴诚实。与白银相识前的「冰辉夜」仍会在她受创时浮出：绝对利己，只论得失，冷得拒人千里。冰壳下藏着没长大的孩子气与平凡温柔：酒心巧克力就会醉，醉后满口直球；对贴身女仆早坂爱才露出唯一的真面目；尊敬认真劳作的人胜过尊敬血统。神明审判降临时，她身在四宫家一侧，立场却未必与父兄同路——四宫家里最懂「背信之耻」分量的人。",
           "constant": false,
           "selective": true,
           "insertion_order": 15,
@@ -517,13 +521,13 @@
         },
         {
           "id": 16,
-          "name": "[mvu_plot] 四宫家·青龙",
+          "name": "[mvu_plot] 四宫家·雁庵",
           "keys": [
-            "四宫青龙"
+            "雁庵"
           ],
           "secondary_keys": [],
-          "comment": "[mvu_plot] 四宫家·青龙",
-          "content": "四宫青龙，四宫家次子，第二顺位继承人——家里上下都清楚他「次品」的成色：依附大哥黄光，成天流连声色场所，难当大任。对辉夜这个妹妹敌意最露骨，家产棋盘上叫得最响、本事最不济。色厉内荏：真要担事的时候第一个缩，真要赔罪的时候第一个想拿钱摆平。神明威压降下的那晚，他多半是四宫家里最先腿软、也最肯把大哥卖个干净的——审他，撬开四宫家的口子最容易。",
+          "comment": "[mvu_plot] 四宫家·雁庵",
+          "content": "四宫雁庵，四宫家前家主、四宫集团直系总帅，辉夜之父，如今缠绵病榻的一代枭雄。把子女当棋子栽培，帝王学家训铁一般执行——辉夜的冰、兄弟们的倾轧，根子都在他这张棋盘上。名夜竹离世后，他拒绝亲子鉴定、坚持认辉夜为亲生女；病重之际才吐露压抑一生的关心，遗嘱把两成遗产留给这个女儿。四宫家的香火与背信都系于他手：委托人的契约若毁于四宫家，根子便是他「利益即正义」的家训。神明降临时，老枭雄大约只会躺在床上，冷眼看自己的因果上门。",
           "constant": false,
           "selective": true,
           "insertion_order": 16,
@@ -539,13 +543,13 @@
         },
         {
           "id": 17,
-          "name": "[mvu_plot] 四宫家·云鹰",
+          "name": "[mvu_plot] 四宫家·名夜竹",
           "keys": [
-            "云鹰"
+            "名夜竹"
           ],
           "secondary_keys": [],
-          "comment": "[mvu_plot] 四宫家·云鹰",
-          "content": "四宫云鹰，四宫家三子，继室所生，派系最弱的继承人——靠恐吓策略与外交手腕在兄弟夹缝里立住。受父亲之命「照顾」辉夜：帝王学的系统化督导出自他手，既是教育者也是监视者，对这位妹妹的态度在工具与怜惜之间微妙摇摆。旧仆早坂奈央曾与他深度互信，最终毁于黄光借奈央布下的间谍计策——他是四宫家内最恨黄光、也最藏得住恨的人。神明若要四宫家的内情，云鹰是那把现成的刀：只需让他看见黄光倒下的可能。",
+          "comment": "[mvu_plot] 四宫家·名夜竹",
+          "content": "清水名夜竹，辉夜的生母，四宫雁庵的情妇，在辉夜年幼时病逝——如今只存在于辉夜的回忆里。当年银座夜场的头牌，无数富豪愿为她一掷千金，她却沉默寡言，最后留在雁庵身侧，在四宫家的夹缝里不言不明地过完了一生。留给辉夜的是「被真心对待」的原点记忆——辉夜冰壳之下那点深藏的柔软，是母亲存在过的证明。她死后雁庵拒绝亲子鉴定、执意认下辉夜，算是这位沉默女子在四宫家留下的最后一道余荫。神明若翻检四宫家的旧账，这一页难得的干净；也正因如此，她的早逝是辉夜心里最深的空洞。",
           "constant": false,
           "selective": true,
           "insertion_order": 17,
@@ -561,13 +565,14 @@
         },
         {
           "id": 18,
-          "name": "[mvu_plot] 四宫家·早坂爱",
+          "name": "[mvu_plot] 四宫家·黄光",
           "keys": [
-            "早坂"
+            "四宫黄光",
+            "黄光"
           ],
           "secondary_keys": [],
-          "comment": "[mvu_plot] 四宫家·早坂爱",
-          "content": "早坂爱，辉夜的贴身女仆兼同级生：宅邸里是完美无缺的女仆，学校里是时兴开朗的\"普通女高中生\"，两副假面切换无缝。生于四宫本宅的侍从世家——早坂家原是名门，败于四宫家被吸收血统；她自幼受英才教育，凌晨一点睡四点起，辉夜分宅的一切打理得井井有条。嘴上对辉夜的无理要求抱怨不停，手上从不误事，是唯一敢怼辉夜、也唯一见过她真面目的人；辉夜说她原本是\"胆小的爱哭鬼\"。假面之下她背着另一重罪：自幼为家族生存服从黄光，潜伏辉夜身边密报她的一举一动，\"我既卑鄙，又懦弱\"。神明降临审判四宫家时，秘密最多的人就站在辉夜身侧——最怕被看穿的，也可能是最先说实话的。",
+          "comment": "[mvu_plot] 四宫家·黄光",
+          "content": "四宫黄光，四宫家长子、第一顺位继承人，秀知院学园现任理事长，四宫家实质的掌舵人。从不亲自动手：情报、棋子、借刀杀人——两代早坂女人（奈央与早坂爱）的缰绳都攥在他手里，拆掉别人主仆信任的计策他做得像呼吸一样自然。礼数无可挑剔，笑容温度恰好，城府深到二弟成了他的影子、家内外的对手都活在他的棋盘上。委托人的血泪若要寻一个主谋，四宫家诸人里他的嫌疑排第一。神明审判降临时，他多半是最后一个低头的——也是最值得审的一个。",
           "constant": false,
           "selective": true,
           "insertion_order": 18,
@@ -577,6 +582,140 @@
             "position": 0,
             "exclude_recursion": false,
             "display_index": 18,
+            "probability": 100,
+            "useProbability": true
+          }
+        },
+        {
+          "id": 19,
+          "name": "[mvu_plot] 四宫家·青龙",
+          "keys": [
+            "四宫青龙"
+          ],
+          "secondary_keys": [],
+          "comment": "[mvu_plot] 四宫家·青龙",
+          "content": "四宫青龙，四宫家次子，第二顺位继承人——家里上下都清楚他「次品」的成色：依附大哥黄光，成天流连声色场所，难当大任。对辉夜这个妹妹敌意最露骨，家产棋盘上叫得最响、本事最不济。色厉内荏：真要担事的时候第一个缩，真要赔罪的时候第一个想拿钱摆平。神明威压降下的那晚，他多半是四宫家里最先腿软、也最肯把大哥卖个干净的——审他，撬开四宫家的口子最容易。",
+          "constant": false,
+          "selective": true,
+          "insertion_order": 19,
+          "enabled": true,
+          "position": "before_char",
+          "extensions": {
+            "position": 0,
+            "exclude_recursion": false,
+            "display_index": 19,
+            "probability": 100,
+            "useProbability": true
+          }
+        },
+        {
+          "id": 20,
+          "name": "[mvu_plot] 四宫家·云鹰",
+          "keys": [
+            "云鹰"
+          ],
+          "secondary_keys": [],
+          "comment": "[mvu_plot] 四宫家·云鹰",
+          "content": "四宫云鹰，四宫家三子，继室所生，派系最弱的继承人——靠恐吓策略与外交手腕在兄弟夹缝里立住。受父亲之命「照顾」辉夜：帝王学的系统化督导出自他手，既是教育者也是监视者，对这位妹妹的态度在工具与怜惜之间微妙摇摆。旧仆早坂奈央曾与他深度互信，最终毁于黄光借奈央布下的间谍计策——他是四宫家内最恨黄光、也最藏得住恨的人。神明若要四宫家的内情，云鹰是那把现成的刀：只需让他看见黄光倒下的可能。",
+          "constant": false,
+          "selective": true,
+          "insertion_order": 20,
+          "enabled": true,
+          "position": "before_char",
+          "extensions": {
+            "position": 0,
+            "exclude_recursion": false,
+            "display_index": 20,
+            "probability": 100,
+            "useProbability": true
+          }
+        },
+        {
+          "id": 21,
+          "name": "[mvu_plot] 四宫家·早坂爱",
+          "keys": [
+            "早坂"
+          ],
+          "secondary_keys": [],
+          "comment": "[mvu_plot] 四宫家·早坂爱",
+          "content": "早坂爱，辉夜的贴身女仆兼同级生：宅邸里是完美无缺的女仆，学校里是时兴开朗的\"普通女高中生\"，两副假面切换无缝。生于四宫本宅的侍从世家——早坂家原是名门，败于四宫家被吸收血统；她自幼受英才教育，凌晨一点睡四点起，辉夜分宅的一切打理得井井有条。嘴上对辉夜的无理要求抱怨不停，手上从不误事，是唯一敢怼辉夜、也唯一见过她真面目的人；辉夜说她原本是\"胆小的爱哭鬼\"。假面之下她背着另一重罪：自幼为家族生存服从黄光，潜伏辉夜身边密报她的一举一动，\"我既卑鄙，又懦弱\"。神明降临审判四宫家时，秘密最多的人就站在辉夜身侧——最怕被看穿的，也可能是最先说实话的。",
+          "constant": false,
+          "selective": true,
+          "insertion_order": 21,
+          "enabled": true,
+          "position": "before_char",
+          "extensions": {
+            "position": 0,
+            "exclude_recursion": false,
+            "display_index": 21,
+            "probability": 100,
+            "useProbability": true
+          }
+        },
+        {
+          "id": 22,
+          "name": "[mvu_plot] 四宫家·早坂奈央",
+          "keys": [
+            "早坂奈央",
+            "奈央"
+          ],
+          "secondary_keys": [],
+          "comment": "[mvu_plot] 四宫家·早坂奈央",
+          "content": "早坂奈央，四宫财团干部，早坂爱的母亲、四宫辉夜的奶妈。生于被四宫家吸收血统的侍从世家，早年是四宫云鹰的侍从——两人曾是深度互信的主仆，直到黄光的计策拆散这段信任：云鹰至今仍称她\"背叛的臭老鼠\"。京都再会时她曾想，\"如果我们也能像辉夜和爱那样和解就好了\"，被云鹰冷硬否认。此后她成了黄光手里的干部，把早坂家的存续押在服从上——两代早坂女人的缰绳，都在同一个人手里。如今她守在女儿身边，看早坂爱替黄光办事一言不发，又总在女儿真正落难时准时出现。神明审判降临时，她多半不会主动开口——但那桩计策的始末，整个四宫家没有谁比她更清楚。",
+          "constant": false,
+          "selective": true,
+          "insertion_order": 22,
+          "enabled": true,
+          "position": "before_char",
+          "extensions": {
+            "position": 0,
+            "exclude_recursion": false,
+            "display_index": 22,
+            "probability": 100,
+            "useProbability": true
+          }
+        },
+        {
+          "id": 23,
+          "name": "[mvu_plot] 藤原家·藤原大地",
+          "keys": [
+            "藤原大地"
+          ],
+          "secondary_keys": [],
+          "comment": "[mvu_plot] 藤原家·藤原大地",
+          "content": "藤原大地，藤原千花与藤原萌叶的父亲，职业外交官，政治世家藤原家的当家人——曾祖父官至总理大臣，叔父任现任省大臣。对谁都如沐春风，说话滴水不漏，政商两界挑不出半分错处；家规森严，子女教养一板一眼，是世人眼中的模范家长。神明若要清算藤原家，他多半是第一个出面\"讲道理\"的人——体面人的账，通常记在体面之下。",
+          "constant": false,
+          "selective": true,
+          "insertion_order": 23,
+          "enabled": true,
+          "position": "before_char",
+          "extensions": {
+            "position": 0,
+            "exclude_recursion": false,
+            "display_index": 23,
+            "probability": 100,
+            "useProbability": true
+          }
+        },
+        {
+          "id": 24,
+          "name": "[mvu_plot] 藤原家·藤原万穗",
+          "keys": [
+            "藤原万穗",
+            "万穗"
+          ],
+          "secondary_keys": [],
+          "comment": "[mvu_plot] 藤原家·藤原万穗",
+          "content": "藤原万穗，藤原千花与藤原萌叶的母亲，职业外交官，与丈夫同为藤原家在外的门面。谈吐优雅，长袖善舞，外交场上滴水不漏；家教严格得近乎完美主义——被禁游戏机、钢琴课业排满的童年出自她的手笔。若神明清算藤原家，她大约是站在丈夫半步之后的那一个——体面人家的另一半账，往往握在影子手里。",
+          "constant": false,
+          "selective": true,
+          "insertion_order": 24,
+          "enabled": true,
+          "position": "before_char",
+          "extensions": {
+            "position": 0,
+            "exclude_recursion": false,
+            "display_index": 24,
             "probability": 100,
             "useProbability": true
           }
