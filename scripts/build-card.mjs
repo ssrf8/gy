@@ -39,6 +39,7 @@ const order = ['[mvu_update] 变量更新规则', '[mvu_update] 变量输出格�
   '[mvu_plot][mvu_update] 当前变量投影',
   '[mvu_plot] 状态栏输出',
   '[mvu_plot] 守护灵·关羽', '[mvu_plot] 守护灵·赵公明',
+  '[mvu_plot] 审判手段',
   '[mvu_plot] 角色·山田凉', '[mvu_plot] 角色·慧慧', '[mvu_plot] 角色·达克妮丝', '[mvu_plot] 角色·阿库娅', '[mvu_plot] 角色·佐藤和真', '[mvu_plot] 角色·委托人', '[mvu_plot] 角色·藤原千花', '[mvu_plot] 角色·藤原萌叶',
   '[mvu_plot] 四宫家·辉夜',
   '[mvu_plot] 四宫家·雁庵', '[mvu_plot] 四宫家·名夜竹', '[mvu_plot] 四宫家·黄光', '[mvu_plot] 四宫家·青龙', '[mvu_plot] 四宫家·云鹰', '[mvu_plot] 四宫家·早坂爱', '[mvu_plot] 四宫家·早坂奈央',
@@ -53,6 +54,8 @@ const defs = {
   // 开局页按钮只翻转 enabled（启用一条、关闭另一条），constant 不变。
   '[mvu_plot] 守护灵·关羽': { constant: true, enabled: true, selective: false, keys: [], comment: '[mvu_plot] 守护灵·关羽' },
   '[mvu_plot] 守护灵·赵公明': { constant: true, enabled: false, selective: false, keys: [], comment: '[mvu_plot] 守护灵·赵公明' },
+  // 审判手段：绿灯（审判场景命中即注入）——女性 NSFW 罚则 / 男性关帝善书正常手段，未成年豁免（条目正文）
+  '[mvu_plot] 审判手段': { constant: false, enabled: true, selective: true, keys: ['审判', '处置', '惩治', '刑罚'], comment: '[mvu_plot] 审判手段' },
   // 角色条目：绿灯（selective + keys，关键词命中当前消息才注入）——财神线角色名只在本线叙述中出现，跨线零噪音
   '[mvu_plot] 角色·山田凉': { constant: false, enabled: true, selective: true, keys: ['山田凉', '山田', '凉前辈', '山田リョウ'], comment: '[mvu_plot] 角色·山田凉' },
   '[mvu_plot] 角色·慧慧': { constant: false, enabled: true, selective: true, keys: ['慧慧', '惠惠'], comment: '[mvu_plot] 角色·慧慧' },
@@ -193,11 +196,11 @@ const card = {
     scenario: '中元节夜，{{user}}的祖传玉佩忽然觉醒，两道守护灵虚影浮现，等待{{user}}选择其一。选定后，{{user}}降临虔诚祭拜的信徒现场，自由输入开始。',
     first_mes: firstMes,
     mes_example: '',
-    creator_notes: '组装产物（由 scripts/build-card.mjs 从 source/ 生成）。修改请回 source/ 后重新组装。卡名与身份字段为占位，待定稿。',
+    creator_notes: '组装产物（由 scripts/build-card.mjs 从 source/ 生成）。修改请回 source/ 后重新组装。卡名与身份字段为占位，待定稿。含 NSFW 内容（审判手段·女性罚则），仅限成年人；未成年角色豁免。',
     system_prompt: '',
     post_history_instructions: '',
     alternate_greetings: openings,
-    tags: ['守护灵', '中元节', '二选一', 'MVU', '关公'],
+    tags: ['守护灵', '中元节', '二选一', 'MVU', '关公', 'NSFW'],
     creator: '',
     character_version: '0.1.0',
     extensions: {

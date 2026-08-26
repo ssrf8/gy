@@ -52,8 +52,8 @@ if (uvHide && uvStream && uvStrip && compile(uvHide.findRegex).test('<UpdateVari
 // 3. 条目标题 = comment（ST v2 无顶层 name，TH 视角 entry.name 映射自 comment）
 const es = d.character_book.entries;
 const titles = es.map(e => e.comment);
-if (es.length === 25) ok.push('世界书 25 条'); else fail.push('世界书条目数 = ' + es.length);
-for (const t of ['[mvu_update] 变量更新规则', '[mvu_update] 变量输出格式', '[mvu_plot][mvu_update] 当前变量投影', '[mvu_plot] 状态栏输出', '[mvu_plot] 守护灵·关羽', '[mvu_plot] 守护灵·赵公明', '[mvu_plot] 角色·山田凉', '[mvu_plot] 角色·慧慧', '[mvu_plot] 角色·达克妮丝', '[mvu_plot] 角色·阿库娅', '[mvu_plot] 角色·佐藤和真', '[mvu_plot] 角色·委托人', '[mvu_plot] 角色·藤原千花', '[mvu_plot] 角色·藤原萌叶', '[mvu_plot] 四宫家·辉夜', '[mvu_plot] 四宫家·雁庵', '[mvu_plot] 四宫家·名夜竹', '[mvu_plot] 四宫家·黄光', '[mvu_plot] 四宫家·青龙', '[mvu_plot] 四宫家·云鹰', '[mvu_plot] 四宫家·早坂爱', '[mvu_plot] 四宫家·早坂奈央', '[mvu_plot] 藤原家·藤原大地', '[mvu_plot] 藤原家·藤原万穗']) {
+if (es.length === 26) ok.push('世界书 26 条'); else fail.push('世界书条目数 = ' + es.length);
+for (const t of ['[mvu_update] 变量更新规则', '[mvu_update] 变量输出格式', '[mvu_plot][mvu_update] 当前变量投影', '[mvu_plot] 状态栏输出', '[mvu_plot] 守护灵·关羽', '[mvu_plot] 守护灵·赵公明', '[mvu_plot] 审判手段', '[mvu_plot] 角色·山田凉', '[mvu_plot] 角色·慧慧', '[mvu_plot] 角色·达克妮丝', '[mvu_plot] 角色·阿库娅', '[mvu_plot] 角色·佐藤和真', '[mvu_plot] 角色·委托人', '[mvu_plot] 角色·藤原千花', '[mvu_plot] 角色·藤原萌叶', '[mvu_plot] 四宫家·辉夜', '[mvu_plot] 四宫家·雁庵', '[mvu_plot] 四宫家·名夜竹', '[mvu_plot] 四宫家·黄光', '[mvu_plot] 四宫家·青龙', '[mvu_plot] 四宫家·云鹰', '[mvu_plot] 四宫家·早坂爱', '[mvu_plot] 四宫家·早坂奈央', '[mvu_plot] 藤原家·藤原大地', '[mvu_plot] 藤原家·藤原万穗']) {
   if (titles.includes(t)) ok.push('条目标题在 comment：' + t); else fail.push('缺条目标题：' + t);
 }
 if (titles.some(t => t.startsWith('[mvu_update] 初始变量'))) ok.push('初始变量条目标题含 [initvar] 标记'); else fail.push('缺初始变量条目标题');
@@ -63,9 +63,9 @@ const find = (g) => es.filter(e => ((e.comment || '') + ' ' + (e.name || '')).in
 if (find('关羽').length === 1 && find('关羽')[0].enabled) ok.push('关羽条目默认启用'); else fail.push('关羽条目默认状态错');
 if (find('赵公明').length === 1 && !find('赵公明')[0].enabled) ok.push('赵公明条目默认关闭'); else fail.push('赵公明条目默认状态错');
 if (find('关羽')[0] && find('关羽')[0].constant && !find('关羽')[0].selective) ok.push('守护灵条目为常驻蓝灯（constant，非关键词触发）'); else fail.push('守护灵条目非常驻（constant 缺失）');
-const roleEntries = es.filter(e => /^\[mvu_plot\] (角色|四宫家|藤原家)·/.test(e.comment || ''));
-const roleOk = roleEntries.length === 18 && roleEntries.every(e => !e.constant && e.selective && (e.keys || []).length > 0 && e.enabled);
-if (roleOk) ok.push('角色/四宫家/藤原家条目 ×18 全部绿灯（selective + 关键词）'); else fail.push('角色条目绿灯参数异常: ' + roleEntries.length + ' 条');
+const roleEntries = es.filter(e => e.selective);
+const roleOk = roleEntries.length === 19 && roleEntries.every(e => !e.constant && e.selective && (e.keys || []).length > 0 && e.enabled);
+if (roleOk) ok.push('绿灯条目 ×19（角色/四宫家/藤原家 ×18 + 审判手段）全部 selective + 关键词'); else fail.push('绿灯条目参数异常: ' + roleEntries.length + ' 条');
 if (!es.find(e => e.comment === '[mvu_plot] 四宫家·青龙')?.keys?.includes('青龙')) ok.push('青龙关键词用全名（不撞青龙偃月刀）'); else fail.push('青龙裸词关键词会误触发');
 const initVar = es.find(e => e.comment.includes('[initvar]'));
 if (initVar && initVar.content.includes('<initvar>')) ok.push('初始变量条目含 <initvar>'); else fail.push('初始变量条目异常');
