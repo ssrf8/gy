@@ -194,13 +194,32 @@ if (spiritEntries.length === 2 && spiritEntries.every(e => e.content.includes('�
 // 常驻当前压力（2026-08-27 驱动性补强：世界时钟条款）——守护灵条目各带一条中元时限压力
 const guanEntry = spiritEntries.find(e => (e.comment || '').includes('关羽'));
 const zhaoEntry = spiritEntries.find(e => (e.comment || '').includes('赵公明'));
-if (guanEntry && guanEntry.content.includes('当前压力') && guanEntry.content.includes('天亮即散'))
+if (guanEntry && guanEntry.content.includes('当前压力') && guanEntry.content.includes('天亮'))
   ok.push('关羽条目含常驻当前压力（中元大审时限）'); else fail.push('关羽条目缺当前压力条款');
+if (guanEntry && guanEntry.content.includes('推进节奏') && guanEntry.content.includes('不待{{user}}点名'))
+  ok.push('关羽条目含推进节奏条款（时辰/门内动静/亡魂主动推进）'); else fail.push('关羽条目缺推进节奏条款');
 if (zhaoEntry && zhaoEntry.content.includes('当前压力') && zhaoEntry.content.includes('望日'))
   ok.push('赵公明条目含常驻当前压力（望日盘账时限）'); else fail.push('赵公明条目缺当前压力条款');
 const hudEntry2 = d.character_book.entries.find(e => e.comment === '[mvu_plot] 状态栏输出');
 if (hudEntry2 && hudEntry2.content.includes('规则不可软化') && hudEntry2.content.includes('以规矩为准'))
   ok.push('状态栏输出条目含防软化条款（规则不可软化）'); else fail.push('状态栏输出条目缺防软化条款');
+if (hudEntry2 && hudEntry2.content.includes('推进义务') && hudEntry2.content.includes('不待{{user}}点名'))
+  ok.push('状态栏输出条目含推进义务条款（每轮场景时辰向前走一步）'); else fail.push('状态栏输出条目缺推进义务条款');
+const kaguyaEntry = d.character_book.entries.find(e => e.comment === '[mvu_plot] 四宫家·辉夜');
+if (kaguyaEntry && kaguyaEntry.content.includes('全用在挣动上') && !kaguyaEntry.content.includes('缠上来了抵死不放'))
+  ok.push('辉夜条目被动化（删主动缠身/腰力改挣动）'); else fail.push('辉夜条目主动迎合残留');
+// 审判流程分层 + 破威自动演（2026-08-27 推进改版：止步点只剩入穴级处置）
+const trialEntry = d.character_book.entries.find(e => e.comment === '[mvu_plot] 审判手段');
+if (trialEntry && trialEntry.content.includes('查罪映身') && trialEntry.content.includes('登门跪迎') && trialEntry.content.includes('破威亮身'))
+  ok.push('审判手段含三段式破威（映身/跪迎/亮身）'); else fail.push('审判手段缺三段式破威');
+if (trialEntry && trialEntry.content.includes('不待{{user}}逐一点名') && trialEntry.content.includes('仍须{{user}}点名'))
+  ok.push('审判流程分层（破威既定程序自动演/入穴级点名）'); else fail.push('审判流程分层缺失');
+if (trialEntry && trialEntry.content.includes('香火化手') && (trialEntry.content.match(/收尾给选择/g) || []).length >= 3)
+  ok.push('审判手段含香火化手 + 环节收尾选项钩子×3'); else fail.push('审判手段缺化手语义或钩子不完备');
+// 冤魂成群一律无名（2026-08-27 大家族积冤改版：防模型编造亡魂姓名）
+if (hudEntry2 && hudEntry2.content.includes('一律无名') && hudEntry2.content.includes('不得为亡魂编造姓名'))
+  ok.push('状态栏输出含冤魂无名红线（成群显现不具名）'); else fail.push('状态栏输出缺冤魂无名红线');
+if (guanEntry && guanEntry.content.includes('成叠') && guanEntry.content.includes('列队循香')) ok.push('守护灵信奉含成叠旧账（众魂列队观刑）'); else fail.push('守护灵信奉缺成叠旧账语义');
 // 人物关系定性（2026-08-27 早坂爱×黄光：操控者非家人，防模型写成兄妹/护主）
 const aichan = d.character_book.entries.find(e => e.comment === '[mvu_plot] 四宫家·早坂爱');
 if (aichan && aichan.content.includes('操控者与恐惧的来源') && aichan.content.includes('不是家人') && aichan.content.includes('兄长'))
