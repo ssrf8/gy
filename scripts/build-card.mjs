@@ -8,7 +8,8 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const read = (p) => fs.readFileSync(path.join(root, p), 'utf8');
+// 读入统一为 LF：产物行尾不随工作区 CRLF/LF 漂移（无 .gitattributes 时 autocrlf 会来回转换，导致同一源在不同环境构建出不同字节）
+const read = (p) => fs.readFileSync(path.join(root, p), 'utf8').replace(/\r\n/g, '\n');
 const S = (p) => read(p).replace(/\s+$/, '');
 
 // ---- 内容源 ----

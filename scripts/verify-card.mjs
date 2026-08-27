@@ -191,6 +191,20 @@ const spiritEntries = d.character_book.entries.filter(e => (e.comment || '').inc
 if (!openingLeak.length) ok.push('开场白无守护灵台词/可交流语义'); else fail.push('开场白残留: ' + [...new Set(openingLeak)].join(','));
 if (spiritEntries.length === 2 && spiritEntries.every(e => e.content.includes('不可交流') && !e.content.includes('可随时交谈')))
   ok.push('守护灵条目为工具化定性（不可交流）'); else fail.push('守护灵条目可交流语义残留');
+// 常驻当前压力（2026-08-27 驱动性补强：世界时钟条款）——守护灵条目各带一条中元时限压力
+const guanEntry = spiritEntries.find(e => (e.comment || '').includes('关羽'));
+const zhaoEntry = spiritEntries.find(e => (e.comment || '').includes('赵公明'));
+if (guanEntry && guanEntry.content.includes('当前压力') && guanEntry.content.includes('天亮即散'))
+  ok.push('关羽条目含常驻当前压力（中元大审时限）'); else fail.push('关羽条目缺当前压力条款');
+if (zhaoEntry && zhaoEntry.content.includes('当前压力') && zhaoEntry.content.includes('望日'))
+  ok.push('赵公明条目含常驻当前压力（望日盘账时限）'); else fail.push('赵公明条目缺当前压力条款');
+const hudEntry2 = d.character_book.entries.find(e => e.comment === '[mvu_plot] 状态栏输出');
+if (hudEntry2 && hudEntry2.content.includes('规则不可软化') && hudEntry2.content.includes('以规矩为准'))
+  ok.push('状态栏输出条目含防软化条款（规则不可软化）'); else fail.push('状态栏输出条目缺防软化条款');
+// 人物关系定性（2026-08-27 早坂爱×黄光：操控者非家人，防模型写成兄妹/护主）
+const aichan = d.character_book.entries.find(e => e.comment === '[mvu_plot] 四宫家·早坂爱');
+if (aichan && aichan.content.includes('操控者与恐惧的来源') && aichan.content.includes('不是家人') && aichan.content.includes('兄长'))
+  ok.push('早坂爱条目含黄光关系定性（操控者非家人）'); else fail.push('早坂爱条目缺黄光关系定性');
 const thNames = d.extensions.tavern_helper.scripts.map(s => s.name).join(',');
 if (thNames === 'mvu_zod_cn.js,zod_schema.js') ok.push('TH 脚本 2 个'); else fail.push('TH 脚本异常: ' + thNames);
 // TH Script 结构断言（STDB A2 §8/D1 §3.1：缺 type/enabled/id 等字段时 TH 导入不注册脚本）
