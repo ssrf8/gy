@@ -39,6 +39,7 @@ const entryContent = new Map(entryFiles.map((f) => [f.replace(/\.md$/, ''), S(pa
 const order = ['[mvu_update] 变量更新规则', '[mvu_update] 变量输出格式', '[mvu_update] 初始变量',
   '[mvu_plot][mvu_update] 当前变量投影',
   '[mvu_plot] 状态栏输出',
+  '[mvu_plot] 写作指导',
   '[mvu_plot] 守护灵·关羽', '[mvu_plot] 守护灵·赵公明',
   '[mvu_plot] 审判手段', '[mvu_plot] 交易手段',
   '[mvu_plot] 角色·山田凉', '[mvu_plot] 角色·惠惠', '[mvu_plot] 角色·达克妮丝', '[mvu_plot] 角色·阿库娅', '[mvu_plot] 角色·佐藤和真', '[mvu_plot] 角色·藤原千花', '[mvu_plot] 角色·藤原萌叶',
@@ -51,6 +52,9 @@ const defs = {
   '[mvu_update] 初始变量': { constant: false, enabled: false, keys: [], comment: '[mvu_update] 初始变量 [initvar]' },
   '[mvu_plot][mvu_update] 当前变量投影': { constant: true, enabled: true, keys: [], comment: '[mvu_plot][mvu_update] 当前变量投影' },
   '[mvu_plot] 状态栏输出': { constant: true, enabled: true, keys: [], comment: '[mvu_plot] 状态栏输出' },
+  // 写作指导：常驻（constant）文风总纲——两线通用叙事引擎 + 关羽线惩罚定向/粗鄙白话/衣着刻度尺 + 财神线债务差/喜剧；
+  // 激活策略同状态栏输出（constant 非关键词触发），保证每轮注入；规则类纪律仍归状态栏输出，本条只写"怎么写"
+  '[mvu_plot] 写作指导': { constant: true, enabled: true, selective: false, keys: [], comment: '[mvu_plot] 写作指导' },
   // 守护灵条目：常驻蓝灯（constant: true）——无论玩家聊天中是否提到关键词，启用的一条始终注入上下文；
   // 开局页按钮只翻转 enabled（启用一条、关闭另一条），constant 不变。
   '[mvu_plot] 守护灵·关羽': { constant: true, enabled: true, selective: false, keys: [], comment: '[mvu_plot] 守护灵·关羽' },

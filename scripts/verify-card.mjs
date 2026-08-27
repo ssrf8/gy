@@ -66,8 +66,8 @@ if (d.character_book && typeof d.character_book.extensions === 'object' && !Arra
 // 绑定字段：extensions.world 必须存在且与 character_book.name 同名（STDB A2 §12.5），否则导入后卡不关联世界书
 if (d.extensions.world === d.character_book.name) ok.push('extensions.world 绑定书名与 character_book.name 一致'); else fail.push('缺 extensions.world 绑定（卡导入不关联世界书）');
 if (es.every(e => typeof e.use_regex === 'boolean')) ok.push('条目含 use_regex 字段（spec 标准）'); else fail.push('条目缺 use_regex');
-if (es.length === 26) ok.push('世界书 26 条'); else fail.push('世界书条目数 = ' + es.length);
-for (const t of ['[mvu_update] 变量更新规则', '[mvu_update] 变量输出格式', '[mvu_plot][mvu_update] 当前变量投影', '[mvu_plot] 状态栏输出', '[mvu_plot] 守护灵·关羽', '[mvu_plot] 守护灵·赵公明', '[mvu_plot] 审判手段', '[mvu_plot] 交易手段', '[mvu_plot] 角色·山田凉', '[mvu_plot] 角色·惠惠', '[mvu_plot] 角色·达克妮丝', '[mvu_plot] 角色·阿库娅', '[mvu_plot] 角色·佐藤和真', '[mvu_plot] 角色·藤原千花', '[mvu_plot] 角色·藤原萌叶', '[mvu_plot] 四宫家·辉夜', '[mvu_plot] 四宫家·雁庵', '[mvu_plot] 四宫家·名夜竹', '[mvu_plot] 四宫家·黄光', '[mvu_plot] 四宫家·青龙', '[mvu_plot] 四宫家·云鹰', '[mvu_plot] 四宫家·早坂爱', '[mvu_plot] 四宫家·早坂奈央', '[mvu_plot] 藤原家·藤原大地', '[mvu_plot] 藤原家·藤原万穗']) {
+if (es.length === 27) ok.push('世界书 27 条'); else fail.push('世界书条目数 = ' + es.length);
+for (const t of ['[mvu_update] 变量更新规则', '[mvu_update] 变量输出格式', '[mvu_plot][mvu_update] 当前变量投影', '[mvu_plot] 状态栏输出', '[mvu_plot] 写作指导', '[mvu_plot] 守护灵·关羽', '[mvu_plot] 守护灵·赵公明', '[mvu_plot] 审判手段', '[mvu_plot] 交易手段', '[mvu_plot] 角色·山田凉', '[mvu_plot] 角色·惠惠', '[mvu_plot] 角色·达克妮丝', '[mvu_plot] 角色·阿库娅', '[mvu_plot] 角色·佐藤和真', '[mvu_plot] 角色·藤原千花', '[mvu_plot] 角色·藤原萌叶', '[mvu_plot] 四宫家·辉夜', '[mvu_plot] 四宫家·雁庵', '[mvu_plot] 四宫家·名夜竹', '[mvu_plot] 四宫家·黄光', '[mvu_plot] 四宫家·青龙', '[mvu_plot] 四宫家·云鹰', '[mvu_plot] 四宫家·早坂爱', '[mvu_plot] 四宫家·早坂奈央', '[mvu_plot] 藤原家·藤原大地', '[mvu_plot] 藤原家·藤原万穗']) {
   if (titles.includes(t)) ok.push('条目标题在 comment：' + t); else fail.push('缺条目标题：' + t);
 }
 if (titles.some(t => t.startsWith('[mvu_update] 初始变量'))) ok.push('初始变量条目标题含 [initvar] 标记'); else fail.push('缺初始变量条目标题');
@@ -81,6 +81,14 @@ if (find('关羽')[0] && find('关羽')[0].constant && !find('关羽')[0].select
 const roleEntries = es.filter(e => e.selective);
 const roleOk = roleEntries.length === 19 && roleEntries.every(e => !e.constant && e.selective && (e.keys || []).length > 0 && e.enabled);
 if (roleOk) ok.push('绿灯条目 ×19（角色/四宫家/藤原家 ×17 + 审判手段/交易手段）全部 selective + 关键词'); else fail.push('绿灯条目参数异常: ' + roleEntries.length + ' 条');
+// 写作指导（2026-08-27 常驻文风总纲，两线异构；规则类纪律仍归状态栏输出，本条只写"怎么写"）
+const writingEntry = es.find(e => e.comment === '[mvu_plot] 写作指导');
+if (writingEntry && writingEntry.constant && !writingEntry.selective && writingEntry.enabled) ok.push('写作指导为常驻条目（constant 非关键词触发）'); else fail.push('写作指导条目激活参数异常');
+if (writingEntry && writingEntry.content.includes('对白是核心引擎') && writingEntry.content.includes('粗鄙白话') && writingEntry.content.includes('债务差'))
+  ok.push('写作指导含叙事引擎/关羽线粗鄙白话/财神线债务差（两线异构）'); else fail.push('写作指导内容不完整（缺叙事引擎/两线定式）');
+if (writingEntry && writingEntry.content.includes('衣着与肉体一体描绘') && writingEntry.content.includes('只报名称的敷衍')) ok.push('写作指导含衣着一体描绘（禁敷衍/遮挡空间关系）'); else fail.push('写作指导缺衣着一体描绘技法');
+if (writingEntry && writingEntry.content.includes('受刑反应渐进') && writingEntry.content.includes('称谓刻度') && writingEntry.content.includes('一唱一和'))
+  ok.push('写作指导含完整版技法（反应渐进/称谓刻度/捧哏逗哏）'); else fail.push('写作指导缺完整版技法');
 // 交易手段：财神线专属，不得混入关羽线刑名措辞（对称断言：审判手段不写账房话）
 const trade = es.find(e => e.comment === '[mvu_plot] 交易手段');
 if (trade && trade.content.includes('利市') && trade.content.includes('许愿') && !trade.content.includes('刑架')) ok.push('交易手段为债务差定式（无审判线刑具混入）'); else fail.push('交易手段内容异常或混入审判线措辞');

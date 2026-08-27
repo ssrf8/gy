@@ -401,7 +401,7 @@
 
   function setGuardianEntries(chosen) {
     return findBookWithGuardianEntries().then(function (bookName) {
-      if (!bookName) throw new Error('未找到含守护灵条目的世界书（条目标题须包含「关羽」或「赵公明」）');
+      if (!bookName) throw new Error('未找到含守护灵条目的世界书（条目标题须包含"关羽"或"赵公明"）');
       var updater = function (entries) {
         return entries.map(function (e) {
           var hit = GUARDIANS.filter(function (g) { return entryHitText(e).indexOf(g) !== -1; });
@@ -442,7 +442,7 @@
       return;
     }
     if (!list.length) {
-      empty.textContent = '角色卡暂无备选开场白：请在角色卡编辑器的「备选开场白」中填写。';
+      empty.textContent = '角色卡暂无备选开场白：请在角色卡编辑器的"备选开场白"中填写。';
       empty.hidden = false;
       return;
     }
@@ -668,7 +668,7 @@
 })();
 </script>
 <script>
-// 随机极光光点：真随机——光团随机游走 + 正弦扰动 + 明暗呼吸，无中心、无周期。
+// 随机极光光点：真随机，光团随机游走 + 正弦扰动 + 明暗呼吸，无中心、无周期。
 // 守护灵卡片 hover 时变多变亮；防重复绑定；reduced-motion 时不启动（canvas 由 CSS 隐藏）。
 (function () {
   'use strict';
