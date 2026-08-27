@@ -39,8 +39,8 @@ const order = ['[mvu_update] 变量更新规则', '[mvu_update] 变量输出格�
   '[mvu_plot][mvu_update] 当前变量投影',
   '[mvu_plot] 状态栏输出',
   '[mvu_plot] 守护灵·关羽', '[mvu_plot] 守护灵·赵公明',
-  '[mvu_plot] 审判手段',
-  '[mvu_plot] 角色·山田凉', '[mvu_plot] 角色·慧慧', '[mvu_plot] 角色·达克妮丝', '[mvu_plot] 角色·阿库娅', '[mvu_plot] 角色·佐藤和真', '[mvu_plot] 角色·委托人', '[mvu_plot] 角色·藤原千花', '[mvu_plot] 角色·藤原萌叶',
+  '[mvu_plot] 审判手段', '[mvu_plot] 交易手段',
+  '[mvu_plot] 角色·山田凉', '[mvu_plot] 角色·惠惠', '[mvu_plot] 角色·达克妮丝', '[mvu_plot] 角色·阿库娅', '[mvu_plot] 角色·佐藤和真', '[mvu_plot] 角色·藤原千花', '[mvu_plot] 角色·藤原萌叶',
   '[mvu_plot] 四宫家·辉夜',
   '[mvu_plot] 四宫家·雁庵', '[mvu_plot] 四宫家·名夜竹', '[mvu_plot] 四宫家·黄光', '[mvu_plot] 四宫家·青龙', '[mvu_plot] 四宫家·云鹰', '[mvu_plot] 四宫家·早坂爱', '[mvu_plot] 四宫家·早坂奈央',
   '[mvu_plot] 藤原家·藤原大地', '[mvu_plot] 藤原家·藤原万穗'];
@@ -56,13 +56,15 @@ const defs = {
   '[mvu_plot] 守护灵·赵公明': { constant: true, enabled: false, selective: false, keys: [], comment: '[mvu_plot] 守护灵·赵公明' },
   // 审判手段：绿灯（审判场景命中即注入）——女性 NSFW 罚则 / 男性关帝善书正常手段，未成年豁免（条目正文）
   '[mvu_plot] 审判手段': { constant: false, enabled: true, selective: true, keys: ['审判', '处置', '惩治', '刑罚'], comment: '[mvu_plot] 审判手段' },
+  // 交易手段：绿灯（财神线应愿交易场景命中即注入）——债务差色情定式，对位审判手段；跨线零噪音
+  '[mvu_plot] 交易手段': { constant: false, enabled: true, selective: true, keys: ['交易', '还愿', '许愿', '代价', '议价'], comment: '[mvu_plot] 交易手段' },
   // 角色条目：绿灯（selective + keys，关键词命中当前消息才注入）——财神线角色名只在本线叙述中出现，跨线零噪音
   '[mvu_plot] 角色·山田凉': { constant: false, enabled: true, selective: true, keys: ['山田凉', '山田', '凉前辈', '山田リョウ'], comment: '[mvu_plot] 角色·山田凉' },
-  '[mvu_plot] 角色·慧慧': { constant: false, enabled: true, selective: true, keys: ['慧慧', '惠惠'], comment: '[mvu_plot] 角色·慧慧' },
+  '[mvu_plot] 角色·惠惠': { constant: false, enabled: true, selective: true, keys: ['惠惠', '慧慧'], comment: '[mvu_plot] 角色·惠惠' },
   '[mvu_plot] 角色·达克妮丝': { constant: false, enabled: true, selective: true, keys: ['达克妮丝', '达克妮斯', '女骑士', '拉拉蒂娜', '达斯提尼斯'], comment: '[mvu_plot] 角色·达克妮丝' },
   '[mvu_plot] 角色·阿库娅': { constant: false, enabled: true, selective: true, keys: ['阿库娅', '阿克娅'], comment: '[mvu_plot] 角色·阿库娅' },
   '[mvu_plot] 角色·佐藤和真': { constant: false, enabled: true, selective: true, keys: ['佐藤和真', '和真'], comment: '[mvu_plot] 角色·佐藤和真' },
-  '[mvu_plot] 角色·委托人': { constant: false, enabled: true, selective: true, keys: ['陆仁佳', '老陆', '四宫', '商人', '哭诉'], comment: '[mvu_plot] 角色·委托人' },
+  // 委托人已删（2026-08-26 大改：不重点描写，NPC 短暂出场由模型按更新规则动态 add，不预置条目与角色池空壳）
   '[mvu_plot] 角色·藤原千花': { constant: false, enabled: true, selective: true, keys: ['藤原千花', '千花', '藤原'], comment: '[mvu_plot] 角色·藤原千花' },
   // 萌叶：全名/名做关键词；「藤原」是姐姐条目 key，姐妹同场双亮属预期
   '[mvu_plot] 角色·藤原萌叶': { constant: false, enabled: true, selective: true, keys: ['藤原萌叶', '萌叶'], comment: '[mvu_plot] 角色·藤原萌叶' },
@@ -102,6 +104,7 @@ const entries = order.map((name, i) => {
     insertion_order: i,
     enabled: def.enabled,
     position: 'before_char',
+    use_regex: false,
     extensions: {
       position: 0,
       exclude_recursion: false,
@@ -140,7 +143,7 @@ const regexScripts = [
   {
     id: '1102f8b1-0000-4000-8000-000000000003',
     scriptName: '状态栏占位剥离（提示词）',
-    findRegex: '/<GuanGongStatus\\s*\\/>/g',
+    findRegex: '/<StatusPlaceHolderImpl\\s*\\/>/g',
     replaceString: '',
     placement: [2],
     disabled: false, trimStrings: [], markdownOnly: false, promptOnly: true,
@@ -168,7 +171,7 @@ const regexScripts = [
     // 渲染必须排在「旧楼占位隐藏」之前：链式执行，本条替换后文本不再含占位符，不会被下一条误删
     id: '1102f8b1-0000-4000-8000-000000000006',
     scriptName: '状态栏渲染（显示层，最新 4 楼）',
-    findRegex: '/<GuanGongStatus\\s*\\/>/i',
+    findRegex: '/<StatusPlaceHolderImpl\\s*\\/>/i',
     replaceString: '```html\n' + statusbar + '\n```',
     placement: [2],
     disabled: false, trimStrings: [], markdownOnly: true, promptOnly: false,
@@ -177,7 +180,7 @@ const regexScripts = [
   {
     id: '1102f8b1-0000-4000-8000-000000000007',
     scriptName: '状态栏占位隐藏（显示层，旧楼兜底）',
-    findRegex: '/<GuanGongStatus\\s*\\/>/g',
+    findRegex: '/<StatusPlaceHolderImpl\\s*\\/>/g',
     replaceString: '',
     placement: [2],
     disabled: false, trimStrings: [], markdownOnly: true, promptOnly: false,
@@ -186,17 +189,30 @@ const regexScripts = [
 ];
 
 // ---- 组装 ----
+// TH 角色卡脚本结构（经 STDB A2 §8/D1 §3.1 核实，本地实战卡实测）：必须含 type/enabled/name/id/content/info/button/data/export_with，
+// 缺字段时 TH 导入无法识别注册脚本。id 用稳定值保证重复导入去重一致。
+const thScript = (name, content, id) => ({
+  type: 'script',
+  enabled: true,
+  name,
+  id,
+  content,
+  info: '',
+  button: { enabled: false, buttons: [] },
+  data: {},
+  export_with: { data: true, button: true },
+});
 const card = {
   spec: 'chara_card_v2',
   spec_version: '2.0',
   data: {
     name: '关公',
-    description: '{{char}}是{{user}}祖传玉佩中的守护灵。开局时{{user}}可从两位守护灵中选择其一——关羽（武圣之力：刀法通神、威压邪祟）或赵公明（财神之力：招财进宝、镇宅安民）；选定后{{char}}以所选守护灵的身份显现、对话与显灵。信徒视{{user}}为神灵显灵，香火即神力之源。中元节夜，百鬼巡街。',
-    personality: '取决于所选守护灵：关羽重义刚直、言出必行；赵公明圆融通达、爱财有道。详见世界书守护灵条目。',
+    description: '{{char}}是{{user}}祖传玉佩中的守护灵。开局时{{user}}可从两位守护灵中选择其一——关羽（武圣之力：刀法通神、威压邪祟）或赵公明（财神之力：招财进宝、镇宅安民）；选定后{{char}}以所选守护灵的身份显现与显灵。守护灵不开口、不应声、不与{{user}}交流，只是玉里供{{user}}借用的力量与身份，一切言语与决断均属{{user}}。信徒视{{user}}为神灵显灵，香火即神力之源，亦为香火债：借神庇佑发家者，债以身为偿，妻女家业连坐。中元节夜，百鬼巡街。',
+    personality: '守护灵本身不可交流：不开口、不应声、无对话与指引。关羽予{{user}}的是重义肃杀的武圣之力（刀法通神、威压邪祟）；赵公明予{{user}}的是圆融通达的财神之力（招财进宝、镇宅安民）。{{user}}才是唯一行事者与说话者，信徒视{{user}}为显灵。详见世界书守护灵条目。',
     scenario: '中元节夜，{{user}}的祖传玉佩忽然觉醒，两道守护灵虚影浮现，等待{{user}}选择其一。选定后，{{user}}降临虔诚祭拜的信徒现场，自由输入开始。',
     first_mes: firstMes,
     mes_example: '',
-    creator_notes: '组装产物（由 scripts/build-card.mjs 从 source/ 生成）。修改请回 source/ 后重新组装。卡名与身份字段为占位，待定稿。含 NSFW 内容（审判手段·女性罚则），仅限成年人；未成年角色豁免。',
+    creator_notes: '组装产物（由 scripts/build-card.mjs 从 source/ 生成）。修改请回 source/ 后重新组装。卡名与身份字段为占位，待定稿。含 NSFW 内容（收编总纲：女性六刑/男性奴役），仅限成年人；所有登场角色均为十八岁及以上。',
     system_prompt: '',
     post_history_instructions: '',
     alternate_greetings: openings,
@@ -204,16 +220,23 @@ const card = {
     creator: '',
     character_version: '0.1.0',
     extensions: {
+      // world = 绑定世界书名称（ST 官方字段，须与 character_book.name 同名，否则导入后卡不关联世界书）
+      // 依据：STDB A2 §3.2/§12.5（本地实战卡 extensions.world 与 character_book.name 均存在且同名）
+      world: '中元特供·关公·世界书',
       tavern_helper: {
         scripts: [
-          { name: 'mvu_zod_cn.js', content: scriptLoader },
-          { name: 'zod_schema.js', content: scriptSchema },
+          thScript('mvu_zod_cn.js', scriptLoader, '1102f8b1-0000-4000-8000-000000001001'),
+          thScript('zod_schema.js', scriptSchema, '1102f8b1-0000-4000-8000-000000001002'),
         ],
       },
       regex_scripts: regexScripts,
     },
     character_book: {
       name: '中元特供·关公·世界书',
+      description: '',
+      // extensions 必须存在（ST TavernCardValidator #validateCharacterBookV2 要求 extensions+entries，
+      // 缺 extensions 时 V2 卡导入验证失败 → 世界书不导入；V3 卡才绕过此检查）
+      extensions: {},
       entries,
     },
   },

@@ -8,16 +8,18 @@
 <JSONPatch>
 [
   {"op":"replace","path":"/环境/时间","value":"…"},
-  {"op":"replace","path":"/角色/慧慧/在场","value":true},
-  {"op":"replace","path":"/角色/慧慧/心声","value":"…"},
-  {"op":"add","path":"/角色/新角色","value":{"名字":"…","在场":true,"状态":"…","心声":"…"}}
+  {"op":"replace","path":"/角色/惠惠/在场","value":true},
+  {"op":"replace","path":"/角色/惠惠/心声","value":"…"},
+  {"op":"replace","path":"/角色/辉夜/衣着","value":"和服衣襟被扯开，露出锁骨"}
 ]
 </JSONPatch>
 </UpdateVariable>
 
 要求：
 - op 只用 add / replace / remove / move
-- replace 的路径必须已存在；角色池新角色用 add 写完整四字段对象
-- 动态角色键使用稳定标准名；别名复用已有记录；离场只把在场 replace 为 false
+- replace 的路径必须已存在
+- 角色池为封闭白名单（凉/惠惠/达克妮丝/阿库娅/辉夜/早坂爱/早坂奈央/藤原千花/藤原萌叶）：只允许 replace 这九人的字段；禁止 add 新角色、禁止 remove 白名单成员、禁止对池外任何键做操作
+- 反例（禁止）：{"op":"add","path":"/角色/原始合伙契约",...}——契约、物品、建筑、概念不是角色；新登场人物只写叙事，不入池
+- 离场只把在场 replace 为 false
 - 顶层容器只允许：环境、角色
 - 没有状态变化时不要输出本块

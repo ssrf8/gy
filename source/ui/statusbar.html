@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,82 +7,136 @@ html,body{margin:0;padding:0;background:transparent}
   --text:#ece5d6;--dim:#a99575;--line:rgba(217,164,65,.24);
   position:relative;overflow:hidden;
   font-family:'Microsoft YaHei','PingFang SC',system-ui,sans-serif;color:var(--text);
-  max-width:420px;margin:6px auto;padding:12px 14px 10px;border:1px solid var(--line);border-radius:12px;
+  max-width:none;width:100%;margin:7px 0;padding:14px 16px 12px;border:1px solid var(--line);border-radius:12px;
   background:
     radial-gradient(130% 70% at 50% -8%,rgba(96,118,205,.16),transparent 55%),
     radial-gradient(80% 55% at 12% 118%,rgba(150,110,220,.08),transparent 60%),
     radial-gradient(90% 60% at 88% 108%,rgba(217,164,65,.10),transparent 62%),
     linear-gradient(180deg,rgba(19,22,46,.95),rgba(9,11,24,.96));
   box-shadow:0 2px 14px rgba(0,0,0,.4),inset 0 1px 0 rgba(255,255,255,.05);
-  line-height:1.5;font-size:12.5px;box-sizing:border-box}
+  line-height:1.5;font-size:14px;box-sizing:border-box}
 #ggbar .sky{position:absolute;inset:0;overflow:hidden;pointer-events:none;border-radius:inherit}
 #ggbar .sky b{position:absolute;border-radius:50%;opacity:.6;
   animation:tw var(--d,4s) ease-in-out var(--dl,0s) infinite alternate}
 @keyframes tw{from{opacity:.12;transform:scale(.75)}to{opacity:.9;transform:scale(1)}}
-#ggbar .meteor{position:absolute;top:16%;right:-12%;width:90px;height:1px;border-radius:1px;opacity:0;
-  background:linear-gradient(90deg,rgba(255,250,230,.95),transparent);
-  animation:met 11s linear 4s infinite}
-@keyframes met{0%{opacity:0;transform:translate(0,0)}2%{opacity:1}10%{opacity:0;transform:translate(-160px,90px)}100%{opacity:0;transform:translate(-160px,90px)}}
-#ggbar .env{position:relative;color:var(--dim);font-size:11.5px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-#ggbar .env::before{content:'✦ ';color:rgba(217,164,65,.65);font-size:9px}
-#ggbar .tabs{position:relative;display:flex;gap:7px;overflow-x:auto;margin-top:9px;padding-bottom:2px;scrollbar-width:thin}
-#ggbar .tab{flex:none;padding:2px 9px;font-size:11px;color:var(--dim);cursor:pointer;background:transparent;
+#ggbar .env{position:relative;color:var(--dim);font-size:13px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+#ggbar .env::before{content:'✦ ';color:rgba(217,164,65,.65);font-size:10px}
+#ggbar .tabs{position:relative;display:flex;flex-wrap:wrap;gap:6px 7px;margin-top:10px;padding-bottom:2px}
+#ggbar .tab{flex:none;padding:3px 10px;font-size:12.5px;color:var(--dim);cursor:pointer;background:transparent;
   letter-spacing:1px;user-select:none}
 #ggbar .tab.off{opacity:.5}
-#ggbar .tab.on{color:#171310;background:linear-gradient(180deg,#ecc873,#c9973c);border-radius:999px;padding:2px 11px;
+#ggbar .tab.on{color:#171310;background:linear-gradient(180deg,#ecc873,#c9973c);border-radius:999px;padding:3px 12px;
   font-weight:700;box-shadow:0 0 8px rgba(217,164,65,.25)}
-#ggbar .stage{position:relative;display:flex;gap:10px;margin-top:9px}
-#ggbar .pfig{position:relative;width:118px;height:158px;border:1px solid rgba(217,164,65,.3);border-radius:10px;flex:none;
+#ggbar .stage{position:relative;display:flex;gap:11px;margin-top:10px}
+#ggbar .pfig{position:relative;width:132px;height:176px;border:1px solid rgba(217,164,65,.3);border-radius:10px;flex:none;
   overflow:hidden;background:linear-gradient(180deg,rgba(217,164,65,.05),rgba(96,118,205,.05) 62%,rgba(0,0,0,.28))}
 #ggbar .pfig img{width:100%;height:100%;object-fit:cover;display:block}
 #ggbar .ph{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
-  font-size:36px;font-weight:700;color:rgba(217,164,65,.32);text-shadow:0 0 14px rgba(217,164,65,.18)}
-#ggbar .phlab{position:absolute;bottom:5px;left:0;right:0;text-align:center;font-size:9px;
+  font-size:40px;font-weight:700;color:rgba(217,164,65,.32);text-shadow:0 0 14px rgba(217,164,65,.18)}
+#ggbar .phlab{position:absolute;bottom:6px;left:0;right:0;text-align:center;font-size:10px;
   color:rgba(217,164,65,.45);letter-spacing:3px}
 #ggbar .pinfo{flex:1;min-width:0;display:flex;flex-direction:column}
-#ggbar .pname{color:#f4eedd;font-weight:700;font-size:13px;letter-spacing:1px;display:flex;align-items:center;gap:7px}
-#ggbar .dot{width:5px;height:5px;border-radius:50%;background:var(--gold);box-shadow:0 0 5px rgba(217,164,65,.7)}
-#ggbar .offtag{font-size:9.5px;color:var(--dim);border:1px solid rgba(169,149,117,.4);border-radius:3px;padding:0 4px;letter-spacing:1px}
-#ggbar .row{display:flex;align-items:baseline;gap:8px;margin-top:6px;font-size:11.5px;line-height:1.45}
-#ggbar .tag{flex:none;font-size:10px;letter-spacing:2px}
+#ggbar .pname{color:#f4eedd;font-weight:700;font-size:15px;letter-spacing:1px;display:flex;align-items:center;gap:7px}
+#ggbar .fen{font-size:10.5px;color:#f2dcd8;background:rgba(217,95,90,.16);border:1px solid rgba(217,95,90,.45);
+  border-radius:3px;padding:0 5px;letter-spacing:1px;margin-left:auto;flex:none}
+#ggbar .dot{width:6px;height:6px;border-radius:50%;background:var(--gold);box-shadow:0 0 5px rgba(217,164,65,.7)}
+#ggbar .offtag{font-size:10.5px;color:var(--dim);border:1px solid rgba(169,149,117,.4);border-radius:3px;padding:0 4px;letter-spacing:1px}
+#ggbar .row{display:flex;align-items:baseline;gap:9px;margin-top:7px;font-size:13px;line-height:1.45}
+#ggbar .tag{flex:none;font-size:11px;letter-spacing:2px}
 #ggbar .tag.g{color:var(--gold)}
 #ggbar .tag.hv{color:var(--red-soft)}
+#ggbar .tag.cd{color:#b9ab8d}
 #ggbar .row .lv{flex:1;min-width:0;overflow-wrap:break-word}
 #ggbar .row.g .lv{color:#e6ddca}
 #ggbar .row.hv .lv{color:#dca094}
-#ggbar .none{color:var(--dim);font-size:11px;margin-top:6px;letter-spacing:1px}
-#ggbar .empty{color:var(--dim);text-align:center;padding:10px 0;letter-spacing:2px}
+#ggbar .row.cd .lv{color:#cfc4ab}
+#ggbar .none{color:var(--dim);font-size:12.5px;margin-top:7px;letter-spacing:1px}
+#ggbar .empty{color:var(--dim);text-align:center;padding:11px 0;letter-spacing:2px}
 </style>
 </head>
 <body>
-<div id="ggbar" data-gg-statusbar="1"><div class="empty">状态同步中…</div></div>
-<script>
+<div id="ggbar" data-gg-statusbar="1" data-state="unstarted" aria-live="polite"><div class="empty">（状态栏脚本未启动，请检查酒馆助手前端渲染）</div></div>
+<script type="module">
 (function () {
-  var waited = 0, RETRY = 10, STEP = 300;
+  'use strict';
+  var root = document.getElementById('ggbar');
+  if (!root || root.__ggbarInit) return;
+  root.__ggbarInit = true;
+  root.setAttribute('data-state', 'loading');
+  var initialStatus = root.querySelector('.empty');
+  if (initialStatus) initialStatus.textContent = '状态同步中…';
+
+  var WAIT_MS = 4000, POLL_MS = 1500;
+  var startedAt = Date.now(), pollTimer = 0, lastSignature = '', dataSource = 'loading';
   // 立绘图源：角色键（记录键或名字）→ 图片地址（data: 或 https:），留空显示占位
   var PORTRAITS = {};
   var skyLayer = null;
   var eventStops = [];
 
+  // TH 会在楼层 iframe 执行前做一次 HTML 实体解码；实体名必须拆开，
+  // 否则数字单引号实体会提前退化，直接破坏整个 module 脚本的语法。
   function esc(s) {
-    return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
-      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
-    });
+    return String(s == null ? '' : s)
+      .replace(/&/g, '&' + 'amp;')
+      .replace(/</g, '&' + 'lt;')
+      .replace(/>/g, '&' + 'gt;')
+      .replace(/"/g, '&' + 'quot;');
+  }
+
+  function hostWindow() {
+    try { return window.parent && window.parent !== window ? window.parent : window; }
+    catch (e) { return window; }
+  }
+
+  function mvuApi() {
+    try { if (window.Mvu && typeof window.Mvu.getMvuData === 'function') return window.Mvu; } catch (e) {}
+    try {
+      var host = hostWindow();
+      if (host.Mvu && typeof host.Mvu.getMvuData === 'function') return host.Mvu;
+    } catch (e) {}
+    return null;
+  }
+
+  function validStat(value) {
+    return value && typeof value === 'object' && value.stat_data && typeof value.stat_data === 'object';
   }
 
   function stat() {
+    // 保持项目原契约：优先展示最新楼 MVU 快照。
     try {
-      if (window.Mvu && typeof Mvu.getMvuData === 'function') {
-        var d = Mvu.getMvuData({ type: 'message', message_id: 'latest' });
-        if (d && d.stat_data) return d.stat_data;
+      var mvu = mvuApi();
+      if (mvu) {
+        var d = mvu.getMvuData({ type: 'message', message_id: 'latest' });
+        if (validStat(d)) { dataSource = 'mvu'; return d.stat_data; }
       }
     } catch (e) {}
+
+    // 某些组合不接受 latest 字符串时，改用当前消息 iframe 的明确楼层号。
+    try {
+      var currentMvu = mvuApi();
+      if (currentMvu && typeof getCurrentMessageId === 'function') {
+        var current = currentMvu.getMvuData({ type: 'message', message_id: getCurrentMessageId() });
+        if (validStat(current)) { dataSource = 'mvu-current'; return current.stat_data; }
+      }
+    } catch (e) {}
+
+    // 消息 iframe 原生路径：不传 latest，避免不同 TH 版本对字符串楼层号处理不一致。
     try {
       if (typeof getVariables === 'function') {
-        var v = getVariables({ type: 'message', message_id: 'latest' });
-        if (v && v.stat_data) return v.stat_data;
+        var v = getVariables({ type: 'message' });
+        if (validStat(v)) { dataSource = 'message'; return v.stat_data; }
       }
     } catch (e) {}
+
+    // 合并变量是楼层 iframe 的最后一道 TH 降级，可覆盖变量实际落在聊天/首楼的情况。
+    try {
+      if (typeof getAllVariables === 'function') {
+        var all = getAllVariables();
+        if (validStat(all)) { dataSource = 'merged'; return all.stat_data; }
+      }
+    } catch (e) {}
+
+    dataSource = 'unavailable';
     return null;
   }
 
@@ -95,7 +147,7 @@ html,body{margin:0;padding:0;background:transparent}
     try { localStorage.setItem('ggbar-sel', k); } catch (e) {}
   }
 
-  // 星空层：只构建一次，逐星随机相位呼吸；低频流星
+  // 星空层：只构建一次，逐星随机相位呼吸
   function buildSky() {
     var sky = document.createElement('div');
     sky.className = 'sky';
@@ -112,9 +164,6 @@ html,body{margin:0;padding:0;background:transparent}
       b.style.setProperty('--dl', (-Math.random() * 5).toFixed(2) + 's');
       sky.appendChild(b);
     }
-    var m = document.createElement('i');
-    m.className = 'meteor';
-    sky.appendChild(m);
     return sky;
   }
 
@@ -129,20 +178,26 @@ html,body{margin:0;padding:0;background:transparent}
       (fig ? '<img src="' + esc(fig) + '" alt="">' :
         '<span class="ph">' + esc(name.charAt(0)) + '</span><span class="phlab">立绘位</span>') +
       '</div><div class="pinfo"><div class="pname">' + esc(name) +
-      (c['在场'] === true ? '<span class="dot"></span>' : '<span class="offtag">场外</span>') + '</div>';
+      (c['在场'] === true ? '<span class="dot"></span>' : '<span class="offtag">场外</span>') +
+      (c['名分'] ? '<span class="fen">' + esc(c['名分']) + '</span>' : '') + '</div>';
     if (c['状态']) html += row('g', '状态', c['状态']);
     if (c['心声']) html += row('hv', '心声', c['心声']);
-    if (!c['状态'] && !c['心声']) html += '<div class="none">（暂无记录）</div>';
+    if (c['衣着']) html += row('cd', '衣着', c['衣着']);
+    if (!c['状态'] && !c['心声'] && !c['衣着']) html += '<div class="none">（暂无记录）</div>';
     html += '</div></div>';
     return html;
   }
 
   function render(s) {
-    var root = document.getElementById('ggbar');
+    root = document.getElementById('ggbar') || root;
     var html = '';
     if (!s) {
-      html = '<div class="empty">（状态待同步）</div>';
+      root.setAttribute('data-state', 'unavailable');
+      root.setAttribute('data-source', dataSource);
+      html = '<div class="empty">（状态暂不可用，将自动重试）</div>';
     } else {
+      root.setAttribute('data-state', 'ready');
+      root.setAttribute('data-source', dataSource);
       var env = s['环境'] || {}, cast = s['角色'] || {};
       var envLine = [env['日期'], env['时间'], env['地点']].filter(Boolean).join(' · ');
       var on = [], off = [];
@@ -152,17 +207,18 @@ html,body{margin:0;padding:0;background:transparent}
       }
       var all = on.concat(off);
       if (envLine) html += '<div class="env">' + esc(envLine) + '</div>';
-      if (!all.length) {
-        html += '<div class="empty">（场上无人）</div>';
+      // 标签只展示在场角色（场外角色状态/心声为空，无查看价值，隐藏以免占位/横滚）
+      if (!on.length) {
+        html += '<div class="empty">' + (all.length ? '（此刻无人）' : '（场上无人）') + '</div>';
       } else {
         var sel = null, saved = remembered();
-        for (var i = 0; i < all.length; i++) if (all[i].k === saved) { sel = all[i]; break; }
-        if (!sel) sel = all[0];
+        for (var i = 0; i < on.length; i++) if (on[i].k === saved) { sel = on[i]; break; }
+        if (!sel) sel = on[0];
 
         html += '<div class="tabs">';
-        for (var j = 0; j < all.length; j++) {
-          var t = all[j];
-          html += '<span class="tab' + (t.k === sel.k ? ' on' : '') + (t.c['在场'] === true ? '' : ' off') +
+        for (var j = 0; j < on.length; j++) {
+          var t = on[j];
+          html += '<span class="tab' + (t.k === sel.k ? ' on' : '') +
             '" data-k="' + esc(t.k) + '">' + esc(t.c['名字'] || t.k) + '</span>';
         }
         html += '</div>' + view(sel);
@@ -173,7 +229,7 @@ html,body{margin:0;padding:0;background:transparent}
     root.appendChild(skyLayer);
   }
 
-  document.getElementById('ggbar').addEventListener('click', function (ev) {
+  root.addEventListener('click', function (ev) {
     var t = ev.target;
     while (t && t !== this && !(t.classList && t.classList.contains('tab'))) t = t.parentNode;
     if (!t || t === this) return;
@@ -182,46 +238,82 @@ html,body{margin:0;padding:0;background:transparent}
     if (s) render(s);
   });
 
-  function tick() {
+  function tick(force) {
     var s = stat();
-    if (s) { render(s); return; }
-    if (++waited < RETRY) { setTimeout(tick, STEP); return; }
-    render(null);
+    if (s) {
+      var signature = '';
+      try { signature = JSON.stringify(s); } catch (e) {}
+      if (force || signature !== lastSignature || root.getAttribute('data-state') !== 'ready') {
+        lastSignature = signature;
+        render(s);
+      }
+      return;
+    }
+    if (Date.now() - startedAt >= WAIT_MS && root.getAttribute('data-state') !== 'unavailable') render(null);
   }
 
   function renderMvuData(data) {
-    if (data && data.stat_data) { render(data.stat_data); return; }
-    var s = stat();
-    if (s) render(s);
+    if (validStat(data)) {
+      dataSource = 'event';
+      lastSignature = '';
+      render(data.stat_data);
+      return;
+    }
+    tick(true);
   }
 
-  function bindMvuRefresh() {
-    var mvu = window.Mvu;
-    if (!mvu || !mvu.events || typeof eventOn !== 'function') return false;
-    [mvu.events.VARIABLE_INITIALIZED, mvu.events.VARIABLE_UPDATE_ENDED]
-      .filter(Boolean)
-      .forEach(function (name) {
-        try {
-          var disposer = eventOn(name, renderMvuData);
-          if (disposer && typeof disposer.stop === 'function') eventStops.push(disposer);
-        } catch (e) {}
-      });
-    return true;
+  function bindRefreshEvents() {
+    var mvu = mvuApi();
+    if (typeof eventOn !== 'function') return false;
+    var subscribed = false;
+    if (mvu && mvu.events) {
+      [mvu.events.VARIABLE_INITIALIZED, mvu.events.VARIABLE_UPDATE_ENDED]
+        .filter(Boolean)
+        .forEach(function (name) {
+          try {
+            var disposer = eventOn(name, renderMvuData);
+            if (disposer && typeof disposer.stop === 'function') eventStops.push(disposer);
+            subscribed = true;
+          } catch (e) {}
+        });
+    }
+    try {
+      var host = hostWindow();
+      var events = window.tavern_events || host.tavern_events || {};
+      if (events.MESSAGE_UPDATED) {
+        var messageDisposer = eventOn(events.MESSAGE_UPDATED, function () { tick(true); });
+        if (messageDisposer && typeof messageDisposer.stop === 'function') eventStops.push(messageDisposer);
+        subscribed = true;
+      }
+    } catch (e) {}
+    return subscribed;
   }
 
-  if (!bindMvuRefresh() && typeof waitGlobalInitialized === 'function') {
-    Promise.resolve(waitGlobalInitialized('Mvu')).then(function () {
-      bindMvuRefresh();
-      renderMvuData();
-    }).catch(function () {});
+  function waitMvuSafely(timeout) {
+    return new Promise(function (resolve) {
+      var done = false;
+      function finish() { if (!done) { done = true; resolve(); } }
+      try {
+        if (typeof waitGlobalInitialized === 'function') Promise.resolve(waitGlobalInitialized('Mvu')).then(finish, finish);
+        else finish();
+      } catch (e) { finish(); }
+      setTimeout(finish, timeout);
+    });
   }
+
+  tick(true);
+  waitMvuSafely(WAIT_MS).then(function () {
+    bindRefreshEvents();
+    tick(true);
+  });
+  pollTimer = window.setInterval(function () { tick(false); }, POLL_MS);
+
   window.addEventListener('unload', function () {
+    if (pollTimer) window.clearInterval(pollTimer);
     while (eventStops.length) {
       try { eventStops.pop().stop(); } catch (e) {}
     }
   });
-  tick();
 })();
 </script>
 </body>
-</html>

@@ -32,12 +32,14 @@ const LooseBool = (fallback = false) => z.preprocess(
   z.boolean()
 ).prefault(fallback);
 
-// 角色项（动态角色池成员；新增角色由模型按更新规则 add 完整对象）
+// 角色项（封闭白名单九女的统一结构；池成员固定于 InitialVariables，运行期不做 add/remove）
 const 角色项 = z.object({
   名字: LooseString().describe('姓名/称呼'),
   在场: LooseBool(false).describe('是否在当前场景内'),
   状态: LooseString().describe('一句话姿态/处境'),
   心声: LooseString().describe('一句话内心所想'),
+  名分: LooseString().describe('收编归属等级：香客/祭品/神婢/神妃/私有物，未收编为空'),
+  衣着: LooseString().describe('色情进度刻度尺：当下衣物与暴露状态（何物/齐整或凌乱/破至何处/湿污），随剧情实时更新'),
 });
 
 // Step 3: 顶层 schema（容器与字段见玩法设计.md §5）
